@@ -27,5 +27,6 @@ export default defineConfig(({ watch }) => [
     entry: ["src/cli.mjs"],
     format: ["cjs"],
     minify: !watch,
+    target: "es6",
   },
 ]);
