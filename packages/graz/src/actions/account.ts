@@ -6,8 +6,7 @@ import { grazSessionDefaultValues, useGrazInternalStore, useGrazSessionStore } f
 import type { Maybe } from "../types/core";
 import type { Key, WalletType } from "../types/wallet";
 import type { ChainId } from "../utils/multi-chain";
-import { checkWallet, getWallet, isCapsule, isWalletConnect } from "./wallet";
-import { isLeapSnaps } from "./wallet/index";
+import { checkWallet, getWallet, isCapsule, isLeapSnaps, isWalletConnect } from "./wallet";
 
 export type ConnectArgs = Maybe<{
   chainId: ChainId;
