@@ -135,6 +135,10 @@ export const isCapsule = (type: WalletType): boolean => {
   return type === WalletType.CAPSULE;
 };
 
+export const isLeapSnaps = (type: WalletType): boolean => {
+  return type === WalletType.METAMASK_SNAP_LEAP;
+};
+
 export const isWalletConnect = (type: WalletType): boolean => {
   return (
     type === WalletType.WALLETCONNECT ||
