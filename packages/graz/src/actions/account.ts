@@ -101,7 +101,7 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
     if (!isWalletConnect(currentWalletType)) {
       let resultAccounts: Record<string, Key> = {};
       if (chainIds.length > 1 && isLeapSnaps(currentWalletType)) {
-        let accounts: Record<string, Key> = {};
+        const accounts: Record<string, Key> = {};
         for await (const chainId of chainIds) {
           accounts[chainId] = await wallet.getKey(chainId);
         }
