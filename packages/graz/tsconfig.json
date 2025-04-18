@@ -16,7 +16,6 @@
     "strictNullChecks": true,
     "jsx": "react-jsx",
     "incremental": false,
-    "target": "es6"
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
