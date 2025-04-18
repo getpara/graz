@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "rootDir": ".",
     "target": "esnext",
+    "esModuleInterop": true
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }
