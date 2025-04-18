@@ -8,6 +8,7 @@ const defaultOptions: Options = {
   shims: true,
   splitting: true,
   treeshake: true,
+  target: "es6",
 };
 
 export default defineConfig(({ watch }) => [
@@ -27,6 +28,5 @@ export default defineConfig(({ watch }) => [
     entry: ["src/cli.mjs"],
     format: ["cjs"],
     minify: !watch,
-    target: "es6",
   },
 ]);
