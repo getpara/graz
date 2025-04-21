@@ -9,6 +9,7 @@ export interface ConfigureGrazArgs {
   chains: ChainInfo[];
   chainsConfig?: Record<string, ChainConfig>;
   capsuleConfig?: CapsuleConfig;
+  paraConfig?: GrazInternalStore["paraConfig"];
   onNotFound?: () => void;
   onReconnectFailed?: () => void;
   walletConnect?: GrazInternalStore["walletConnect"];
@@ -34,6 +35,7 @@ export const configureGraz = (args: ConfigureGrazArgs): ConfigureGrazArgs => {
     walletConnect: args.walletConnect || prev.walletConnect,
     walletType: args.defaultWallet || prev.walletType,
     capsuleConfig: args.capsuleConfig || prev.capsuleConfig,
+    paraConfig: args.paraConfig || prev.paraConfig,
     walletDefaultOptions: args.walletDefaultOptions || prev.walletDefaultOptions,
     chains: args.chains,
     chainsConfig: args.chainsConfig || prev.chainsConfig,

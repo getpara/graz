@@ -12,6 +12,7 @@ import { getKeplr } from "./keplr";
 import { getLeap } from "./leap";
 import { getMetamaskSnapLeap } from "./leap-metamask-snap/leap";
 import { getOkx } from "./okx";
+import { getPara } from "./para";
 import { getStation } from "./station";
 import { getVectis } from "./vectis";
 import { getWalletConnect } from "./wallet-connect";
@@ -112,6 +113,9 @@ export const getWallet = (type: WalletType = useGrazInternalStore.getState().wal
       }
       case WalletType.OKX: {
         return getOkx();
+      }
+      case WalletType.PARA: {
+        return getPara();
       }
 
       default: {

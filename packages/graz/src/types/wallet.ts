@@ -25,6 +25,7 @@ export enum WalletType {
   COMPASS = "compass",
   INITIA = "initia",
   OKX = "okx",
+  PARA = "para",
 }
 
 export const WALLET_TYPES = [
@@ -46,6 +47,7 @@ export const WALLET_TYPES = [
   WalletType.COMPASS,
   WalletType.INITIA,
   WalletType.OKX,
+  WalletType.PARA,
 ];
 
 export type Wallet = Pick<
