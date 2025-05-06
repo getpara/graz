@@ -109,8 +109,9 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
         } else if (isLeapDappBrowser() && wallet.getKeys) {
           const allAccounts = await wallet.getKeys(chainIds);
           chainIds.forEach((chainId, index) => {
-            if (allAccounts[index]) {
-              resultAccounts[chainId] = allAccounts[index];
+            const account = allAccounts[index];
+            if (account) {
+              resultAccounts[chainId] = account;
             }
           });
         }
