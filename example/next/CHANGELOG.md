@@ -1,5 +1,12 @@
 # @project/example-next
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [1de0f39]
+  - graz@0.2.3
+
 ## 0.0.2
 
 ### Patch Changes
