@@ -6,7 +6,7 @@ import { grazSessionDefaultValues, useGrazInternalStore, useGrazSessionStore } f
 import type { Maybe } from "../types/core";
 import type { Key, WalletType } from "../types/wallet";
 import type { ChainId } from "../utils/multi-chain";
-import { checkWallet, getWallet, isCapsule, isLeapSnaps, isWalletConnect } from "./wallet";
+import { checkWallet, getWallet, isCapsule, isLeapDappBrowser, isLeapSnaps, isWalletConnect } from "./wallet";
 
 export type ConnectArgs = Maybe<{
   chainId: ChainId;
@@ -99,12 +99,21 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
     }
     if (!isWalletConnect(currentWalletType)) {
       let resultAccounts: Record<string, Key> = {};
-      if (chainIds.length > 1 && isLeapSnaps(currentWalletType)) {
-        const accounts: Record<string, Key> = {};
-        for await (const chainId of chainIds) {
-          accounts[chainId] = await wallet.getKey(chainId);
+      if (chainIds.length > 1) {
+        if (isLeapSnaps(currentWalletType)) {
+          const accounts: Record<string, Key> = {};
+          for await (const chainId of chainIds) {
+            accounts[chainId] = await wallet.getKey(chainId);
+          }
+          resultAccounts = accounts;
+        } else if (isLeapDappBrowser() && wallet.getKeys) {
+          const allAccounts = await wallet.getKeys(chainIds);
+          chainIds.forEach((chainId, index) => {
+            if (allAccounts[index]) {
+              resultAccounts[chainId] = allAccounts[index];
+            }
+          });
         }
-        resultAccounts = accounts;
       } else {
         resultAccounts = Object.fromEntries(
           await Promise.all(
