@@ -1,5 +1,11 @@
 # graz
 
+## 0.2.4
+
+### Patch Changes
+
+- 9240d0d: fixes build error
+
 ## 0.2.3
 
 ### Patch Changes
