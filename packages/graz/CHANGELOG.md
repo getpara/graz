@@ -1,5 +1,11 @@
 # graz
 
+## 0.2.5
+
+### Patch Changes
+
+- fa5d0fd: Fixes multi chain connect on non-snaps/dapp browser wallets - bug introduced in 0.2.3
+
 ## 0.2.4
 
 ### Patch Changes
