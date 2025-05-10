@@ -99,22 +99,20 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
     }
     if (!isWalletConnect(currentWalletType)) {
       let resultAccounts: Record<string, Key> = {};
-      if (chainIds.length > 1) {
-        if (isLeapSnaps(currentWalletType)) {
-          const accounts: Record<string, Key> = {};
-          for await (const chainId of chainIds) {
-            accounts[chainId] = await wallet.getKey(chainId);
-          }
-          resultAccounts = accounts;
-        } else if (isLeapDappBrowser() && wallet.getKeys) {
-          const allAccounts = await wallet.getKeys(chainIds);
-          chainIds.forEach((chainId, index) => {
-            const account = allAccounts[index];
-            if (account) {
-              resultAccounts[chainId] = account;
-            }
-          });
+      if (isLeapSnaps(currentWalletType)) {
+        const accounts: Record<string, Key> = {};
+        for await (const chainId of chainIds) {
+          accounts[chainId] = await wallet.getKey(chainId);
         }
+        resultAccounts = accounts;
+      } else if (isLeapDappBrowser() && wallet.getKeys) {
+        const allAccounts = await wallet.getKeys(chainIds);
+        chainIds.forEach((chainId, index) => {
+          const account = allAccounts[index];
+          if (account) {
+            resultAccounts[chainId] = account;
+          }
+        });
       } else {
         resultAccounts = Object.fromEntries(
           await Promise.all(
