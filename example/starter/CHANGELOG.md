@@ -1,5 +1,12 @@
 # @project/starter
 
+## 0.1.5
+
+### Patch Changes
+
+- Updated dependencies [fa5d0fd]
+  - graz@0.2.5
+
 ## 0.1.4
 
 ### Patch Changes
