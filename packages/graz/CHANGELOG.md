@@ -1,5 +1,11 @@
 # graz
 
+## 0.2.6
+
+### Patch Changes
+
+- cd65f2f: This PR enable user to update wallet that connected with wallet connect
+
 ## 0.2.5
 
 ### Patch Changes
