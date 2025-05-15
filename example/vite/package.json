@@ -1,6 +1,6 @@
 {
   "name": "@project/example-vite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "5.62.0",
+    "@getpara/graz-connector": "file:../../../web-sdk/packages/graz-connector",
     "graz": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
