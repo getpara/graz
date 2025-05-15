@@ -34,11 +34,7 @@ export interface SuggestChainArgs {
 
 export const suggestChain = async ({ chainInfo, walletType }: SuggestChainArgs): Promise<ChainInfo> => {
   const wallet = getWallet(walletType);
-  if (walletType === WalletType.CAPSULE) {
-    await connect({ chainId: chainInfo.chainId, walletType });
-  } else {
-    await wallet.experimentalSuggestChain(chainInfo);
-  }
+  await wallet.experimentalSuggestChain(chainInfo);
   return chainInfo;
 };
 

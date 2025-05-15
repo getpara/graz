@@ -1,5 +1,4 @@
 import type { ChainInfo, Keplr } from "@keplr-wallet/types";
-import type { CapsuleProvider } from "@leapwallet/cosmos-social-login-capsule-provider";
 import type { ISignClient, SignClientTypes } from "@walletconnect/types";
 import type { WalletConnectModalConfig } from "@walletconnect/modal";
 import { create } from "zustand";
@@ -9,7 +8,7 @@ import { persist, subscribeWithSelector } from "zustand/middleware";
 
 import type { Dictionary } from "../types/core";
 import { Key, WalletType } from "../types/wallet";
-import { ParaGrazConfig, ParaGrazInternalProvider } from "@getpara/graz-connector";
+import { ParaGrazConfig, ParaGrazConnector } from "@getpara/graz-connector";
 
 export interface ChainConfig {
   path?: string;
@@ -25,16 +24,6 @@ export interface WalletConnectStore {
     WalletConnectModalConfig,
     "themeVariables" | "themeMode" | "privacyPolicyUrl" | "termsOfServiceUrl"
   > | null;
-}
-
-export interface CapsuleConfig {
-  apiKey?: string;
-  env?: "DEV" | "SANDBOX" | "BETA" | "PROD";
-}
-
-export interface CapsuleState {
-  showModal: boolean;
-  chainId?: string[];
 }
 
 export interface IframeOptions {
@@ -54,9 +43,7 @@ export interface IframeOptions {
 
 export interface GrazInternalStore {
   recentChainIds: string[] | null;
-  capsuleConfig: CapsuleConfig | null;
-  capsuleState: CapsuleState | null;
-  paraConfig: ParaGrazConfig | null;
+  paraConfig: ParaGrazConfig | null | undefined;
   chains: ChainInfo[] | null;
   chainsConfig: Record<string, ChainConfig> | null;
   iframeOptions: IframeOptions | null;
@@ -79,8 +66,7 @@ export interface GrazSessionStore {
   activeChainIds: string[] | null;
   status: "connected" | "connecting" | "reconnecting" | "disconnected";
   wcSignClients: Map<WalletType, ISignClient>;
-  capsuleClient: CapsuleProvider | null;
-  paraConnector: ParaGrazInternalProvider | null;
+  paraConnector: ParaGrazConnector | null;
 }
 
 export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds">;
@@ -95,8 +81,6 @@ export const grazInternalDefaultValues: GrazInternalStore = {
   recentChainIds: null,
   chains: null,
   chainsConfig: null,
-  capsuleConfig: null,
-  capsuleState: null,
   paraConfig: null,
   multiChainFetchConcurrency: 3,
   walletType: WalletType.KEPLR,
@@ -116,7 +100,6 @@ export const grazSessionDefaultValues: GrazSessionStore = {
   activeChainIds: null,
   status: "disconnected",
   wcSignClients: new Map(),
-  capsuleClient: null,
   paraConnector: null,
 };
 
