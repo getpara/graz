@@ -1,47 +1,24 @@
-import {
-  WALLET_TYPES,
-  WalletType,
-  useConnect,
-  checkWallet,
-  useAccount,
-} from "graz";
-import { useEffect, useMemo } from "react";
+import { WalletType } from "graz";
+import { FC } from "react";
 import { WalletOption } from "./WalletOption";
 
 interface WalletModalProps {
   isOpen: boolean;
   onClose: () => void;
-  chainIds: string[];
+  installedWallets: WalletType[];
+  notInstalledWallets: WalletType[];
+  onSelectWallet: (walletType: WalletType) => void;
+  isConnecting: boolean;
 }
 
-export const WalletModal: React.FC<WalletModalProps> = ({
+export const WalletModal: FC<WalletModalProps> = ({
   isOpen,
   onClose,
-  chainIds,
+  installedWallets,
+  notInstalledWallets,
+  onSelectWallet,
+  isConnecting,
 }) => {
-  const { connect, isLoading, isSuccess } = useConnect({
-    onSuccess: () => onClose(),
-  });
-  const { isConnected } = useAccount();
-
-  const { installedWallets, notInstalledWallets } = useMemo(() => {
-    const installed: WalletType[] = [];
-    const notInstalled: WalletType[] = [];
-
-    WALLET_TYPES.forEach((walletType) =>
-      checkWallet(walletType) ? installed.push(walletType) : notInstalled.push(walletType),
-    );
-
-    return { installedWallets: installed, notInstalledWallets: notInstalled };
-  }, []);
-
-  useEffect(() => {
-    if (isOpen && isSuccess && isConnected) onClose();
-  }, [isOpen, isSuccess, isConnected, onClose]);
-
-  const handleWalletSelect = (walletType: WalletType) =>
-    connect({ chainId: chainIds, walletType });
-
   if (!isOpen) return null;
 
   return (
@@ -69,8 +46,9 @@ export const WalletModal: React.FC<WalletModalProps> = ({
                     <WalletOption
                       key={walletType}
                       walletType={walletType}
-                      onSelect={handleWalletSelect}
-                      isConnecting={isLoading}
+                      onSelect={onSelectWallet}
+                      isConnecting={isConnecting}
+                      isSupported={true}
                     />
                   ))}
                 </div>
@@ -85,8 +63,9 @@ export const WalletModal: React.FC<WalletModalProps> = ({
                     <WalletOption
                       key={walletType}
                       walletType={walletType}
-                      onSelect={handleWalletSelect}
-                      isConnecting={isLoading}
+                      onSelect={onSelectWallet}
+                      isConnecting={isConnecting}
+                      isSupported={false}
                     />
                   ))}
                 </div>

@@ -1,38 +1,32 @@
-import { useAccount, useActiveChains, useBalances } from "graz";
-import { useCallback } from "react";
+import { Key } from "graz";
+import { FC } from "react";
 
-export const AccountInfo: React.FC = () => {
-  const activeChains = useActiveChains();
-  const activeChainIds = activeChains?.map((c) => c.chainId);
+interface AccountInfoProps {
+  accounts: Record<string, Key | undefined>;
+  balances?: Record<string, any[]>;
+  isLoadingBalances: boolean;
+  truncateAddress: (addr: string) => string;
+  chainIds: string[];
+}
 
-  const { data: accounts, isConnected } = useAccount({
-    chainId: activeChainIds,
-    multiChain: true,
-  });
-
-  const { data: balances, isLoading: isLoadingBalances } = useBalances({
-    chainId: activeChainIds,
-    multiChain: true,
-  });
-
-  const truncate = useCallback(
-    (addr: string) => `${addr.slice(0, 8)}...${addr.slice(-4)}`,
-    [],
-  );
-
-  if (!isConnected || !activeChains || !accounts) return null;
-
+export const AccountInfo: FC<AccountInfoProps> = ({
+  accounts,
+  balances,
+  isLoadingBalances,
+  truncateAddress,
+  chainIds,
+}) => {
   return (
     <div className="account-info">
       <div className="multi-chain-grid">
-        {activeChains.map((chain) => {
-          const account = accounts[chain.chainId];
+        {chainIds.map((chainId) => {
+          const account = accounts[chainId];
           const address = account?.bech32Address ?? "";
-          const coins = balances?.[chain.chainId] ?? [];
+          const coins = balances?.[chainId] ?? [];
           return (
-            <div className="account-card" key={chain.chainId}>
+            <div className="account-card" key={chainId}>
               <div className="account-header">
-                <h4 className="chain-name">{chain.chainName}</h4>
+                <h4 className="chain-name">{chainId.split('-')[0]}</h4>
               </div>
               <div className="account-details">
                 <div className="info-row">
@@ -40,7 +34,7 @@ export const AccountInfo: React.FC = () => {
                   <span className="info-value address">
                     {address ? (
                       <>
-                        <code>{truncate(address)}</code>
+                        <code>{truncateAddress(address)}</code>
                         <button
                           className="copy-button"
                           onClick={() => navigator.clipboard.writeText(address)}

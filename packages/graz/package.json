@@ -42,8 +42,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@leapwallet/cosmos-social-login-capsule-provider": "^0.0.41",
-    "@getpara/graz-connector": "0.1.0-alpha.5",
+    "@getpara/graz-connector": "file:../../../web-sdk/packages/graz-connector",
     "@tanstack/react-query": ">=5.62.0",
     "react": ">=17"
   },

@@ -1,23 +1,19 @@
-import { checkWallet, WalletType } from "graz";
-import { useEffect, useState } from "react";
+import { WalletType } from "graz";
+import { FC } from "react";
 
 interface WalletOptionProps {
   walletType: WalletType;
   onSelect: (walletType: WalletType) => void;
   isConnecting: boolean;
+  isSupported: boolean;
 }
 
-export const WalletOption: React.FC<WalletOptionProps> = ({
+export const WalletOption: FC<WalletOptionProps> = ({
   walletType,
   onSelect,
   isConnecting,
+  isSupported,
 }) => {
-  const [isSupported, setIsSupported] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsSupported(checkWallet(walletType));
-  }, [walletType]);
-
   const formatWalletName = (type: WalletType) => {
     return type.charAt(0) + type.slice(1).toLowerCase();
   };
