@@ -363,7 +363,7 @@ export const getWalletConnect = (params?: GetWalletConnectParams): Wallet => {
     return {
       signed: {
         chainId: signed.chainId ?? "",
-        accountNumber: signed.accountNumber ? Long.fromString(signed.accountNumber) : new Long(0),
+        accountNumber: signed.accountNumber ? BigInt(signed.accountNumber) : BigInt(0),
         authInfoBytes: signed.authInfoBytes
           ? new Uint8Array(Buffer.from(signed.authInfoBytes, encoding))
           : new Uint8Array([]),

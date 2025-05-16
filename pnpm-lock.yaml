@@ -25,7 +25,7 @@ importers:
         version: 3.0.3
       tsup:
         specifier: ^7.2.0
-        version: 7.2.0(postcss@8.4.49)(typescript@5.2.2)
+        version: 7.2.0(postcss@8.5.3)(typescript@5.2.2)
       turbo:
         specifier: ^1.10.13
         version: 1.10.13
@@ -37,10 +37,10 @@ importers:
     dependencies:
       '@docusaurus/core':
         specifier: ^2.4.3
-        version: 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+        version: 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/preset-classic':
         specifier: ^2.4.3
-        version: 2.4.3(@algolia/client-search@4.17.1)(@types/react@18.2.21)(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+        version: 2.4.3(@algolia/client-search@4.17.1)(@types/react@18.2.21)(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@mdx-js/react':
         specifier: ^1.6.22
         version: 1.6.22(react@17.0.2)
@@ -80,7 +80,7 @@ importers:
         version: 11.11.0(@emotion/react@11.11.1(@types/react@18.2.21)(react@18.2.0))(@types/react@18.2.21)(react@18.2.0)
       '@leapwallet/cosmos-social-login-capsule-provider-ui':
         specifier: ^0.0.58
-        version: 0.0.58(@cosmjs/proto-signing@0.31.3)(@types/react-dom@18.2.7)(@types/react@18.2.21)(csstype@3.1.2)(osmojs@15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(react-dom@18.2.0(react@18.2.0))(stridejs@0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(tailwindcss@3.3.3)(zod@3.23.8)
+        version: 0.0.58(@cosmjs/proto-signing@0.33.1)(@types/react-dom@18.2.7)(@types/react@18.2.21)(csstype@3.1.2)(osmojs@15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(react-dom@18.2.0(react@18.2.0))(stridejs@0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(tailwindcss@3.3.3)(zod@3.23.8)
       '@tanstack/react-query':
         specifier: 5.62.0
         version: 5.62.0(react@18.2.0)
@@ -135,7 +135,7 @@ importers:
         version: 0.0.4(long@5.2.3)
       '@leapwallet/cosmos-social-login-capsule-provider-ui':
         specifier: ^0.0.58
-        version: 0.0.58(@cosmjs/proto-signing@0.31.3)(@types/react-dom@18.2.7)(@types/react@18.2.21)(csstype@3.1.2)(osmojs@15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(react-dom@18.2.0(react@18.2.0))(stridejs@0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(tailwindcss@3.3.3)(zod@3.23.8)
+        version: 0.0.58(@cosmjs/proto-signing@0.33.1)(@types/react-dom@18.2.7)(@types/react@18.2.21)(csstype@3.1.2)(osmojs@15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(react-dom@18.2.0(react@18.2.0))(stridejs@0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(tailwindcss@3.3.3)(zod@3.23.8)
       '@tanstack/react-query':
         specifier: 5.62.0
         version: 5.62.0(react@18.2.0)
@@ -226,29 +226,29 @@ importers:
   packages/graz:
     dependencies:
       '@cosmjs/amino':
-        specifier: 0.31.3
-        version: 0.31.3
+        specifier: 0.32.4
+        version: 0.32.4
       '@cosmjs/cosmwasm-stargate':
-        specifier: 0.31.3
-        version: 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: 0.32.4
+        version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/launchpad':
         specifier: 0.27.1
         version: 0.27.1
       '@cosmjs/proto-signing':
-        specifier: 0.31.3
-        version: 0.31.3
+        specifier: 0.32.4
+        version: 0.32.4
       '@cosmjs/stargate':
-        specifier: 0.31.3
-        version: 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: 0.32.4
+        version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/tendermint-rpc':
-        specifier: 0.31.3
-        version: 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: 0.32.4
+        version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmsnap/snapper':
         specifier: 0.1.29
         version: 0.1.29
       '@dao-dao/cosmiframe':
         specifier: 0.1.0
-        version: 0.1.0(@cosmjs/amino@0.31.3)(@cosmjs/proto-signing@0.31.3)
+        version: 0.1.0(@cosmjs/amino@0.32.4)(@cosmjs/proto-signing@0.32.4)
       '@keplr-wallet/cosmos':
         specifier: 0.12.156
         version: 0.12.156(starknet@6.11.0)
@@ -256,8 +256,8 @@ importers:
         specifier: 0.12.156
         version: 0.12.156(starknet@6.11.0)
       '@leapwallet/cosmos-social-login-capsule-provider':
-        specifier: ^0.0.41
-        version: 0.0.41(@cosmjs/encoding@0.32.4)(@cosmjs/proto-signing@0.31.3)(fp-ts@2.1.1)
+        specifier: ^0.0.44
+        version: 0.0.44(@cosmjs/encoding@0.33.1)(@cosmjs/proto-signing@0.32.4)(fp-ts@2.1.1)
       '@metamask/providers':
         specifier: 12.0.0
         version: 12.0.0
@@ -266,7 +266,7 @@ importers:
         version: 5.62.0(react@18.2.0)
       '@terra-money/station-connector':
         specifier: 1.1.0
-        version: 1.1.0(@cosmjs/amino@0.31.3)(@terra-money/feather.js@3.0.0-beta.2)(axios@1.6.8)
+        version: 1.1.0(@cosmjs/amino@0.32.4)(@terra-money/feather.js@3.0.0-beta.3)(axios@1.6.8)
       '@vectis/extension-client':
         specifier: ^0.7.2
         version: 0.7.2
@@ -275,7 +275,7 @@ importers:
         version: 2.7.0(@types/react@18.2.21)(react@18.2.0)
       '@walletconnect/sign-client':
         specifier: 2.17.2
-        version: 2.17.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        version: 2.17.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@walletconnect/types':
         specifier: 2.17.2
         version: 2.17.2
@@ -1059,6 +1059,10 @@ packages:
     resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/runtime@7.27.1':
+    resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/template@7.22.15':
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
     engines: {node: '>=6.9.0'}
@@ -1636,6 +1640,7 @@ packages:
 
   '@confio/ics23@0.6.8':
     resolution: {integrity: sha512-wB6uo+3A50m0sW/EWcU64xpV/8wShZ6bMTa7pF8eYsTrSkQA7oLUIJcs/wb8g4y2Oyq701BaGiO6n/ak5WXO1w==}
+    deprecated: Unmaintained. The codebase for this package was moved to https://github.com/cosmos/ics23 but then the JS implementation was removed in https://github.com/cosmos/ics23/pull/353. Please consult the maintainers of https://github.com/cosmos for further assistance.
 
   '@cosmjs/amino@0.27.1':
     resolution: {integrity: sha512-w56ar/nK9+qlvWDpBPRmD0Blk2wfkkLqRi1COs1x7Ll1LF0AtkIBUjbRKplENLbNovK0T3h+w8bHiFm+GBGQOA==}
@@ -1652,8 +1657,14 @@ packages:
   '@cosmjs/amino@0.31.3':
     resolution: {integrity: sha512-36emtUq895sPRX8PTSOnG+lhJDCVyIcE0Tr5ct59sUbgQiI14y43vj/4WAlJ/utSOxy+Zhj9wxcs4AZfu0BHsw==}
 
-  '@cosmjs/cosmwasm-stargate@0.31.3':
-    resolution: {integrity: sha512-Uv9TmCn3650gdFeZm7SEfUZF3uX3lfJfFhXOk6I2ZLr/FrKximnlb+vwAfZaZnWYvlA7qrKtHIjeRNHvT23zcw==}
+  '@cosmjs/amino@0.32.4':
+    resolution: {integrity: sha512-zKYOt6hPy8obIFtLie/xtygCkH9ZROiQ12UHfKsOkWaZfPQUvVbtgmu6R4Kn1tFLI/SRkw7eqhaogmW/3NYu/Q==}
+
+  '@cosmjs/amino@0.33.1':
+    resolution: {integrity: sha512-WfWiBf2EbIWpwKG9AOcsIIkR717SY+JdlXM/SL/bI66BdrhniAF+/ZNis9Vo9HF6lP2UU5XrSmFA4snAvEgdrg==}
+
+  '@cosmjs/cosmwasm-stargate@0.32.4':
+    resolution: {integrity: sha512-Fuo9BGEiB+POJ5WeRyBGuhyKR1ordvxZGLPuPosFJOH9U0gKMgcjwKMCgAlWFkMlHaTB+tNdA8AifWiHrI7VgA==}
 
   '@cosmjs/crypto@0.27.1':
     resolution: {integrity: sha512-vbcxwSt99tIYJg8Spp00wc3zx72qx+pY3ozGuBN8gAvySnagK9dQ/jHwtWQWdammmdD6oW+75WfIHZ+gNa+Ybg==}
@@ -1669,6 +1680,12 @@ packages:
 
   '@cosmjs/crypto@0.31.3':
     resolution: {integrity: sha512-vRbvM9ZKR2017TO73dtJ50KxoGcFzKtKI7C8iO302BQ5p+DuB+AirUg1952UpSoLfv5ki9O416MFANNg8UN/EQ==}
+
+  '@cosmjs/crypto@0.32.4':
+    resolution: {integrity: sha512-zicjGU051LF1V9v7bp8p7ovq+VyC91xlaHdsFOTo2oVry3KQikp8L/81RkXmUIT8FxMwdx1T7DmFwVQikcSDIw==}
+
+  '@cosmjs/crypto@0.33.1':
+    resolution: {integrity: sha512-U4kGIj/SNBzlb2FGgA0sMR0MapVgJUg8N+oIAiN5+vl4GZ3aefmoL1RDyTrFS/7HrB+M+MtHsxC0tvEu4ic/zA==}
 
   '@cosmjs/encoding@0.27.1':
     resolution: {integrity: sha512-rayLsA0ojHeniaRfWWcqSsrE/T1rl1gl0OXVNtXlPwLJifKBeLEefGbOUiAQaT0wgJ8VNGBazVtAZBpJidfDhw==}
@@ -1688,6 +1705,9 @@ packages:
   '@cosmjs/encoding@0.32.4':
     resolution: {integrity: sha512-tjvaEy6ZGxJchiizzTn7HVRiyTg1i4CObRRaTRPknm5EalE13SV+TCHq38gIDfyUeden4fCuaBVEdBR5+ti7Hw==}
 
+  '@cosmjs/encoding@0.33.1':
+    resolution: {integrity: sha512-nuNxf29fUcQE14+1p//VVQDwd1iau5lhaW/7uMz7V2AH3GJbFJoJVaKvVyZvdFk+Cnu+s3wCqgq4gJkhRCJfKw==}
+
   '@cosmjs/json-rpc@0.28.13':
     resolution: {integrity: sha512-fInSvg7x9P6p+GWqet+TMhrMTM3OWWdLJOGS5w2ryubMjgpR1rLiAx77MdTNkArW+/6sUwku0sN4veM4ENQu6A==}
 
@@ -1697,8 +1717,8 @@ packages:
   '@cosmjs/json-rpc@0.30.1':
     resolution: {integrity: sha512-pitfC/2YN9t+kXZCbNuyrZ6M8abnCC2n62m+JtU9vQUfaEtVsgy+1Fk4TRQ175+pIWSdBMFi2wT8FWVEE4RhxQ==}
 
-  '@cosmjs/json-rpc@0.31.3':
-    resolution: {integrity: sha512-7LVYerXjnm69qqYR3uA6LGCrBW2EO5/F7lfJxAmY+iII2C7xO3a0vAjMSt5zBBh29PXrJVS6c2qRP22W1Le2Wg==}
+  '@cosmjs/json-rpc@0.32.4':
+    resolution: {integrity: sha512-/jt4mBl7nYzfJ2J/VJ+r19c92mUKF0Lt0JxM3MXEJl7wlwW5haHAWtzRujHkyYMXOwIR+gBqT2S0vntXVBRyhQ==}
 
   '@cosmjs/launchpad@0.27.1':
     resolution: {integrity: sha512-DcFwGD/z5PK8CzO2sojDxa+Be9EIEtRZb2YawgVnw2Ht/p5FlNv+OVo8qlishpBdalXEN7FvQ1dVeDFEe9TuJw==}
@@ -1718,6 +1738,12 @@ packages:
   '@cosmjs/math@0.31.3':
     resolution: {integrity: sha512-kZ2C6glA5HDb9hLz1WrftAjqdTBb3fWQsRR+Us2HsjAYdeE6M3VdXMsYCP5M3yiihal1WDwAY2U7HmfJw7Uh4A==}
 
+  '@cosmjs/math@0.32.4':
+    resolution: {integrity: sha512-++dqq2TJkoB8zsPVYCvrt88oJWsy1vMOuSOKcdlnXuOA/ASheTJuYy4+oZlTQ3Fr8eALDLGGPhJI02W2HyAQaw==}
+
+  '@cosmjs/math@0.33.1':
+    resolution: {integrity: sha512-ytGkWdKFCPiiBU5eqjHNd59djPpIsOjbr2CkNjlnI1Zmdj+HDkSoD9MUGpz9/RJvRir5IvsXqdE05x8EtoQkJA==}
+
   '@cosmjs/proto-signing@0.28.13':
     resolution: {integrity: sha512-nSl/2ZLsUJYz3Ad0RY3ihZUgRHIow2OnYqKsESMu+3RA/jTi9bDYhiBu8mNMHI0xrEJry918B2CyI56pOUHdPQ==}
 
@@ -1730,6 +1756,12 @@ packages:
   '@cosmjs/proto-signing@0.31.3':
     resolution: {integrity: sha512-24+10/cGl6lLS4VCrGTCJeDRPQTn1K5JfknzXzDIHOx8THR31JxA7/HV5eWGHqWgAbudA7ccdSvEK08lEHHtLA==}
 
+  '@cosmjs/proto-signing@0.32.4':
+    resolution: {integrity: sha512-QdyQDbezvdRI4xxSlyM1rSVBO2st5sqtbEIl3IX03uJ7YiZIQHyv6vaHVf1V4mapusCqguiHJzm4N4gsFdLBbQ==}
+
+  '@cosmjs/proto-signing@0.33.1':
+    resolution: {integrity: sha512-Sv4W+MxX+0LVnd+2rU4Fw1HRsmMwSVSYULj7pRkij3wnPwUlTVoJjmKFgKz13ooIlfzPrz/dnNjGp/xnmXChFQ==}
+
   '@cosmjs/socket@0.28.13':
     resolution: {integrity: sha512-lavwGxQ5VdeltyhpFtwCRVfxeWjH5D5mmN7jgx9nuCf3XSFbTcOYxrk2pQ4usenu1Q1KZdL4Yl5RCNrJuHD9Ug==}
 
@@ -1739,8 +1771,8 @@ packages:
   '@cosmjs/socket@0.30.1':
     resolution: {integrity: sha512-r6MpDL+9N+qOS/D5VaxnPaMJ3flwQ36G+vPvYJsXArj93BjgyFB7BwWwXCQDzZ+23cfChPUfhbINOenr8N2Kow==}
 
-  '@cosmjs/socket@0.31.3':
-    resolution: {integrity: sha512-aqrDGGi7os/hsz5p++avI4L0ZushJ+ItnzbqA7C6hamFSCJwgOkXaOUs+K9hXZdX4rhY7rXO4PH9IH8q09JkTw==}
+  '@cosmjs/socket@0.32.4':
+    resolution: {integrity: sha512-davcyYziBhkzfXQTu1l5NrpDYv0K9GekZCC9apBRvL1dvMc9F/ygM7iemHjUA+z8tJkxKxrt/YPjJ6XNHzLrkw==}
 
   '@cosmjs/stargate@0.28.13':
     resolution: {integrity: sha512-dVBMazDz8/eActHsRcZjDHHptOBMqvibj5CFgEtZBp22gP6ASzoAUXTlkSVk5FBf4sfuUHoff6st134/+PGMAg==}
@@ -1751,8 +1783,8 @@ packages:
   '@cosmjs/stargate@0.30.1':
     resolution: {integrity: sha512-RdbYKZCGOH8gWebO7r6WvNnQMxHrNXInY/gPHPzMjbQF6UatA6fNM2G2tdgS5j5u7FTqlCI10stNXrknaNdzog==}
 
-  '@cosmjs/stargate@0.31.3':
-    resolution: {integrity: sha512-53NxnzmB9FfXpG4KjOUAYAvWLYKdEmZKsutcat/u2BrDXNZ7BN8jim/ENcpwXfs9/Og0K24lEIdvA4gsq3JDQw==}
+  '@cosmjs/stargate@0.32.4':
+    resolution: {integrity: sha512-usj08LxBSsPRq9sbpCeVdyLx2guEcOHfJS9mHGCLCXpdAPEIEQEtWLDpEUc0LEhWOx6+k/ChXTc5NpFkdrtGUQ==}
 
   '@cosmjs/stream@0.28.13':
     resolution: {integrity: sha512-AnjtfwT8NwPPkd3lhZhjOlOzT0Kn9bgEu2IPOZjQ1nmG2bplsr6TJmnwn0dJxHT7UGtex17h6whKB5N4wU37Wg==}
@@ -1763,8 +1795,8 @@ packages:
   '@cosmjs/stream@0.30.1':
     resolution: {integrity: sha512-Fg0pWz1zXQdoxQZpdHRMGvUH5RqS6tPv+j9Eh7Q953UjMlrwZVo0YFLC8OTf/HKVf10E4i0u6aM8D69Q6cNkgQ==}
 
-  '@cosmjs/stream@0.31.3':
-    resolution: {integrity: sha512-8keYyI7X0RjsLyVcZuBeNjSv5FA4IHwbFKx7H60NHFXszN8/MvXL6aZbNIvxtcIHHsW7K9QSQos26eoEWlAd+w==}
+  '@cosmjs/stream@0.32.4':
+    resolution: {integrity: sha512-Gih++NYHEiP+oyD4jNEUxU9antoC0pFSg+33Hpp0JlHwH0wXhtD3OOKnzSfDB7OIoEbrzLJUpEjOgpCp5Z+W3A==}
 
   '@cosmjs/tendermint-rpc@0.28.13':
     resolution: {integrity: sha512-GB+ZmfuJIGQm0hsRtLYjeR3lOxF7Z6XyCBR0cX5AAYOZzSEBJjevPgUHD6tLn8zIhvzxaW3/VKnMB+WmlxdH4w==}
@@ -1775,8 +1807,8 @@ packages:
   '@cosmjs/tendermint-rpc@0.30.1':
     resolution: {integrity: sha512-Z3nCwhXSbPZJ++v85zHObeUggrEHVfm1u18ZRwXxFE9ZMl5mXTybnwYhczuYOl7KRskgwlB+rID0WYACxj4wdQ==}
 
-  '@cosmjs/tendermint-rpc@0.31.3':
-    resolution: {integrity: sha512-s3TiWkPCW4QceTQjpYqn4xttUJH36mTPqplMl+qyocdqk5+X5mergzExU/pHZRWQ4pbby8bnR7kMvG4OC1aZ8g==}
+  '@cosmjs/tendermint-rpc@0.32.4':
+    resolution: {integrity: sha512-MWvUUno+4bCb/LmlMIErLypXxy7ckUuzEmpufYYYd9wgbdCXaTaO08SZzyFM5PI8UJ/0S2AmUrgWhldlbxO8mw==}
 
   '@cosmjs/utils@0.27.1':
     resolution: {integrity: sha512-VG7QPDiMUzVPxRdJahDV8PXxVdnuAHiIuG56hldV4yPnOz/si/DLNd7VAUUA5923b6jS1Hhev0Hr6AhEkcxBMg==}
@@ -1792,6 +1824,12 @@ packages:
 
   '@cosmjs/utils@0.31.3':
     resolution: {integrity: sha512-VBhAgzrrYdIe0O5IbKRqwszbQa7ZyQLx9nEQuHQ3HUplQW7P44COG/ye2n6AzCudtqxmwdX7nyX8ta1J07GoqA==}
+
+  '@cosmjs/utils@0.32.4':
+    resolution: {integrity: sha512-D1Yc+Zy8oL/hkUkFUL/bwxvuDBzRGpc4cF7/SkdhxX4iHpSLgdOuTt1mhCh9+kl6NQREy9t7SYZ6xeW5gFe60w==}
+
+  '@cosmjs/utils@0.33.1':
+    resolution: {integrity: sha512-UnLHDY6KMmC+UXf3Ufyh+onE19xzEXjT4VZ504Acmk4PXxqyvG4cCPprlKUFnGUX7f0z8Or9MAOHXBx41uHBcg==}
 
   '@cosmsnap/snapper@0.1.29':
     resolution: {integrity: sha512-pnCdpIJzezKSeRMZzIA9A/LZxpwvXjN8XZK3J8rlX5xrVPrYvETL0hC7KeAxnRle9LcwKqv+AwebrHrHQwpvEQ==}
@@ -2468,8 +2506,8 @@ packages:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
     engines: {node: '>=6.0.0'}
 
-  '@jridgewell/gen-mapping@0.3.5':
-    resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
+  '@jridgewell/gen-mapping@0.3.8':
+    resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
     engines: {node: '>=6.0.0'}
 
   '@jridgewell/resolve-uri@3.1.0':
@@ -2555,8 +2593,8 @@ packages:
   '@leapwallet/cosmos-social-login-capsule-provider-ui@0.0.58':
     resolution: {integrity: sha512-G42fhIoi55tfLzpq5qIGNfymHb84KKlz6/fdkkoppn6OQsd7YGSOqyQuz72NkB0fMqvsm0pQNfh3YEKwz9Q/Tw==}
 
-  '@leapwallet/cosmos-social-login-capsule-provider@0.0.41':
-    resolution: {integrity: sha512-bspkrnc/1FPI2EV0ssCxbySgGPj8+huj5Qesm4wuGJvbr4WDjb4QZZn7j3f7ZQXbGz3jYuc75TVCXcOCFHkDAQ==}
+  '@leapwallet/cosmos-social-login-capsule-provider@0.0.44':
+    resolution: {integrity: sha512-G5uexSTG2lY9HLfE0iBmifHuyegzGj+1MgZEwl5tsrKSxpDZAOl8Lp9WpKp81QWLrKtArsjF4PN9h927moIWhg==}
 
   '@leapwallet/cosmos-social-login-core@0.0.1':
     resolution: {integrity: sha512-hGJrBYR8CQAVvmOOCvK2RmZ5ykSjxueXZfsRBXGNFyBw6YEo2oRXedJ2g4X9MDAL7pqQ6ExkltTbSkr+ea2uKg==}
@@ -2755,6 +2793,10 @@ packages:
 
   '@noble/hashes@1.6.1':
     resolution: {integrity: sha512-pq5D8h10hHBjyqX+cfBm0i8JUXJ0UhczFc4r74zbuT9XgewFo2E3J1cOaGtdZynILNmQ685YWGzGE1Zv6io50w==}
+    engines: {node: ^14.21.3 || >=16}
+
+  '@noble/hashes@1.8.0':
+    resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
 
   '@noble/secp256k1@1.7.1':
@@ -3697,8 +3739,8 @@ packages:
   '@stablelib/x25519@1.0.3':
     resolution: {integrity: sha512-KnTbKmUhPhHavzobclVJQG5kuivH+qDLpe84iRqX3CLrKp881cF160JvXJ+hjn1aMyCwYOKeIZefIH/P5cJoRw==}
 
-  '@starknet-io/types-js@0.7.8':
-    resolution: {integrity: sha512-mjo2WPC/U88rGCjnkWDZ43zoByBGDIT20AZ0zd6hjFeAYu3wiuS1I6RiDb2vkF8f9BMCQ55VN3kuXCm6mjuQbw==}
+  '@starknet-io/types-js@0.7.10':
+    resolution: {integrity: sha512-1VtCqX4AHWJlRRSYGSn+4X1mqolI1Tdq62IwzoU2vUuEE72S1OlEeGhpvd6XsdqXcfHmVzYfj8k1XtKBQqwo9w==}
 
   '@svgr/babel-plugin-add-jsx-attribute@6.5.1':
     resolution: {integrity: sha512-9PYGcXrAxitycIjRmZB+Q0JaN07GZIWaTBIGQzfaZv+qr1n8X1XUEJ5rZ/vx6OVD9RRYlrNnXWExQXcmZeD/BQ==}
@@ -3793,8 +3835,8 @@ packages:
     peerDependencies:
       react: ^18 || ^19
 
-  '@terra-money/feather.js@3.0.0-beta.2':
-    resolution: {integrity: sha512-H048FhtK8G3lIPoVC0rN8Z+jUcJS44twXI+r7k1LY1K49MVUMArP6e7XqLiJONzBZCkEQE/W05F9ogCPrqMaHQ==}
+  '@terra-money/feather.js@3.0.0-beta.3':
+    resolution: {integrity: sha512-fjXXWO9LJgsV+KDRI92bio7HE5va2eLLzsWgq3uQ5aBM0RtTwrrcRu+l4YSPvcMSgZipQYFT0lTiBLz7ugGYEg==}
     engines: {node: '>=16'}
 
   '@terra-money/station-connector@1.1.0':
@@ -3922,6 +3964,9 @@ packages:
 
   '@types/node@18.17.15':
     resolution: {integrity: sha512-2yrWpBk32tvV/JAd3HNHWuZn/VDN1P+72hWirHnvsvTGSqbANi+kSeuQR9yAHnbvaBvHDsoTdXV0Fe+iRtHLKA==}
+
+  '@types/node@18.19.100':
+    resolution: {integrity: sha512-ojmMP8SZBKprc3qGrGk8Ujpo80AXkrP7G2tOT4VWr5jlr5DHjsJF+emXJz+Wm0glmy4Js62oKMdZZ6B9Y+tEcA==}
 
   '@types/node@18.19.65':
     resolution: {integrity: sha512-Ay5BZuO1UkTmVHzZJNvZKw/E+iB3GQABb6kijEz89w2JrfhNA+M/ebp18pfz9Gqe9ywhMC8AA8yC01lZq48J+Q==}
@@ -4261,8 +4306,8 @@ packages:
   '@zag-js/focus-visible@0.16.0':
     resolution: {integrity: sha512-a7U/HSopvQbrDU4GLerpqiMcHKEkQkNPeDZJWz38cw/6Upunh41GjHetq5TB84hxyCaDzJ6q2nEdNoBQfC0FKA==}
 
-  abi-wan-kanabi@2.2.3:
-    resolution: {integrity: sha512-JlqiAl9CPvTm5kKG0QXmVCWNWoC/XyRMOeT77cQlbxXWllgjf6SqUmaNqFon72C2o5OSZids+5FvLdsw6dvWaw==}
+  abi-wan-kanabi@2.2.4:
+    resolution: {integrity: sha512-0aA81FScmJCPX+8UvkXLki3X1+yPQuWxEkqXBVKltgPAK79J+NB+Lp5DouMXa7L6f+zcRlIA/6XO7BN/q9fnvg==}
     hasBin: true
 
   accepts@1.3.8:
@@ -4598,8 +4643,14 @@ packages:
   bn.js@4.12.1:
     resolution: {integrity: sha512-k8TVBiPkPJT9uHLdOKfFpqcfprwBFOAAXXozRubr7R7PfIuKvQlzcI4M0pALeqXN09vdaMbUdUj+pass+uULAg==}
 
+  bn.js@4.12.2:
+    resolution: {integrity: sha512-n4DSx829VRTRByMRGdjQ9iqsN0Bh4OolPsFnaZBLcbi8iXcB+kJ9s7EnRt4wILZNV3kPLHkRVfOc/HvhC3ovDw==}
+
   bn.js@5.2.1:
     resolution: {integrity: sha512-eXRvHzWyYPBuB4NBy0cmYQjGitUrtqwbvlzP3G6VFnNRbsZQIxQ10PbKKHt8gZ/HW/D/747aDl+QkDqg3KQLMQ==}
+
+  bn.js@5.2.2:
+    resolution: {integrity: sha512-v2YAxEmKaBLahNwE1mjp4WON6huMNeuDvagFZW+ASCuA/ku0bXR9hSMw0XpiqMoA3+rmnyck/tPRSFQkoC9Cuw==}
 
   body-parser@1.20.1:
     resolution: {integrity: sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==}
@@ -4698,8 +4749,8 @@ packages:
   buffer@6.0.3:
     resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
 
-  bufferutil@4.0.8:
-    resolution: {integrity: sha512-4T53u4PdgsXqKaIctwF8ifXlRTTmEPJ8iEPWFdGZvcf7sbwYo6FKFEX9eNNAnzFZ7EzJAQ3CJeOtCRA4rDp7Pw==}
+  bufferutil@4.0.9:
+    resolution: {integrity: sha512-WDtdLmJvAuNNPzByAYpRo2rF1Mmradw6gvWsQKf63476DDXmomT9zUiGypLcG4ibIM67vhAj8jJRdbmEws2Aqw==}
     engines: {node: '>=6.14.2'}
 
   builtin-modules@3.3.0:
@@ -4738,6 +4789,10 @@ packages:
   cacheable-request@6.1.0:
     resolution: {integrity: sha512-Oj3cAGPCqOZX7Rz64Uny2GYAZNliQSqfbePrgAQ1wKAihYmCUnraBtJtKcGR4xz7wF+LoJC+ssFZvv5BgF9Igg==}
     engines: {node: '>=8'}
+
+  call-bind-apply-helpers@1.0.2:
+    resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
+    engines: {node: '>= 0.4'}
 
   call-bind@1.0.7:
     resolution: {integrity: sha512-GHTSNSYICQ7scH7sZ+M2rFopRoLh8t2bLSW6BbgrtLsahOIB5iyAVJf9GjWK3cYTDaMj4XdBpM1cA6pIS0Kv2w==}
@@ -5077,6 +5132,9 @@ packages:
   cosmjs-types@0.8.0:
     resolution: {integrity: sha512-Q2Mj95Fl0PYMWEhA2LuGEIhipF7mQwd9gTQ85DdP9jjjopeoGaDxvmPa5nakNzsq7FnO1DMTatXTAx6bxMH7Lg==}
 
+  cosmjs-types@0.9.0:
+    resolution: {integrity: sha512-MN/yUe6mkJwHnCFfsNPeCfXVhyxHYW6c/xDUzrSbBycYzw++XvWDMJArXp2pLdgD6FQ8DW79vkPjeNKVrXaHeQ==}
+
   cosmos-directory-client@0.0.6:
     resolution: {integrity: sha512-WIdaQ8uW1vIbYvNnAVunkC6yxTrneJC7VQ5UUQ0kuw8b0C0A39KTIpoQHCfc8tV7o9vF4niwRhdXEdfAgQEsQQ==}
 
@@ -5255,8 +5313,8 @@ packages:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
 
-  decimal.js@10.4.3:
-    resolution: {integrity: sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==}
+  decimal.js@10.5.0:
+    resolution: {integrity: sha512-8vDa8Qxvr/+d94hSh5P3IJwI5t8/c0KsMp+g8bNw9cY2icONa5aPfvKeieW1WlG0WQYwwhJ7mjui2xtiePQSXw==}
 
   decode-uri-component@0.2.2:
     resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
@@ -5446,6 +5504,10 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
+  dunder-proto@1.0.1:
+    resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
+    engines: {node: '>= 0.4'}
+
   duplexer3@0.1.5:
     resolution: {integrity: sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==}
 
@@ -5522,6 +5584,10 @@ packages:
     resolution: {integrity: sha512-jxayLKShrEqqzJ0eumQbVhTYQM27CfT1T35+gCgDFoL82JLsXqTJ76zv6A0YLOgEnLUMvLzsDsGIrl8NFpT2gQ==}
     engines: {node: '>= 0.4'}
 
+  es-define-property@1.0.1:
+    resolution: {integrity: sha512-e3nRfgfUZ4rNGL232gUgX06QNyyez04KdjFrF+LTRoOXmrOgFKDg4BCdsjW8EnT69eqdYGmRpJwiPVYNrCaW3g==}
+    engines: {node: '>= 0.4'}
+
   es-errors@1.3.0:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
@@ -5532,8 +5598,16 @@ packages:
   es-module-lexer@1.2.1:
     resolution: {integrity: sha512-9978wrXM50Y4rTMmW5kXIC09ZdXQZqkE4mxhwkd8VbzsGkXGPgV4zWuqQJgCEzYngdo2dYDa0l8xhX4fkSwJSg==}
 
+  es-object-atoms@1.1.1:
+    resolution: {integrity: sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==}
+    engines: {node: '>= 0.4'}
+
   es-set-tostringtag@2.0.1:
     resolution: {integrity: sha512-g3OMbtlwY3QewlqAiMLI47KywjWZoEytKr8pf6iTC8uJq5bIAH52Z9pnQ8pVL6whrCto53JZDuUIsifGeLorTg==}
+    engines: {node: '>= 0.4'}
+
+  es-set-tostringtag@2.1.0:
+    resolution: {integrity: sha512-j6vWzfrGVfyXxge+O0x5sh6cvxAog0a/4Rdd2K36zCMV5eJ+/+tOAngRO8cODMNWbVRdVlmGZQL2YS3yR8bIUA==}
     engines: {node: '>= 0.4'}
 
   es-shim-unscopables@1.0.0:
@@ -5887,8 +5961,8 @@ packages:
     resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
     engines: {node: '>=8.6.0'}
 
-  fast-glob@3.3.2:
-    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
+  fast-glob@3.3.3:
+    resolution: {integrity: sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==}
     engines: {node: '>=8.6.0'}
 
   fast-json-stable-stringify@2.1.0:
@@ -5927,8 +6001,8 @@ packages:
     resolution: {integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==}
     engines: {node: '>=0.4.0'}
 
-  fetch-cookie@3.0.1:
-    resolution: {integrity: sha512-ZGXe8Y5Z/1FWqQ9q/CrJhkUD73DyBU9VF0hBQmEO/wPHe4A9PKTjplFDLeFX8aOsYypZUcX5Ji/eByn3VCVO3Q==}
+  fetch-cookie@3.1.0:
+    resolution: {integrity: sha512-s/XhhreJpqH0ftkGVcQt8JE9bqk+zRn4jF5mPJXWZeQMCI5odV9K+wEWYbnzFPHgQZlvPSMjS4n4yawWE8RINw==}
 
   file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -6019,8 +6093,8 @@ packages:
   for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
 
-  foreground-child@3.3.0:
-    resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
+  foreground-child@3.3.1:
+    resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
   fork-ts-checker-webpack-plugin@6.5.3:
@@ -6041,8 +6115,8 @@ packages:
     resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
     engines: {node: '>= 6'}
 
-  form-data@4.0.1:
-    resolution: {integrity: sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==}
+  form-data@4.0.2:
+    resolution: {integrity: sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w==}
     engines: {node: '>= 6'}
 
   forwarded@0.2.0:
@@ -6122,6 +6196,10 @@ packages:
     resolution: {integrity: sha512-5uYhsJH8VJBTv7oslg4BznJYhDoRI6waYCxMmCdnTrcCrHA/fCFKoTFz2JKKE0HdDFUF7/oQuhzumXJK7paBRQ==}
     engines: {node: '>= 0.4'}
 
+  get-intrinsic@1.3.0:
+    resolution: {integrity: sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ==}
+    engines: {node: '>= 0.4'}
+
   get-nonce@1.0.1:
     resolution: {integrity: sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==}
     engines: {node: '>=6'}
@@ -6131,6 +6209,10 @@ packages:
 
   get-port-please@3.1.2:
     resolution: {integrity: sha512-Gxc29eLs1fbn6LQ4jSU4vXjlwyZhF5HsGuMAa7gqBP4Rw4yxxltyDUuF5MBclFzDTXO+ACchGQoeela4DSfzdQ==}
+
+  get-proto@1.0.1:
+    resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
+    engines: {node: '>= 0.4'}
 
   get-starknet-core@4.0.0:
     resolution: {integrity: sha512-6pLmidQZkC3wZsrHY99grQHoGpuuXqkbSP65F8ov1/JsEI8DDLkhsAuLCKFzNOK56cJp+f1bWWfTJ57e9r5eqQ==}
@@ -6235,6 +6317,10 @@ packages:
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
 
+  gopd@1.2.0:
+    resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
+    engines: {node: '>= 0.4'}
+
   got@9.6.0:
     resolution: {integrity: sha512-R7eWptXuGYxwijs0eV+v3o6+XH1IqVK8dJOEecQfTmkncw9AV4dcw/Dhxi8MdlqPthxxpZyizMzyg8RTmEsG+Q==}
     engines: {node: '>=8.6'}
@@ -6281,8 +6367,16 @@ packages:
     resolution: {integrity: sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==}
     engines: {node: '>= 0.4'}
 
+  has-symbols@1.1.0:
+    resolution: {integrity: sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==}
+    engines: {node: '>= 0.4'}
+
   has-tostringtag@1.0.0:
     resolution: {integrity: sha512-kFjcSNhnlGV1kyoGk7OXKSawH5JOb/LzUc5w9B02hOTO0dfFRjbHQKvg1d6cf3HbeUmtU9VbbV3qzZ2Teh97WQ==}
+    engines: {node: '>= 0.4'}
+
+  has-tostringtag@1.0.2:
+    resolution: {integrity: sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw==}
     engines: {node: '>= 0.4'}
 
   has-yarn@2.1.0:
@@ -6576,8 +6670,8 @@ packages:
   is-core-module@2.13.0:
     resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
 
-  is-core-module@2.15.1:
-    resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==}
+  is-core-module@2.16.1:
+    resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==}
     engines: {node: '>= 0.4'}
 
   is-date-object@1.0.5:
@@ -6819,8 +6913,8 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
-  jiti@1.21.6:
-    resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
+  jiti@1.21.7:
+    resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
 
   jiti@2.4.0:
@@ -6965,8 +7059,14 @@ packages:
   libsodium-sumo@0.7.11:
     resolution: {integrity: sha512-bY+7ph7xpk51Ez2GbE10lXAQ5sJma6NghcIDaSPbM/G9elfrjLa0COHl/7P6Wb/JizQzl5UQontOOP1z0VwbLA==}
 
+  libsodium-sumo@0.7.15:
+    resolution: {integrity: sha512-5tPmqPmq8T8Nikpm1Nqj0hBHvsLFCXvdhBFV7SGOitQPZAA6jso8XoL0r4L7vmfKXr486fiQInvErHtEvizFMw==}
+
   libsodium-wrappers-sumo@0.7.11:
     resolution: {integrity: sha512-DGypHOmJbB1nZn89KIfGOAkDgfv5N6SBGC3Qvmy/On0P0WD1JQvNRS/e3UL3aFF+xC0m+MYz5M+MnRnK2HMrKQ==}
+
+  libsodium-wrappers-sumo@0.7.15:
+    resolution: {integrity: sha512-aSWY8wKDZh5TC7rMvEdTHoyppVq/1dTSAeAR7H6pzd6QRT3vQWcT5pGwCotLcpPEOLXX6VvqihSPkpEhYAjANA==}
 
   libsodium-wrappers@0.7.15:
     resolution: {integrity: sha512-E4anqJQwcfiC6+Yrl01C1m8p99wEhLmJSs0VQqST66SbQXXBoaJY0pF4BNjRYa/sOQAxx6lXAaAFIlx+15tXJQ==}
@@ -6978,8 +7078,8 @@ packages:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
 
-  lilconfig@3.1.2:
-    resolution: {integrity: sha512-eop+wDAvpItUys0FWkHIKeC9ybYrTGbU41U5K7+bttZZeohvnY7M9dZ5kB21GNWiFT2q1OoPTvncPCgSOVO5ow==}
+  lilconfig@3.1.3:
+    resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
     engines: {node: '>=14'}
 
   lines-and-columns@1.2.4:
@@ -7068,6 +7168,9 @@ packages:
   long@5.2.3:
     resolution: {integrity: sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q==}
 
+  long@5.3.2:
+    resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
+
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
@@ -7115,6 +7218,10 @@ packages:
 
   markdown-escapes@1.0.4:
     resolution: {integrity: sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==}
+
+  math-intrinsics@1.1.0:
+    resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
+    engines: {node: '>= 0.4'}
 
   md5.js@1.3.5:
     resolution: {integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==}
@@ -7281,6 +7388,11 @@ packages:
   nan@2.18.0:
     resolution: {integrity: sha512-W7tfG7vMOGtD30sHoZSSc/JVYiyDPEyQVso/Zz+/uQd0B0L46gtC+pHha5FFMRpil6fm/AoEcRWyOVi4+E/f8w==}
 
+  nanoid@3.3.11:
+    resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
   nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -7331,9 +7443,6 @@ packages:
   node-emoji@1.11.0:
     resolution: {integrity: sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==}
 
-  node-fetch-native@1.6.4:
-    resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
-
   node-fetch-native@1.6.6:
     resolution: {integrity: sha512-8Mc2HhqPdlIfedsuZoc3yioPuzp6b+L5jRCRY1QzuWZh2EGJVQrGppC6V6cF0bLdbW0+O2YpqCA25aF/1lvipQ==}
 
@@ -7349,10 +7458,6 @@ packages:
   node-forge@1.3.1:
     resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
     engines: {node: '>= 6.13.0'}
-
-  node-gyp-build@4.7.0:
-    resolution: {integrity: sha512-PbZERfeFdrHQOOXiAKOY0VPbykZy90ndPKk0d+CFDegTKmWp1VgOTz2xACVbr1BjCWxrQp68CXtvNsveFhqDJg==}
-    hasBin: true
 
   node-gyp-build@4.8.4:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
@@ -7695,8 +7800,8 @@ packages:
     resolution: {integrity: sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ==}
     engines: {node: '>= 6'}
 
-  pirates@4.0.6:
-    resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
+  pirates@4.0.7:
+    resolution: {integrity: sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==}
     engines: {node: '>= 6'}
 
   pkg-dir@4.2.0:
@@ -8009,8 +8114,8 @@ packages:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.4.49:
-    resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
+  postcss@8.5.3:
+    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -8074,10 +8179,6 @@ packages:
   property-information@5.6.0:
     resolution: {integrity: sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==}
 
-  protobufjs@6.11.3:
-    resolution: {integrity: sha512-xL96WDdCZYdU7Slin569tFX712BxsxslWwAfAhCYjQKGTq7dAU91Lomy6nLLhh/dyGhk/YH4TwTSRxTzhuHyZg==}
-    hasBin: true
-
   protobufjs@6.11.4:
     resolution: {integrity: sha512-5kQWPaJHi1WoCpjTGszzQ32PG2F4+wRY6BmAT4Vfw56Q2FZ4YZzK20xUYQH4YkfehY1e6QSICrJquM6xXZNcrw==}
     hasBin: true
@@ -8096,9 +8197,6 @@ packages:
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
-  psl@1.13.0:
-    resolution: {integrity: sha512-BFwmFXiJoFqlUpZ5Qssolv15DMyc84gTBds1BjsV1BfXEo1UyyD7GsmN67n7J77uRhoSNW1AXtXKPLcBFQn9Aw==}
-
   public-encrypt@4.0.3:
     resolution: {integrity: sha512-zVpa8oKZSz5bTMTFClc1fQOnyyEzpl5ozpi1B5YcvBrdohMjH2rfsBtyXcuNuwjsDIXmBYlF2N5FlJYhR29t8Q==}
 
@@ -8110,10 +8208,6 @@ packages:
 
   punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
-    engines: {node: '>=6'}
-
-  punycode@2.3.1:
-    resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
   pupa@2.1.1:
@@ -8156,9 +8250,6 @@ packages:
   querystring-es3@0.2.1:
     resolution: {integrity: sha512-773xhDQnZBMFobEiztv8LIl70ch5MSF/jUQVlhwFyBILqq96anmoctVIYz+ZRp0qbCKATTn6ev02M3r7Ga5vqA==}
     engines: {node: '>=0.4.x'}
-
-  querystringify@2.2.0:
-    resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -8512,16 +8603,17 @@ packages:
   resolve@1.19.0:
     resolution: {integrity: sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==}
 
+  resolve@1.22.10:
+    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
+    engines: {node: '>= 0.4'}
+    hasBin: true
+
   resolve@1.22.2:
     resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
     hasBin: true
 
   resolve@1.22.4:
     resolution: {integrity: sha512-PXNdCiPqDqeUou+w1C2eTQbNfxKSuMxqTCuvlmmMsk1NWHL5fRrhY6Pl0qEYYc6+QqGClco1Qj8XnjPego4wfg==}
-    hasBin: true
-
-  resolve@1.22.8:
-    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
 
   resolve@2.0.0-next.4:
@@ -9128,6 +9220,13 @@ packages:
     resolution: {integrity: sha512-KxVu8EYHDPBdUYdKZdKtU2aj2XfEx9AfjXxE/Aj0vT06w2icA09Vus1rh6eSu1y01akYg6BjIK/hxyLJINoMLQ==}
     engines: {node: '>=12'}
 
+  tldts-core@6.1.86:
+    resolution: {integrity: sha512-Je6p7pkk+KMzMv2XXKmAE3McmolOQFdxkKw0R8EYNr7sELW46JqnNeTX8ybPiQgvg1ymCoF8LXs5fzFaZvJPTA==}
+
+  tldts@6.1.86:
+    resolution: {integrity: sha512-WMi/OQ2axVTf/ykqCQgXiIct+mSQDFdH2fkwhPwgEwvJ1kSzZRiinb0zF2Xb8u4+OqPChmyI6MEu4EezNJz+FQ==}
+    hasBin: true
+
   tmp@0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
@@ -9159,9 +9258,9 @@ packages:
     resolution: {integrity: sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==}
     engines: {node: '>=6'}
 
-  tough-cookie@4.1.4:
-    resolution: {integrity: sha512-Loo5UUvLD9ScZ6jh8beX1T6sO1w2/MpCRpEP7V280GKMVUQ0Jzar2U3UJPsrdbziLEMMhu3Ujnq//rhiFuIeag==}
-    engines: {node: '>=6'}
+  tough-cookie@5.1.2:
+    resolution: {integrity: sha512-FVDYdxtnj0G6Qm/DhNPSb8Ju59ULcup3tuJxkFb5K8Bv2pUXILbf0xZWU8PX8Ov19OXljbUyveOFwRMwkXzO+A==}
+    engines: {node: '>=16'}
 
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
@@ -9403,10 +9502,6 @@ packages:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
 
-  universalify@0.2.0:
-    resolution: {integrity: sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==}
-    engines: {node: '>= 4.0.0'}
-
   universalify@2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
@@ -9499,9 +9594,6 @@ packages:
   url-parse-lax@3.0.0:
     resolution: {integrity: sha512-NjFKA0DidqPa5ciFcSrXnAltTtzz84ogy+NebPvfEgAck0+TNg4UJ4IN+fB7zRZfbgUf0syOo9MDxFkDSMuFaQ==}
     engines: {node: '>=4'}
-
-  url-parse@1.5.10:
-    resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
 
   url-set-query@1.0.0:
     resolution: {integrity: sha512-3AChu4NiXquPfeckE5R5cGdiHCMWJx1dwCWOmWIL4KHAziJNOFIYJlpGFeKDvwLPHovZRCxK3cYlwzqI9Vp+Gg==}
@@ -9907,9 +9999,9 @@ packages:
     resolution: {integrity: sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==}
     engines: {node: '>= 14'}
 
-  yaml@2.6.1:
-    resolution: {integrity: sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==}
-    engines: {node: '>= 14'}
+  yaml@2.8.0:
+    resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
+    engines: {node: '>= 14.6'}
     hasBin: true
 
   yargs-parser@18.1.3:
@@ -10907,6 +10999,8 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
+  '@babel/runtime@7.27.1': {}
+
   '@babel/template@7.22.15':
     dependencies:
       '@babel/code-frame': 7.22.13
@@ -10952,7 +11046,7 @@ snapshots:
       '@types/ethereumjs-util': 5.2.0
       '@types/node': 10.12.18
       bignumber.js: 9.1.2
-      elliptic: 6.6.0
+      elliptic: 6.6.1
       ethereumjs-util: 5.2.1
       io-ts: 2.0.1(fp-ts@2.1.1)
       web3-eth-abi: 1.3.6
@@ -11879,18 +11973,31 @@ snapshots:
       '@cosmjs/math': 0.31.3
       '@cosmjs/utils': 0.31.3
 
-  '@cosmjs/cosmwasm-stargate@0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/amino@0.32.4':
     dependencies:
-      '@cosmjs/amino': 0.31.3
-      '@cosmjs/crypto': 0.31.3
-      '@cosmjs/encoding': 0.31.3
-      '@cosmjs/math': 0.31.3
-      '@cosmjs/proto-signing': 0.31.3
-      '@cosmjs/stargate': 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@cosmjs/tendermint-rpc': 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@cosmjs/utils': 0.31.3
-      cosmjs-types: 0.8.0
-      long: 4.0.0
+      '@cosmjs/crypto': 0.32.4
+      '@cosmjs/encoding': 0.32.4
+      '@cosmjs/math': 0.32.4
+      '@cosmjs/utils': 0.32.4
+
+  '@cosmjs/amino@0.33.1':
+    dependencies:
+      '@cosmjs/crypto': 0.33.1
+      '@cosmjs/encoding': 0.33.1
+      '@cosmjs/math': 0.33.1
+      '@cosmjs/utils': 0.33.1
+
+  '@cosmjs/cosmwasm-stargate@0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@cosmjs/amino': 0.32.4
+      '@cosmjs/crypto': 0.32.4
+      '@cosmjs/encoding': 0.32.4
+      '@cosmjs/math': 0.32.4
+      '@cosmjs/proto-signing': 0.32.4
+      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/utils': 0.32.4
+      cosmjs-types: 0.9.0
       pako: 2.1.0
     transitivePeerDependencies:
       - bufferutil
@@ -11915,8 +12022,8 @@ snapshots:
       '@cosmjs/encoding': 0.28.13
       '@cosmjs/math': 0.28.13
       '@cosmjs/utils': 0.28.13
-      '@noble/hashes': 1.6.1
-      bn.js: 5.2.1
+      '@noble/hashes': 1.8.0
+      bn.js: 5.2.2
       elliptic: 6.6.1
       libsodium-wrappers: 0.7.15
 
@@ -11925,8 +12032,8 @@ snapshots:
       '@cosmjs/encoding': 0.29.5
       '@cosmjs/math': 0.29.5
       '@cosmjs/utils': 0.29.5
-      '@noble/hashes': 1.6.1
-      bn.js: 5.2.1
+      '@noble/hashes': 1.8.0
+      bn.js: 5.2.2
       elliptic: 6.6.1
       libsodium-wrappers: 0.7.15
 
@@ -11935,8 +12042,8 @@ snapshots:
       '@cosmjs/encoding': 0.30.1
       '@cosmjs/math': 0.30.1
       '@cosmjs/utils': 0.30.1
-      '@noble/hashes': 1.6.1
-      bn.js: 5.2.1
+      '@noble/hashes': 1.8.0
+      bn.js: 5.2.2
       elliptic: 6.6.1
       libsodium-wrappers: 0.7.15
 
@@ -11949,6 +12056,26 @@ snapshots:
       bn.js: 5.2.1
       elliptic: 6.6.1
       libsodium-wrappers-sumo: 0.7.11
+
+  '@cosmjs/crypto@0.32.4':
+    dependencies:
+      '@cosmjs/encoding': 0.32.4
+      '@cosmjs/math': 0.32.4
+      '@cosmjs/utils': 0.32.4
+      '@noble/hashes': 1.6.1
+      bn.js: 5.2.1
+      elliptic: 6.6.1
+      libsodium-wrappers-sumo: 0.7.11
+
+  '@cosmjs/crypto@0.33.1':
+    dependencies:
+      '@cosmjs/encoding': 0.33.1
+      '@cosmjs/math': 0.33.1
+      '@cosmjs/utils': 0.33.1
+      '@noble/hashes': 1.8.0
+      bn.js: 5.2.2
+      elliptic: 6.6.1
+      libsodium-wrappers-sumo: 0.7.15
 
   '@cosmjs/encoding@0.27.1':
     dependencies:
@@ -11986,6 +12113,12 @@ snapshots:
       bech32: 1.1.4
       readonly-date: 1.0.0
 
+  '@cosmjs/encoding@0.33.1':
+    dependencies:
+      base64-js: 1.5.1
+      bech32: 1.1.4
+      readonly-date: 1.0.0
+
   '@cosmjs/json-rpc@0.28.13':
     dependencies:
       '@cosmjs/stream': 0.28.13
@@ -12001,9 +12134,9 @@ snapshots:
       '@cosmjs/stream': 0.30.1
       xstream: 11.14.0
 
-  '@cosmjs/json-rpc@0.31.3':
+  '@cosmjs/json-rpc@0.32.4':
     dependencies:
-      '@cosmjs/stream': 0.31.3
+      '@cosmjs/stream': 0.32.4
       xstream: 11.14.0
 
   '@cosmjs/launchpad@0.27.1':
@@ -12024,19 +12157,27 @@ snapshots:
 
   '@cosmjs/math@0.28.13':
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
 
   '@cosmjs/math@0.29.5':
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
 
   '@cosmjs/math@0.30.1':
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
 
   '@cosmjs/math@0.31.3':
     dependencies:
       bn.js: 5.2.1
+
+  '@cosmjs/math@0.32.4':
+    dependencies:
+      bn.js: 5.2.1
+
+  '@cosmjs/math@0.33.1':
+    dependencies:
+      bn.js: 5.2.2
 
   '@cosmjs/proto-signing@0.28.13':
     dependencies:
@@ -12078,47 +12219,65 @@ snapshots:
       cosmjs-types: 0.8.0
       long: 4.0.0
 
-  '@cosmjs/socket@0.28.13(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/proto-signing@0.32.4':
+    dependencies:
+      '@cosmjs/amino': 0.32.4
+      '@cosmjs/crypto': 0.32.4
+      '@cosmjs/encoding': 0.32.4
+      '@cosmjs/math': 0.32.4
+      '@cosmjs/utils': 0.32.4
+      cosmjs-types: 0.9.0
+
+  '@cosmjs/proto-signing@0.33.1':
+    dependencies:
+      '@cosmjs/amino': 0.33.1
+      '@cosmjs/crypto': 0.33.1
+      '@cosmjs/encoding': 0.33.1
+      '@cosmjs/math': 0.33.1
+      '@cosmjs/utils': 0.33.1
+      cosmjs-types: 0.9.0
+
+  '@cosmjs/socket@0.28.13(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/stream': 0.28.13
-      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       xstream: 11.14.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@cosmjs/socket@0.29.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/socket@0.29.5(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/stream': 0.29.5
-      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       xstream: 11.14.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@cosmjs/socket@0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/socket@0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/stream': 0.30.1
-      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       xstream: 11.14.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@cosmjs/socket@0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/socket@0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@cosmjs/stream': 0.31.3
-      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/stream': 0.32.4
+      isomorphic-ws: 4.0.1(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       xstream: 11.14.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@cosmjs/stargate@0.28.13(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/stargate@0.28.13(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@confio/ics23': 0.6.8
       '@cosmjs/amino': 0.28.13
@@ -12126,7 +12285,7 @@ snapshots:
       '@cosmjs/math': 0.28.13
       '@cosmjs/proto-signing': 0.28.13
       '@cosmjs/stream': 0.28.13
-      '@cosmjs/tendermint-rpc': 0.28.13(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.28.13(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/utils': 0.28.13
       cosmjs-types: 0.4.1
       long: 4.0.0
@@ -12137,7 +12296,7 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@cosmjs/stargate@0.29.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/stargate@0.29.3(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@confio/ics23': 0.6.8
       '@cosmjs/amino': 0.29.3
@@ -12145,7 +12304,7 @@ snapshots:
       '@cosmjs/math': 0.29.5
       '@cosmjs/proto-signing': 0.29.3
       '@cosmjs/stream': 0.29.5
-      '@cosmjs/tendermint-rpc': 0.29.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.29.5(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/utils': 0.29.5
       cosmjs-types: 0.5.2
       long: 4.0.0
@@ -12156,7 +12315,7 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@cosmjs/stargate@0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/stargate@0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@confio/ics23': 0.6.8
       '@cosmjs/amino': 0.30.1
@@ -12164,7 +12323,7 @@ snapshots:
       '@cosmjs/math': 0.30.1
       '@cosmjs/proto-signing': 0.30.1
       '@cosmjs/stream': 0.30.1
-      '@cosmjs/tendermint-rpc': 0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/utils': 0.30.1
       cosmjs-types: 0.7.2
       long: 4.0.0
@@ -12175,19 +12334,17 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@cosmjs/stargate@0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/stargate@0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@confio/ics23': 0.6.8
-      '@cosmjs/amino': 0.31.3
-      '@cosmjs/encoding': 0.31.3
-      '@cosmjs/math': 0.31.3
-      '@cosmjs/proto-signing': 0.31.3
-      '@cosmjs/stream': 0.31.3
-      '@cosmjs/tendermint-rpc': 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@cosmjs/utils': 0.31.3
-      cosmjs-types: 0.8.0
-      long: 4.0.0
-      protobufjs: 6.11.4
+      '@cosmjs/amino': 0.32.4
+      '@cosmjs/encoding': 0.32.4
+      '@cosmjs/math': 0.32.4
+      '@cosmjs/proto-signing': 0.32.4
+      '@cosmjs/stream': 0.32.4
+      '@cosmjs/tendermint-rpc': 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/utils': 0.32.4
+      cosmjs-types: 0.9.0
       xstream: 11.14.0
     transitivePeerDependencies:
       - bufferutil
@@ -12206,17 +12363,17 @@ snapshots:
     dependencies:
       xstream: 11.14.0
 
-  '@cosmjs/stream@0.31.3':
+  '@cosmjs/stream@0.32.4':
     dependencies:
       xstream: 11.14.0
 
-  '@cosmjs/tendermint-rpc@0.28.13(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/tendermint-rpc@0.28.13(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/crypto': 0.28.13
       '@cosmjs/encoding': 0.28.13
       '@cosmjs/json-rpc': 0.28.13
       '@cosmjs/math': 0.28.13
-      '@cosmjs/socket': 0.28.13(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/socket': 0.28.13(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/stream': 0.28.13
       '@cosmjs/utils': 0.28.13
       axios: 0.21.4
@@ -12227,13 +12384,13 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@cosmjs/tendermint-rpc@0.29.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/tendermint-rpc@0.29.5(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/crypto': 0.29.5
       '@cosmjs/encoding': 0.29.5
       '@cosmjs/json-rpc': 0.29.5
       '@cosmjs/math': 0.29.5
-      '@cosmjs/socket': 0.29.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/socket': 0.29.5(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/stream': 0.29.5
       '@cosmjs/utils': 0.29.5
       axios: 0.21.4
@@ -12244,13 +12401,13 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@cosmjs/tendermint-rpc@0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/tendermint-rpc@0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/crypto': 0.30.1
       '@cosmjs/encoding': 0.30.1
       '@cosmjs/json-rpc': 0.30.1
       '@cosmjs/math': 0.30.1
-      '@cosmjs/socket': 0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/socket': 0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmjs/stream': 0.30.1
       '@cosmjs/utils': 0.30.1
       axios: 0.21.4
@@ -12261,16 +12418,16 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@cosmjs/tendermint-rpc@0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@cosmjs/tendermint-rpc@0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@cosmjs/crypto': 0.31.3
-      '@cosmjs/encoding': 0.31.3
-      '@cosmjs/json-rpc': 0.31.3
-      '@cosmjs/math': 0.31.3
-      '@cosmjs/socket': 0.31.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@cosmjs/stream': 0.31.3
-      '@cosmjs/utils': 0.31.3
-      axios: 0.21.4
+      '@cosmjs/crypto': 0.32.4
+      '@cosmjs/encoding': 0.32.4
+      '@cosmjs/json-rpc': 0.32.4
+      '@cosmjs/math': 0.32.4
+      '@cosmjs/socket': 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/stream': 0.32.4
+      '@cosmjs/utils': 0.32.4
+      axios: 1.6.8
       readonly-date: 1.0.0
       xstream: 11.14.0
     transitivePeerDependencies:
@@ -12288,16 +12445,20 @@ snapshots:
 
   '@cosmjs/utils@0.31.3': {}
 
+  '@cosmjs/utils@0.32.4': {}
+
+  '@cosmjs/utils@0.33.1': {}
+
   '@cosmsnap/snapper@0.1.29':
     dependencies:
       '@keplr-wallet/proto-types': 0.12.12
       '@keplr-wallet/types': 0.12.12
       ses: 0.18.4
 
-  '@dao-dao/cosmiframe@0.1.0(@cosmjs/amino@0.31.3)(@cosmjs/proto-signing@0.31.3)':
+  '@dao-dao/cosmiframe@0.1.0(@cosmjs/amino@0.32.4)(@cosmjs/proto-signing@0.32.4)':
     dependencies:
-      '@cosmjs/amino': 0.31.3
-      '@cosmjs/proto-signing': 0.31.3
+      '@cosmjs/amino': 0.32.4
+      '@cosmjs/proto-signing': 0.32.4
       uuid: 9.0.1
 
   '@discoveryjs/json-ext@0.5.7': {}
@@ -12317,7 +12478,7 @@ snapshots:
     transitivePeerDependencies:
       - '@algolia/client-search'
 
-  '@docusaurus/core@2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/core@2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/core': 7.22.15
       '@babel/generator': 7.22.15
@@ -12388,8 +12549,8 @@ snapshots:
       url-loader: 4.1.1(file-loader@6.2.0(webpack@5.83.1(esbuild@0.18.4)))(webpack@5.83.1(esbuild@0.18.4))
       wait-on: 6.0.1
       webpack: 5.83.1(esbuild@0.18.4)
-      webpack-bundle-analyzer: 4.8.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      webpack-dev-server: 4.15.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)(webpack@5.83.1(esbuild@0.18.4))
+      webpack-bundle-analyzer: 4.8.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      webpack-dev-server: 4.15.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)(webpack@5.83.1(esbuild@0.18.4))
       webpack-merge: 5.9.0
       webpackbar: 5.0.2(webpack@5.83.1(esbuild@0.18.4))
     transitivePeerDependencies:
@@ -12469,9 +12630,9 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@docusaurus/plugin-content-blog@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-content-blog@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/logger': 2.4.3
       '@docusaurus/mdx-loader': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -12506,9 +12667,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-content-docs@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-content-docs@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/logger': 2.4.3
       '@docusaurus/mdx-loader': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/module-type-aliases': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -12543,9 +12704,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-content-pages@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-content-pages@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/mdx-loader': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
@@ -12572,9 +12733,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-debug@2.4.3(@types/react@18.2.21)(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-debug@2.4.3(@types/react@18.2.21)(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
       fs-extra: 10.1.0
@@ -12601,9 +12762,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-google-analytics@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-google-analytics@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils-validation': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
       react: 17.0.2
@@ -12626,9 +12787,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-google-gtag@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-google-gtag@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils-validation': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
       react: 17.0.2
@@ -12651,9 +12812,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-google-tag-manager@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-google-tag-manager@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils-validation': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
       react: 17.0.2
@@ -12676,9 +12837,9 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/plugin-sitemap@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/plugin-sitemap@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/logger': 2.4.3
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
@@ -12706,20 +12867,20 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/preset-classic@2.4.3(@algolia/client-search@4.17.1)(@types/react@18.2.21)(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/preset-classic@2.4.3(@algolia/client-search@4.17.1)(@types/react@18.2.21)(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-blog': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-pages': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-debug': 2.4.3(@types/react@18.2.21)(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-google-analytics': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-google-gtag': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-google-tag-manager': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-sitemap': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/theme-classic': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/theme-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/theme-search-algolia': 2.4.3(@algolia/client-search@4.17.1)(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(@types/react@18.2.21)(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-blog': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-pages': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-debug': 2.4.3(@types/react@18.2.21)(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-google-analytics': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-google-gtag': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-google-tag-manager': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-sitemap': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/theme-classic': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/theme-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/theme-search-algolia': 2.4.3(@algolia/client-search@4.17.1)(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(@types/react@18.2.21)(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
@@ -12749,15 +12910,15 @@ snapshots:
       prop-types: 15.8.1
       react: 17.0.2
 
-  '@docusaurus/theme-classic@2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/theme-classic@2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/mdx-loader': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/module-type-aliases': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@docusaurus/plugin-content-blog': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-pages': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/theme-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-blog': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-pages': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/theme-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/theme-translations': 2.4.3
       '@docusaurus/types': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
@@ -12795,13 +12956,13 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/theme-common@2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/theme-common@2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@docusaurus/mdx-loader': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@docusaurus/module-type-aliases': 2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@docusaurus/plugin-content-blog': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/plugin-content-pages': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-blog': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-pages': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
       '@docusaurus/utils-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))
       '@types/history': 4.7.11
@@ -12833,13 +12994,13 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@docusaurus/theme-search-algolia@2.4.3(@algolia/client-search@4.17.1)(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(@types/react@18.2.21)(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
+  '@docusaurus/theme-search-algolia@2.4.3(@algolia/client-search@4.17.1)(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(@types/react@18.2.21)(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)':
     dependencies:
       '@docsearch/react': 3.3.5(@algolia/client-search@4.17.1)(@types/react@18.2.21)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/core': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/logger': 2.4.3
-      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
-      '@docusaurus/theme-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.8)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/plugin-content-docs': 2.4.3(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
+      '@docusaurus/theme-common': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(bufferutil@4.0.9)(esbuild@0.18.4)(eslint@8.49.0)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)(typescript@5.2.2)(utf-8-validate@5.0.10)
       '@docusaurus/theme-translations': 2.4.3
       '@docusaurus/utils': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
       '@docusaurus/utils-validation': 2.4.3(@docusaurus/types@2.4.3(esbuild@0.18.4)(react-dom@17.0.2(react@17.0.2))(react@17.0.2))(esbuild@0.18.4)
@@ -13463,7 +13624,7 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.4.15
       '@jridgewell/trace-mapping': 0.3.18
 
-  '@jridgewell/gen-mapping@0.3.5':
+  '@jridgewell/gen-mapping@0.3.8':
     dependencies:
       '@jridgewell/set-array': 1.2.1
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -13526,14 +13687,14 @@ snapshots:
       bech32: 1.1.4
       buffer: 6.0.3
       long: 4.0.0
-      protobufjs: 6.11.3
+      protobufjs: 6.11.4
     transitivePeerDependencies:
       - starknet
 
   '@keplr-wallet/crypto@0.12.156(starknet@6.11.0)':
     dependencies:
       '@noble/curves': 1.7.0
-      '@noble/hashes': 1.5.0
+      '@noble/hashes': 1.6.1
       bip32: 2.0.6
       bip39: 3.1.0
       bs58check: 2.1.2
@@ -13543,12 +13704,12 @@ snapshots:
   '@keplr-wallet/proto-types@0.12.12':
     dependencies:
       long: 4.0.0
-      protobufjs: 6.11.3
+      protobufjs: 6.11.4
 
   '@keplr-wallet/proto-types@0.12.156':
     dependencies:
       long: 4.0.0
-      protobufjs: 6.11.3
+      protobufjs: 6.11.4
 
   '@keplr-wallet/simple-fetch@0.12.156': {}
 
@@ -13569,23 +13730,23 @@ snapshots:
     transitivePeerDependencies:
       - starknet
 
-  '@leapwallet/buffer-boba@0.1.6(@cosmjs/proto-signing@0.31.3)(osmojs@15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(stridejs@0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))':
+  '@leapwallet/buffer-boba@0.1.6(@cosmjs/proto-signing@0.33.1)(osmojs@15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(stridejs@0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))':
     dependencies:
-      '@cosmjs/proto-signing': 0.31.3
+      '@cosmjs/proto-signing': 0.33.1
       base64js: 1.0.1
       cosmjs-types: 0.8.0
       long: 5.2.0
-      osmojs: 15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      osmojs: 15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       protobufjs: 7.2.3
-      stridejs: 0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      stridejs: 0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
-  '@leapwallet/cosmos-social-login-capsule-provider-ui@0.0.58(@cosmjs/proto-signing@0.31.3)(@types/react-dom@18.2.7)(@types/react@18.2.21)(csstype@3.1.2)(osmojs@15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(react-dom@18.2.0(react@18.2.0))(stridejs@0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(tailwindcss@3.3.3)(zod@3.23.8)':
+  '@leapwallet/cosmos-social-login-capsule-provider-ui@0.0.58(@cosmjs/proto-signing@0.33.1)(@types/react-dom@18.2.7)(@types/react@18.2.21)(csstype@3.1.2)(osmojs@15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(react-dom@18.2.0(react@18.2.0))(stridejs@0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))(tailwindcss@3.3.3)(zod@3.23.8)':
     dependencies:
       '@cosmjs/amino': 0.31.3
       '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1(@types/react@18.2.21)(react@18.2.0))(@types/react@18.2.21)(react@18.2.0)
       '@heroicons/react': 2.1.3(react@18.2.0)
-      '@leapwallet/buffer-boba': 0.1.6(@cosmjs/proto-signing@0.31.3)(osmojs@15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(stridejs@0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+      '@leapwallet/buffer-boba': 0.1.6(@cosmjs/proto-signing@0.33.1)(osmojs@15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))(protobufjs@7.2.3)(stridejs@0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))
       '@leapwallet/cosmos-social-login-core': 0.0.1
       '@leapwallet/parser-parfait': 0.7.0(zod@3.23.8)
       '@leapwallet/react-ui': 1.9.10(@types/react-dom@18.2.7)(@types/react@18.2.21)(tailwindcss@3.3.3)
@@ -13615,11 +13776,11 @@ snapshots:
       - tailwindcss
       - zod
 
-  '@leapwallet/cosmos-social-login-capsule-provider@0.0.41(@cosmjs/encoding@0.32.4)(@cosmjs/proto-signing@0.31.3)(fp-ts@2.1.1)':
+  '@leapwallet/cosmos-social-login-capsule-provider@0.0.44(@cosmjs/encoding@0.33.1)(@cosmjs/proto-signing@0.32.4)(fp-ts@2.1.1)':
     dependencies:
       '@cosmjs/amino': 0.31.3
       '@leapwallet/cosmos-social-login-core': 0.0.1
-      '@usecapsule/cosmjs-v0-integration': 1.21.0(@cosmjs/amino@0.31.3)(@cosmjs/encoding@0.32.4)(@cosmjs/proto-signing@0.31.3)(fp-ts@2.1.1)
+      '@usecapsule/cosmjs-v0-integration': 1.21.0(@cosmjs/amino@0.31.3)(@cosmjs/encoding@0.33.1)(@cosmjs/proto-signing@0.32.4)(fp-ts@2.1.1)
       '@usecapsule/web-sdk': 1.23.0(fp-ts@2.1.1)
       long: 5.2.3
     transitivePeerDependencies:
@@ -13900,6 +14061,8 @@ snapshots:
 
   '@noble/hashes@1.6.1': {}
 
+  '@noble/hashes@1.8.0': {}
+
   '@noble/secp256k1@1.7.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -13914,15 +14077,15 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  '@osmonauts/helpers@0.6.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@osmonauts/helpers@0.6.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.27.1
       '@cosmjs/amino': 0.28.13
       '@cosmjs/crypto': 0.28.13
       '@cosmjs/proto-signing': 0.28.13
-      '@cosmjs/stargate': 0.28.13(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/stargate': 0.28.13(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       cosmjs-types: 0.5.1
-      long: 5.2.3
+      long: 5.3.2
       protobufjs: 6.11.4
     transitivePeerDependencies:
       - bufferutil
@@ -13931,14 +14094,14 @@ snapshots:
 
   '@osmonauts/lcd@0.10.0':
     dependencies:
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.27.1
       axios: 0.27.2
     transitivePeerDependencies:
       - debug
 
   '@osmonauts/lcd@0.6.0':
     dependencies:
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.27.1
       axios: 0.27.2
     transitivePeerDependencies:
       - debug
@@ -14877,7 +15040,7 @@ snapshots:
       '@stablelib/random': 1.0.2
       '@stablelib/wipe': 1.0.1
 
-  '@starknet-io/types-js@0.7.8': {}
+  '@starknet-io/types-js@0.7.10': {}
 
   '@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.22.15)':
     dependencies:
@@ -14983,7 +15146,7 @@ snapshots:
       '@tanstack/query-core': 5.62.0
       react: 18.2.0
 
-  '@terra-money/feather.js@3.0.0-beta.2':
+  '@terra-money/feather.js@3.0.0-beta.3':
     dependencies:
       '@terra-money/legacy.proto': '@terra-money/terra.proto@0.1.7'
       '@terra-money/terra.proto': 5.3.0-beta.0
@@ -14992,24 +15155,24 @@ snapshots:
       bech32: 2.0.0
       bip32: 2.0.6
       bip39: 3.1.0
-      bufferutil: 4.0.8
+      bufferutil: 4.0.9
       crypto-browserify: 3.12.1
-      decimal.js: 10.4.3
+      decimal.js: 10.5.0
       jscrypto: 1.0.3
       keccak256: 1.0.6
-      long: 5.2.3
+      long: 5.3.2
       readable-stream: 3.6.2
       secp256k1: 4.0.4
       tmp: 0.2.3
       utf-8-validate: 5.0.10
-      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - debug
 
-  '@terra-money/station-connector@1.1.0(@cosmjs/amino@0.31.3)(@terra-money/feather.js@3.0.0-beta.2)(axios@1.6.8)':
+  '@terra-money/station-connector@1.1.0(@cosmjs/amino@0.32.4)(@terra-money/feather.js@3.0.0-beta.3)(axios@1.6.8)':
     dependencies:
-      '@cosmjs/amino': 0.31.3
-      '@terra-money/feather.js': 3.0.0-beta.2
+      '@cosmjs/amino': 0.32.4
+      '@terra-money/feather.js': 3.0.0-beta.3
       axios: 1.6.8
       bech32: 2.0.0
 
@@ -15078,7 +15241,7 @@ snapshots:
   '@types/ethereumjs-util@5.2.0':
     dependencies:
       '@types/bn.js': 5.1.5
-      '@types/node': 18.17.15
+      '@types/node': 18.19.65
 
   '@types/express-serve-static-core@4.17.35':
     dependencies:
@@ -15149,6 +15312,10 @@ snapshots:
   '@types/node@17.0.45': {}
 
   '@types/node@18.17.15': {}
+
+  '@types/node@18.19.100':
+    dependencies:
+      undici-types: 5.26.5
 
   '@types/node@18.19.65':
     dependencies:
@@ -15405,11 +15572,11 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@usecapsule/cosmjs-v0-integration@1.21.0(@cosmjs/amino@0.31.3)(@cosmjs/encoding@0.32.4)(@cosmjs/proto-signing@0.31.3)(fp-ts@2.1.1)':
+  '@usecapsule/cosmjs-v0-integration@1.21.0(@cosmjs/amino@0.31.3)(@cosmjs/encoding@0.33.1)(@cosmjs/proto-signing@0.32.4)(fp-ts@2.1.1)':
     dependencies:
       '@cosmjs/amino': 0.31.3
-      '@cosmjs/encoding': 0.32.4
-      '@cosmjs/proto-signing': 0.31.3
+      '@cosmjs/encoding': 0.33.1
+      '@cosmjs/proto-signing': 0.32.4
       '@usecapsule/core-sdk': 1.21.0(fp-ts@2.1.1)
     transitivePeerDependencies:
       - debug
@@ -15466,13 +15633,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@walletconnect/core@2.17.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@walletconnect/core@2.17.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@walletconnect/heartbeat': 1.2.2
       '@walletconnect/jsonrpc-provider': 1.0.14
       '@walletconnect/jsonrpc-types': 1.0.4
       '@walletconnect/jsonrpc-utils': 1.0.8
-      '@walletconnect/jsonrpc-ws-connection': 1.0.14(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@walletconnect/jsonrpc-ws-connection': 1.0.14(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@walletconnect/keyvaluestorage': 1.1.1
       '@walletconnect/logger': 2.1.2
       '@walletconnect/relay-api': 1.0.11
@@ -15539,12 +15706,12 @@ snapshots:
       '@walletconnect/jsonrpc-types': 1.0.3
       tslib: 1.14.1
 
-  '@walletconnect/jsonrpc-ws-connection@1.0.14(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@walletconnect/jsonrpc-ws-connection@1.0.14(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
       '@walletconnect/jsonrpc-utils': 1.0.8
       '@walletconnect/safe-json': 1.0.2
       events: 3.3.0
-      ws: 7.5.9(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ws: 7.5.9(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -15615,9 +15782,9 @@ snapshots:
     dependencies:
       tslib: 1.14.1
 
-  '@walletconnect/sign-client@2.17.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@walletconnect/sign-client@2.17.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@walletconnect/core': 2.17.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@walletconnect/core': 2.17.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.2
       '@walletconnect/jsonrpc-utils': 1.0.8
@@ -15804,7 +15971,7 @@ snapshots:
     dependencies:
       '@zag-js/dom-query': 0.16.0
 
-  abi-wan-kanabi@2.2.3:
+  abi-wan-kanabi@2.2.4:
     dependencies:
       ansicolors: 0.3.2
       cardinal: 2.1.1
@@ -15988,7 +16155,7 @@ snapshots:
       call-bind: 1.0.7
       define-properties: 1.2.0
       es-abstract: 1.22.1
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
       is-array-buffer: 3.0.2
       is-shared-array-buffer: 1.0.2
 
@@ -15996,7 +16163,7 @@ snapshots:
 
   asn1.js@4.10.1:
     dependencies:
-      bn.js: 4.12.1
+      bn.js: 4.12.2
       inherits: 2.0.4
       minimalistic-assert: 1.0.1
 
@@ -16063,7 +16230,7 @@ snapshots:
   axios@0.27.2:
     dependencies:
       follow-redirects: 1.15.9
-      form-data: 4.0.1
+      form-data: 4.0.2
     transitivePeerDependencies:
       - debug
 
@@ -16192,7 +16359,11 @@ snapshots:
 
   bn.js@4.12.1: {}
 
+  bn.js@4.12.2: {}
+
   bn.js@5.2.1: {}
+
+  bn.js@5.2.2: {}
 
   body-parser@1.20.1:
     dependencies:
@@ -16300,7 +16471,7 @@ snapshots:
 
   browserify-rsa@4.1.1:
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
       randombytes: 2.1.0
       safe-buffer: 5.2.1
 
@@ -16318,7 +16489,7 @@ snapshots:
 
   browserify-sign@4.2.3:
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
       browserify-rsa: 4.1.1
       create-hash: 1.2.0
       create-hmac: 1.1.7
@@ -16366,7 +16537,7 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  bufferutil@4.0.8:
+  bufferutil@4.0.9:
     dependencies:
       node-gyp-build: 4.8.4
 
@@ -16402,6 +16573,11 @@ snapshots:
       lowercase-keys: 2.0.0
       normalize-url: 4.5.1
       responselike: 1.0.2
+
+  call-bind-apply-helpers@1.0.2:
+    dependencies:
+      es-errors: 1.3.0
+      function-bind: 1.1.2
 
   call-bind@1.0.7:
     dependencies:
@@ -16764,6 +16940,8 @@ snapshots:
       long: 4.0.0
       protobufjs: 6.11.4
 
+  cosmjs-types@0.9.0: {}
+
   cosmos-directory-client@0.0.6:
     dependencies:
       cosmos-directory-types: 0.0.6
@@ -16990,7 +17168,7 @@ snapshots:
 
   decamelize@1.2.0: {}
 
-  decimal.js@10.4.3: {}
+  decimal.js@10.5.0: {}
 
   decode-uri-component@0.2.2: {}
 
@@ -17178,6 +17356,12 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
+  dunder-proto@1.0.1:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      es-errors: 1.3.0
+      gopd: 1.2.0
+
   duplexer3@0.1.5: {}
 
   duplexer@0.1.2: {}
@@ -17305,6 +17489,8 @@ snapshots:
     dependencies:
       get-intrinsic: 1.2.4
 
+  es-define-property@1.0.1: {}
+
   es-errors@1.3.0: {}
 
   es-iterator-helpers@1.0.14:
@@ -17326,11 +17512,22 @@ snapshots:
 
   es-module-lexer@1.2.1: {}
 
+  es-object-atoms@1.1.1:
+    dependencies:
+      es-errors: 1.3.0
+
   es-set-tostringtag@2.0.1:
     dependencies:
       get-intrinsic: 1.2.4
       has: 1.0.3
       has-tostringtag: 1.0.0
+
+  es-set-tostringtag@2.1.0:
+    dependencies:
+      es-errors: 1.3.0
+      get-intrinsic: 1.3.0
+      has-tostringtag: 1.0.2
+      hasown: 2.0.2
 
   es-shim-unscopables@1.0.0:
     dependencies:
@@ -17698,8 +17895,8 @@ snapshots:
 
   eth-lib@0.2.8:
     dependencies:
-      bn.js: 4.12.0
-      elliptic: 6.6.0
+      bn.js: 4.12.1
+      elliptic: 6.6.1
       xhr-request-promise: 0.1.3
 
   ethereum-bloom-filters@1.0.10:
@@ -17740,9 +17937,9 @@ snapshots:
 
   ethereumjs-util@5.2.1:
     dependencies:
-      bn.js: 4.12.0
+      bn.js: 4.12.1
       create-hash: 1.2.0
-      elliptic: 6.6.0
+      elliptic: 6.6.1
       ethereum-cryptography: 0.1.3
       ethjs-util: 0.1.6
       rlp: 2.2.7
@@ -17882,7 +18079,7 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.5
 
-  fast-glob@3.3.2:
+  fast-glob@3.3.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
       '@nodelib/fs.walk': 1.2.8
@@ -17934,10 +18131,10 @@ snapshots:
     dependencies:
       xml-js: 1.6.11
 
-  fetch-cookie@3.0.1:
+  fetch-cookie@3.1.0:
     dependencies:
       set-cookie-parser: 2.7.1
-      tough-cookie: 4.1.4
+      tough-cookie: 5.1.2
 
   file-entry-cache@6.0.1:
     dependencies:
@@ -18025,7 +18222,7 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  foreground-child@3.3.0:
+  foreground-child@3.3.1:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
@@ -18056,10 +18253,11 @@ snapshots:
       combined-stream: 1.0.8
       mime-types: 2.1.35
 
-  form-data@4.0.1:
+  form-data@4.0.2:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
+      es-set-tostringtag: 2.1.0
       mime-types: 2.1.35
 
   forwarded@0.2.0: {}
@@ -18137,15 +18335,33 @@ snapshots:
       has-symbols: 1.0.3
       hasown: 2.0.2
 
+  get-intrinsic@1.3.0:
+    dependencies:
+      call-bind-apply-helpers: 1.0.2
+      es-define-property: 1.0.1
+      es-errors: 1.3.0
+      es-object-atoms: 1.1.1
+      function-bind: 1.1.2
+      get-proto: 1.0.1
+      gopd: 1.2.0
+      has-symbols: 1.1.0
+      hasown: 2.0.2
+      math-intrinsics: 1.1.0
+
   get-nonce@1.0.1: {}
 
   get-own-enumerable-property-symbols@3.0.2: {}
 
   get-port-please@3.1.2: {}
 
+  get-proto@1.0.1:
+    dependencies:
+      dunder-proto: 1.0.1
+      es-object-atoms: 1.1.1
+
   get-starknet-core@4.0.0:
     dependencies:
-      '@starknet-io/types-js': 0.7.8
+      '@starknet-io/types-js': 0.7.10
 
   get-stream@4.1.0:
     dependencies:
@@ -18162,7 +18378,7 @@ snapshots:
   get-symbol-description@1.0.0:
     dependencies:
       call-bind: 1.0.7
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
 
   get-tsconfig@4.7.0:
     dependencies:
@@ -18182,7 +18398,7 @@ snapshots:
 
   glob@10.4.5:
     dependencies:
-      foreground-child: 3.3.0
+      foreground-child: 3.3.1
       jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
@@ -18273,6 +18489,8 @@ snapshots:
     dependencies:
       get-intrinsic: 1.2.4
 
+  gopd@1.2.0: {}
+
   got@9.6.0:
     dependencies:
       '@sindresorhus/is': 0.14.0
@@ -18333,9 +18551,15 @@ snapshots:
 
   has-symbols@1.0.3: {}
 
+  has-symbols@1.1.0: {}
+
   has-tostringtag@1.0.0:
     dependencies:
       has-symbols: 1.0.3
+
+  has-tostringtag@1.0.2:
+    dependencies:
+      has-symbols: 1.1.0
 
   has-yarn@2.1.0: {}
 
@@ -18622,7 +18846,7 @@ snapshots:
   is-array-buffer@3.0.2:
     dependencies:
       call-bind: 1.0.7
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
       is-typed-array: 1.1.12
 
   is-arrayish@0.2.1: {}
@@ -18664,7 +18888,7 @@ snapshots:
     dependencies:
       has: 1.0.3
 
-  is-core-module@2.15.1:
+  is-core-module@2.16.1:
     dependencies:
       hasown: 2.0.2
 
@@ -18790,7 +19014,7 @@ snapshots:
   is-weakset@2.0.2:
     dependencies:
       call-bind: 1.0.7
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
 
   is-whitespace-character@1.0.4: {}
 
@@ -18831,9 +19055,9 @@ snapshots:
 
   isomorphic-timers-promises@1.0.1: {}
 
-  isomorphic-ws@4.0.1(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)):
+  isomorphic-ws@4.0.1(ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)):
     dependencies:
-      ws: 7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ws: 7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
   iterator.prototype@1.1.1:
     dependencies:
@@ -18872,7 +19096,7 @@ snapshots:
 
   jiti@1.21.0: {}
 
-  jiti@1.21.6: {}
+  jiti@1.21.7: {}
 
   jiti@2.4.0: {}
 
@@ -18951,14 +19175,14 @@ snapshots:
 
   keccak256@1.0.6:
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
       buffer: 6.0.3
       keccak: 3.0.4
 
   keccak@3.0.4:
     dependencies:
       node-addon-api: 2.0.2
-      node-gyp-build: 4.7.0
+      node-gyp-build: 4.8.4
       readable-stream: 3.6.2
 
   keyv@3.1.0:
@@ -19003,9 +19227,15 @@ snapshots:
 
   libsodium-sumo@0.7.11: {}
 
+  libsodium-sumo@0.7.15: {}
+
   libsodium-wrappers-sumo@0.7.11:
     dependencies:
       libsodium-sumo: 0.7.11
+
+  libsodium-wrappers-sumo@0.7.15:
+    dependencies:
+      libsodium-sumo: 0.7.15
 
   libsodium-wrappers@0.7.15:
     dependencies:
@@ -19015,7 +19245,7 @@ snapshots:
 
   lilconfig@2.1.0: {}
 
-  lilconfig@3.1.2: {}
+  lilconfig@3.1.3: {}
 
   lines-and-columns@1.2.4: {}
 
@@ -19109,6 +19339,8 @@ snapshots:
 
   long@5.2.3: {}
 
+  long@5.3.2: {}
+
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
@@ -19150,6 +19382,8 @@ snapshots:
       semver: 6.3.1
 
   markdown-escapes@1.0.4: {}
+
+  math-intrinsics@1.1.0: {}
 
   md5.js@1.3.5:
     dependencies:
@@ -19303,6 +19537,8 @@ snapshots:
 
   nan@2.18.0: {}
 
+  nanoid@3.3.11: {}
+
   nanoid@3.3.6: {}
 
   nanoid@3.3.7: {}
@@ -19354,8 +19590,6 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-  node-fetch-native@1.6.4: {}
-
   node-fetch-native@1.6.6: {}
 
   node-fetch@2.7.0:
@@ -19363,8 +19597,6 @@ snapshots:
       whatwg-url: 5.0.0
 
   node-forge@1.3.1: {}
-
-  node-gyp-build@4.7.0: {}
 
   node-gyp-build@4.8.4: {}
 
@@ -19489,7 +19721,7 @@ snapshots:
   ofetch@1.4.1:
     dependencies:
       destr: 2.0.3
-      node-fetch-native: 1.6.4
+      node-fetch-native: 1.6.6
       ufo: 1.5.4
 
   ohash@1.1.4: {}
@@ -19542,15 +19774,15 @@ snapshots:
 
   os-tmpdir@1.0.2: {}
 
-  osmojs@15.2.1(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  osmojs@15.2.1(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.27.1
       '@cosmjs/amino': 0.29.3
       '@cosmjs/proto-signing': 0.29.3
-      '@cosmjs/stargate': 0.29.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@cosmjs/tendermint-rpc': 0.29.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/stargate': 0.29.3(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.29.5(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@osmonauts/lcd': 0.10.0
-      long: 5.2.3
+      long: 5.3.2
       protobufjs: 6.11.4
     transitivePeerDependencies:
       - bufferutil
@@ -19755,7 +19987,7 @@ snapshots:
 
   pirates@4.0.5: {}
 
-  pirates@4.0.6: {}
+  pirates@4.0.7: {}
 
   pkg-dir@4.2.0:
     dependencies:
@@ -19820,31 +20052,31 @@ snapshots:
       postcss: 8.4.38
       postcss-selector-parser: 6.0.13
 
-  postcss-import@15.1.0(postcss@8.4.49):
+  postcss-import@15.1.0(postcss@8.5.3):
     dependencies:
-      postcss: 8.4.49
+      postcss: 8.5.3
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
-      resolve: 1.22.8
+      resolve: 1.22.10
 
-  postcss-js@4.0.1(postcss@8.4.49):
+  postcss-js@4.0.1(postcss@8.5.3):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.49
+      postcss: 8.5.3
 
-  postcss-load-config@4.0.1(postcss@8.4.49):
+  postcss-load-config@4.0.1(postcss@8.5.3):
     dependencies:
       lilconfig: 2.1.0
       yaml: 2.3.1
     optionalDependencies:
-      postcss: 8.4.49
+      postcss: 8.5.3
 
-  postcss-load-config@4.0.2(postcss@8.4.49):
+  postcss-load-config@4.0.2(postcss@8.5.3):
     dependencies:
-      lilconfig: 3.1.2
-      yaml: 2.6.1
+      lilconfig: 3.1.3
+      yaml: 2.8.0
     optionalDependencies:
-      postcss: 8.4.49
+      postcss: 8.5.3
 
   postcss-loader@7.3.0(postcss@8.4.38)(webpack@5.83.1(esbuild@0.18.4)):
     dependencies:
@@ -19920,9 +20152,9 @@ snapshots:
       icss-utils: 5.1.0(postcss@8.4.38)
       postcss: 8.4.38
 
-  postcss-nested@6.2.0(postcss@8.4.49):
+  postcss-nested@6.2.0(postcss@8.5.3):
     dependencies:
-      postcss: 8.4.49
+      postcss: 8.5.3
       postcss-selector-parser: 6.1.2
 
   postcss-normalize-charset@5.1.0(postcss@8.4.38):
@@ -20043,9 +20275,9 @@ snapshots:
       picocolors: 1.0.0
       source-map-js: 1.2.0
 
-  postcss@8.4.49:
+  postcss@8.5.3:
     dependencies:
-      nanoid: 3.3.7
+      nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -20099,22 +20331,6 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  protobufjs@6.11.3:
-    dependencies:
-      '@protobufjs/aspromise': 1.1.2
-      '@protobufjs/base64': 1.1.2
-      '@protobufjs/codegen': 2.0.4
-      '@protobufjs/eventemitter': 1.1.0
-      '@protobufjs/fetch': 1.1.0
-      '@protobufjs/float': 1.0.2
-      '@protobufjs/inquire': 1.1.0
-      '@protobufjs/path': 1.1.2
-      '@protobufjs/pool': 1.1.0
-      '@protobufjs/utf8': 1.1.0
-      '@types/long': 4.0.2
-      '@types/node': 18.17.15
-      long: 4.0.0
-
   protobufjs@6.11.4:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
@@ -20143,8 +20359,8 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 18.19.65
-      long: 5.2.3
+      '@types/node': 18.19.100
+      long: 5.3.2
 
   proxy-addr@2.0.7:
     dependencies:
@@ -20154,10 +20370,6 @@ snapshots:
   proxy-compare@2.5.1: {}
 
   proxy-from-env@1.1.0: {}
-
-  psl@1.13.0:
-    dependencies:
-      punycode: 2.3.1
 
   public-encrypt@4.0.3:
     dependencies:
@@ -20176,8 +20388,6 @@ snapshots:
   punycode@1.4.1: {}
 
   punycode@2.3.0: {}
-
-  punycode@2.3.1: {}
 
   pupa@2.1.1:
     dependencies:
@@ -20222,8 +20432,6 @@ snapshots:
       strict-uri-encode: 2.0.0
 
   querystring-es3@0.2.1: {}
-
-  querystringify@2.2.0: {}
 
   queue-microtask@1.2.3: {}
 
@@ -20542,7 +20750,7 @@ snapshots:
       call-bind: 1.0.7
       define-properties: 1.2.0
       es-abstract: 1.22.1
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
       globalthis: 1.0.3
       which-builtin-type: 1.1.3
 
@@ -20674,6 +20882,12 @@ snapshots:
       is-core-module: 2.13.0
       path-parse: 1.0.7
 
+  resolve@1.22.10:
+    dependencies:
+      is-core-module: 2.16.1
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
+
   resolve@1.22.2:
     dependencies:
       is-core-module: 2.12.1
@@ -20683,12 +20897,6 @@ snapshots:
   resolve@1.22.4:
     dependencies:
       is-core-module: 2.13.0
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
-
-  resolve@1.22.8:
-    dependencies:
-      is-core-module: 2.15.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
@@ -20762,7 +20970,7 @@ snapshots:
   safe-regex-test@1.0.0:
     dependencies:
       call-bind: 1.0.7
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
       is-regex: 1.1.4
 
   safe-stable-stringify@2.4.3: {}
@@ -20809,9 +21017,9 @@ snapshots:
 
   secp256k1@4.0.3:
     dependencies:
-      elliptic: 6.6.0
+      elliptic: 6.6.1
       node-addon-api: 2.0.2
-      node-gyp-build: 4.7.0
+      node-gyp-build: 4.8.4
 
   secp256k1@4.0.4:
     dependencies:
@@ -20946,7 +21154,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.7
       es-errors: 1.3.0
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
       object-inspect: 1.13.1
 
   signal-exit@3.0.7: {}
@@ -21069,16 +21277,16 @@ snapshots:
   starknet@6.11.0:
     dependencies:
       '@noble/curves': 1.4.2
-      '@noble/hashes': 1.6.1
+      '@noble/hashes': 1.8.0
       '@scure/base': 1.1.9
       '@scure/starknet': 1.0.0
-      abi-wan-kanabi: 2.2.3
-      fetch-cookie: 3.0.1
+      abi-wan-kanabi: 2.2.4
+      fetch-cookie: 3.1.0
       get-starknet-core: 4.0.0
       isomorphic-fetch: 3.0.0
       lossless-json: 4.0.2
       pako: 2.1.0
-      starknet-types-07: '@starknet-io/types-js@0.7.8'
+      starknet-types-07: '@starknet-io/types-js@0.7.10'
       ts-mixer: 6.0.4
       url-join: 4.0.1
     transitivePeerDependencies:
@@ -21114,14 +21322,14 @@ snapshots:
 
   strict-uri-encode@2.0.0: {}
 
-  stridejs@0.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  stridejs@0.6.2(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.27.1
       '@cosmjs/amino': 0.30.1
       '@cosmjs/proto-signing': 0.30.1
-      '@cosmjs/stargate': 0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@cosmjs/tendermint-rpc': 0.30.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@osmonauts/helpers': 0.6.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@cosmjs/stargate': 0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.30.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@osmonauts/helpers': 0.6.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@osmonauts/lcd': 0.6.0
       protobufjs: 6.11.4
     transitivePeerDependencies:
@@ -21243,12 +21451,12 @@ snapshots:
 
   sucrase@3.35.0:
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/gen-mapping': 0.3.8
       commander: 4.1.1
       glob: 10.4.5
       lines-and-columns: 1.2.4
       mz: 2.7.0
-      pirates: 4.0.6
+      pirates: 4.0.7
       ts-interface-checker: 0.1.13
 
   superstruct@1.0.3: {}
@@ -21309,22 +21517,22 @@ snapshots:
       chokidar: 3.6.0
       didyoumean: 1.2.2
       dlv: 1.1.3
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.21.6
+      jiti: 1.21.7
       lilconfig: 2.1.0
       micromatch: 4.0.8
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.4.49
-      postcss-import: 15.1.0(postcss@8.4.49)
-      postcss-js: 4.0.1(postcss@8.4.49)
-      postcss-load-config: 4.0.2(postcss@8.4.49)
-      postcss-nested: 6.2.0(postcss@8.4.49)
+      postcss: 8.5.3
+      postcss-import: 15.1.0(postcss@8.5.3)
+      postcss-js: 4.0.1(postcss@8.5.3)
+      postcss-load-config: 4.0.2(postcss@8.5.3)
+      postcss-nested: 6.2.0(postcss@8.5.3)
       postcss-selector-parser: 6.1.2
-      resolve: 1.22.8
+      resolve: 1.22.10
       sucrase: 3.35.0
     transitivePeerDependencies:
       - ts-node
@@ -21380,14 +21588,20 @@ snapshots:
   tiny-secp256k1@1.1.6:
     dependencies:
       bindings: 1.5.0
-      bn.js: 4.12.0
+      bn.js: 4.12.1
       create-hmac: 1.1.7
-      elliptic: 6.6.0
+      elliptic: 6.6.1
       nan: 2.18.0
 
   tiny-warning@1.0.3: {}
 
   titleize@3.0.0: {}
+
+  tldts-core@6.1.86: {}
+
+  tldts@6.1.86:
+    dependencies:
+      tldts-core: 6.1.86
 
   tmp@0.0.33:
     dependencies:
@@ -21409,12 +21623,9 @@ snapshots:
 
   totalist@1.1.0: {}
 
-  tough-cookie@4.1.4:
+  tough-cookie@5.1.2:
     dependencies:
-      psl: 1.13.0
-      punycode: 2.3.1
-      universalify: 0.2.0
-      url-parse: 1.5.10
+      tldts: 6.1.86
 
   tr46@0.0.3: {}
 
@@ -21451,7 +21662,7 @@ snapshots:
 
   tslib@2.6.2: {}
 
-  tsup@7.2.0(postcss@8.4.49)(typescript@5.2.2):
+  tsup@7.2.0(postcss@8.5.3)(typescript@5.2.2):
     dependencies:
       bundle-require: 4.0.1(esbuild@0.18.4)
       cac: 6.7.14
@@ -21461,14 +21672,14 @@ snapshots:
       execa: 5.1.1
       globby: 11.1.0
       joycon: 3.1.1
-      postcss-load-config: 4.0.1(postcss@8.4.49)
+      postcss-load-config: 4.0.1(postcss@8.5.3)
       resolve-from: 5.0.0
       rollup: 3.25.1
       source-map: 0.8.0-beta.0
       sucrase: 3.32.0
       tree-kill: 1.2.2
     optionalDependencies:
-      postcss: 8.4.49
+      postcss: 8.5.3
       typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
@@ -21529,7 +21740,7 @@ snapshots:
   typed-array-buffer@1.0.0:
     dependencies:
       call-bind: 1.0.7
-      get-intrinsic: 1.2.4
+      get-intrinsic: 1.3.0
       is-typed-array: 1.1.12
 
   typed-array-byte-length@1.0.0:
@@ -21591,7 +21802,7 @@ snapshots:
       consola: 3.2.3
       defu: 6.1.4
       mime: 3.0.0
-      node-fetch-native: 1.6.4
+      node-fetch-native: 1.6.6
       pathe: 1.1.2
 
   unherit@1.1.3:
@@ -21667,8 +21878,6 @@ snapshots:
 
   universalify@0.1.2: {}
 
-  universalify@0.2.0: {}
-
   universalify@2.0.0: {}
 
   unpipe@1.0.0: {}
@@ -21682,7 +21891,7 @@ snapshots:
       h3: 1.13.0
       listhen: 1.9.0
       lru-cache: 10.4.3
-      node-fetch-native: 1.6.4
+      node-fetch-native: 1.6.6
       ofetch: 1.4.1
       ufo: 1.5.4
     optionalDependencies:
@@ -21739,11 +21948,6 @@ snapshots:
   url-parse-lax@3.0.0:
     dependencies:
       prepend-http: 2.0.0
-
-  url-parse@1.5.10:
-    dependencies:
-      querystringify: 2.2.0
-      requires-port: 1.0.0
 
   url-set-query@1.0.0: {}
 
@@ -21923,7 +22127,7 @@ snapshots:
 
   web3-utils@1.3.6:
     dependencies:
-      bn.js: 4.12.0
+      bn.js: 4.12.1
       eth-lib: 0.2.8
       ethereum-bloom-filters: 1.0.10
       ethjs-unit: 0.1.6
@@ -21938,7 +22142,7 @@ snapshots:
 
   webidl-conversions@4.0.2: {}
 
-  webpack-bundle-analyzer@4.8.0(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  webpack-bundle-analyzer@4.8.0(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       acorn: 8.10.0
@@ -21949,7 +22153,7 @@ snapshots:
       lodash: 4.17.21
       opener: 1.5.2
       sirv: 1.0.19
-      ws: 7.5.9(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ws: 7.5.9(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -21963,7 +22167,7 @@ snapshots:
       schema-utils: 4.0.1
       webpack: 5.83.1(esbuild@0.18.4)
 
-  webpack-dev-server@4.15.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)(webpack@5.83.1(esbuild@0.18.4)):
+  webpack-dev-server@4.15.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)(webpack@5.83.1(esbuild@0.18.4)):
     dependencies:
       '@types/bonjour': 3.5.10
       '@types/connect-history-api-fallback': 1.5.0
@@ -21994,7 +22198,7 @@ snapshots:
       sockjs: 0.3.24
       spdy: 4.0.2
       webpack-dev-middleware: 5.3.3(webpack@5.83.1(esbuild@0.18.4))
-      ws: 8.13.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ws: 8.13.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     optionalDependencies:
       webpack: 5.83.1(esbuild@0.18.4)
     transitivePeerDependencies:
@@ -22159,19 +22363,19 @@ snapshots:
       signal-exit: 3.0.7
       typedarray-to-buffer: 3.1.5
 
-  ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     optionalDependencies:
-      bufferutil: 4.0.8
+      bufferutil: 4.0.9
       utf-8-validate: 5.0.10
 
-  ws@7.5.9(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  ws@7.5.9(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     optionalDependencies:
-      bufferutil: 4.0.8
+      bufferutil: 4.0.9
       utf-8-validate: 5.0.10
 
-  ws@8.13.0(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+  ws@8.13.0(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     optionalDependencies:
-      bufferutil: 4.0.8
+      bufferutil: 4.0.9
       utf-8-validate: 5.0.10
 
   xdg-basedir@4.0.0: {}
@@ -22220,7 +22424,7 @@ snapshots:
 
   yaml@2.3.1: {}
 
-  yaml@2.6.1: {}
+  yaml@2.8.0: {}
 
   yargs-parser@18.1.3:
     dependencies:

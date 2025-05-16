@@ -38,7 +38,8 @@ export const getLeap = (): Wallet => {
       subscription,
       setDefaultOptions,
     });
-    return res;
+
+    return res as unknown as Wallet;
   }
 
   useGrazInternalStore.getState()._notFoundFn();

@@ -42,17 +42,17 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@leapwallet/cosmos-social-login-capsule-provider": "^0.0.41",
+    "@leapwallet/cosmos-social-login-capsule-provider": "^0.0.44",
     "@tanstack/react-query": ">=5.62.0",
     "react": ">=17"
   },
   "dependencies": {
-    "@cosmjs/amino": "0.31.3",
-    "@cosmjs/cosmwasm-stargate": "0.31.3",
+    "@cosmjs/amino": "0.32.4",
+    "@cosmjs/cosmwasm-stargate": "0.32.4",
     "@cosmjs/launchpad": "0.27.1",
-    "@cosmjs/proto-signing": "0.31.3",
-    "@cosmjs/stargate": "0.31.3",
-    "@cosmjs/tendermint-rpc": "0.31.3",
+    "@cosmjs/proto-signing": "0.32.4",
+    "@cosmjs/stargate": "0.32.4",
+    "@cosmjs/tendermint-rpc": "0.32.4",
     "@keplr-wallet/types": "0.12.156",
     "@cosmsnap/snapper": "0.1.29",
     "@dao-dao/cosmiframe": "0.1.0",

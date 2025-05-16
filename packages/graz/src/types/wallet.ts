@@ -1,4 +1,12 @@
-import type { ChainInfo, Keplr, KeplrIntereactionOptions, Key as KeplrKey } from "@keplr-wallet/types";
+import { OfflineAminoSigner } from "@cosmjs/amino";
+import { DirectSignResponse, OfflineDirectSigner } from "@cosmjs/proto-signing";
+import type {
+  ChainInfo,
+  Keplr,
+  KeplrIntereactionOptions,
+  Key as KeplrKey,
+  KeplrSignOptions,
+} from "@keplr-wallet/types";
 
 export enum WalletType {
   KEPLR = "keplr",
@@ -48,12 +56,15 @@ export const WALLET_TYPES = [
   WalletType.OKX,
 ];
 
-export type Wallet = Pick<
-  Keplr,
-  "enable" | "getOfflineSigner" | "getOfflineSignerAuto" | "getOfflineSignerOnlyAmino" | "signDirect" | "signAmino"
-> & {
+export type Wallet = Pick<Keplr, "enable" | "getOfflineSignerOnlyAmino" | "signAmino"> & {
   experimentalSuggestChain: (chainInfo: Omit<ChainInfo, "nodeProvider">) => Promise<void>;
   signArbitrary?: Keplr["signArbitrary"];
+  signDirect: (...args: SignDirectParams) => Promise<DirectSignResponse>;
+  getOfflineSigner: (chainId: string, signOptions?: KeplrSignOptions) => OfflineAminoSigner & OfflineDirectSigner;
+  getOfflineSignerAuto: (
+    chainId: string,
+    signOptions?: KeplrSignOptions,
+  ) => Promise<OfflineAminoSigner | OfflineDirectSigner>;
   subscription?: (reconnect: () => void) => () => void;
   init?: () => Promise<unknown>;
   disable?: (chainIds?: string | undefined) => Promise<void>;
@@ -65,7 +76,14 @@ export type Wallet = Pick<
   experimentalSignEIP712CosmosTx_v0?: Keplr["experimentalSignEIP712CosmosTx_v0"];
 };
 
-export type SignDirectParams = Parameters<Wallet["signDirect"]>;
+export interface SignDoc {
+  bodyBytes?: Uint8Array | null;
+  authInfoBytes?: Uint8Array | null;
+  chainId?: string | null;
+  accountNumber: bigint | null;
+}
+
+export type SignDirectParams = [chainId: string, signer: string, signDoc: SignDoc, signOptions?: KeplrSignOptions];
 export type SignAminoParams = Parameters<Wallet["signAmino"]>;
 
 export type KnownKeys = Record<string, Key>;
