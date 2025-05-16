@@ -1,9 +1,10 @@
-import type { ChainInfo, DirectSignResponse, KeplrSignOptions, SignDoc, StdSignDoc } from "@keplr-wallet/types";
+import type { ChainInfo, KeplrSignOptions, StdSignDoc } from "@keplr-wallet/types";
 import type { ChainInfoResponse } from "@terra-money/station-connector/keplrConnector";
 
 import { useGrazInternalStore } from "../../store";
-import type { Key, Wallet } from "../../types/wallet";
+import type { Key, SignDoc, Wallet } from "../../types/wallet";
 import { clearSession } from ".";
+import { DirectSignResponse } from "@cosmjs/proto-signing";
 
 /**
  * Function to return Station object (which is {@link Wallet}) and throws and error if it does not exist on `window`.
