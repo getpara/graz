@@ -61,10 +61,6 @@ export const listedWallets = {
     imgSrc: "/assets/wallet-icon-cosmostation.png",
     mobile: true,
   },
-  [WalletType.CAPSULE]: {
-    name: "Capsule",
-    imgSrc: "/assets/wallet-icon-capsule.jpg",
-  },
   [WalletType.COSMIFRAME]: {
     name: "DAO DAO",
     imgSrc: "/assets/wallet-icon-daodao.png",

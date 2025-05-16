@@ -7,7 +7,7 @@ import type { Maybe } from "../types/core";
 import type { Key } from "../types/wallet";
 import { WalletType } from "../types/wallet";
 import type { ChainId } from "../utils/multi-chain";
-import { checkWallet, getWallet, isCapsule, isLeapDappBrowser, isLeapSnaps, isWalletConnect } from "./wallet";
+import { checkWallet, getWallet, isLeapDappBrowser, isLeapSnaps, isWalletConnect } from "./wallet";
 
 export type ConnectArgs = Maybe<{
   chainId: ChainId;
@@ -68,46 +68,9 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
 
     const { accounts: _account } = useGrazSessionStore.getState();
     await wallet.init?.();
-    if (
-      isCapsule(currentWalletType) &&
-      useGrazSessionStore.getState().capsuleClient &&
-      Object.values(useGrazSessionStore.getState().accounts || []).length > 0
-    ) {
-      const connectedChains = chainIds.map((x) => chains!.find((y) => y.chainId === x)!);
-      const _resAcc = useGrazSessionStore.getState().accounts;
-      useGrazSessionStore.setState({ status: "connecting" });
 
-      const resultAcccounts = Object.fromEntries(
-        await Promise.all(
-          chainIds.map(async (chainId): Promise<[string, Key]> => [chainId, await wallet.getKey(chainId)]),
-        ),
-      );
-      useGrazSessionStore.setState((prev) => ({
-        accounts: { ...(prev.accounts || {}), ...resultAcccounts },
-      }));
-
-      useGrazInternalStore.setState((prev) => ({
-        recentChainIds: [...(prev.recentChainIds || []), ...chainIds].filter((thing, i, arr) => {
-          return arr.indexOf(thing) === i;
-        }),
-      }));
-      useGrazSessionStore.setState((prev) => ({
-        activeChainIds: [...(prev.activeChainIds || []), ...chainIds].filter((thing, i, arr) => {
-          return arr.indexOf(thing) === i;
-        }),
-      }));
-      useGrazSessionStore.setState({
-        status: "connected",
-      });
-      return { accounts: _resAcc!, walletType: currentWalletType, chains: connectedChains };
-    }
     await wallet.enable(chainIds);
-    if (isCapsule(currentWalletType)) {
-      const connectedChains = chainIds.map((x) => chains!.find((y) => y.chainId === x)!);
-      const _resAcc = useGrazSessionStore.getState().accounts;
-      useGrazSessionStore.setState({ status: "connecting" });
-      return { accounts: _resAcc!, walletType: currentWalletType, chains: connectedChains };
-    }
+
     if (!isWalletConnect(currentWalletType)) {
       let resultAccounts: Record<string, Key> = {};
       if (isLeapSnaps(currentWalletType)) {

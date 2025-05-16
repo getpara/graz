@@ -42,7 +42,6 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@leapwallet/cosmos-social-login-capsule-provider": "^0.0.44",
     "@tanstack/react-query": ">=5.62.0",
     "react": ">=17"
   },

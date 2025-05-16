@@ -1,6 +1,5 @@
 import { Stack } from "@chakra-ui/react";
 import { Card } from "src/ui/card/chain";
-import CapsuleModals from "src/ui/modal/capsule-modals";
 import { mainnetChains } from "src/utils/graz";
 
 const HomePage = () => {
@@ -11,7 +10,6 @@ const HomePage = () => {
           <Card key={chain.chainId} chain={chain} />
         ))}
       </Stack>
-      <CapsuleModals />
     </>
   );
 };
