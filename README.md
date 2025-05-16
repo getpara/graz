@@ -115,7 +115,7 @@ You can read more about available hooks and exports on [Documentation Site](http
 ## Maintainers
 
 - Nur Fikri/Kiki ([@codingki](https://github.com/codingki))
-- Joshua Nataniel M ([@joshuanatanielnm](https://github.com/joshuanatanielnm)
+- Joshua Nataniel M ([@joshuanatanielnm](https://github.com/joshuanatanielnm))
 
 ## License
 

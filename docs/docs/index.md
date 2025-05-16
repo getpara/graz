@@ -110,8 +110,8 @@ function Wallet() {
 
 ## Maintainers
 
-- Griko Nibras ([@grikomsn](https://github.com/grikomsn))
 - Nur Fikri ([@codingki](https://github.com/codingki))
+- Joshua Nataniel M ([@joshuanatanielnm](https://github.com/joshuanatanielnm))
 
 ## License
 
