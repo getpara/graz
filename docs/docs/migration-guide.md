@@ -4,6 +4,23 @@ sidebar_position: 3
 
 # Migration Guide
 
+## 0.3.0 Breaking Changes
+
+Changes:
+
+- @cosmjs dependencies moved to peer dependencies
+- bump @cosmjs packages dependencies to support only >= 0.32.4
+- zustand bumped to v5
+- @walletconnect packages bumped to v2.20.2
+- removed `@cosmjs/launchpad` and `@cosmjs/tendermint-rpc` package
+
+Removed:
+
+- Capsule wallet, will replaced by Para soon.
+- `useCosmWasmTmSigningClient` hook
+- `useStargateTmSigningClient` hook
+- `useTendermintClient` hook
+
 ## 0.2.0 Breaking Changes
 
 We updates the react-query version to 5.62.0 and removes QueryClientProvider initialisation from Graz Provider. As a results, dApps must now wrap Graz provider with QueryClientProvider on their end. Also note that react-query has been added as peer dependency now.
