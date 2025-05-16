@@ -1,5 +1,11 @@
 # graz
 
+## 0.3.1
+
+### Patch Changes
+
+- fff247b: fix type missmatch
+
 ## 0.3.0
 
 ### Minor Changes

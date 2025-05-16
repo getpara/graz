@@ -1,5 +1,12 @@
 # @project/starter
 
+## 0.1.8
+
+### Patch Changes
+
+- Updated dependencies [fff247b]
+  - graz@0.3.1
+
 ## 0.1.7
 
 ### Patch Changes
