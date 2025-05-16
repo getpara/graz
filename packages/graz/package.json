@@ -2,7 +2,7 @@
   "name": "graz",
   "description": "React hooks for Cosmos",
   "version": "0.2.6",
-  "author": "Griko Nibras <griko@strange.love>",
+  "author": "Nur Fikri <kikiding.space@gmail.com>",
   "repository": "https://github.com/graz-sh/graz.git",
   "homepage": "https://github.com/graz-sh/graz",
   "bugs": "https://github.com/graz-sh/graz/issues",
@@ -42,17 +42,15 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@leapwallet/cosmos-social-login-capsule-provider": "^0.0.41",
     "@tanstack/react-query": ">=5.62.0",
-    "react": ">=17"
+    "react": ">=17",
+    "@cosmjs/amino": ">=0.32.4",
+    "@cosmjs/cosmwasm-stargate": ">=0.32.4",
+    "@cosmjs/proto-signing": ">=0.32.4",
+    "@cosmjs/stargate": ">=0.32.4",
+    "@cosmjs/encoding": ">=0.32.4"
   },
   "dependencies": {
-    "@cosmjs/amino": "0.31.3",
-    "@cosmjs/cosmwasm-stargate": "0.31.3",
-    "@cosmjs/launchpad": "0.27.1",
-    "@cosmjs/proto-signing": "0.31.3",
-    "@cosmjs/stargate": "0.31.3",
-    "@cosmjs/tendermint-rpc": "0.31.3",
     "@keplr-wallet/types": "0.12.156",
     "@cosmsnap/snapper": "0.1.29",
     "@dao-dao/cosmiframe": "0.1.0",
@@ -60,13 +58,13 @@
     "@metamask/providers": "12.0.0",
     "@terra-money/station-connector": "1.1.0",
     "@vectis/extension-client": "^0.7.2",
-    "@walletconnect/sign-client": "2.17.2",
-    "@walletconnect/types": "2.17.2",
-    "@walletconnect/utils": "2.17.2",
+    "@walletconnect/sign-client": "2.20.2",
+    "@walletconnect/types": "2.20.2",
+    "@walletconnect/utils": "2.20.2",
     "@walletconnect/modal": "2.7.0",
     "cosmos-directory-client": "0.0.6",
     "long": "4",
-    "zustand": "4.5.2"
+    "zustand": "5.0.4"
   },
   "devDependencies": {
     "@initia/initia-registry-types": "0.0.20",
@@ -75,7 +73,7 @@
     "@types/react-dom": "^18.2.7",
     "arg": "^5.0.2",
     "react": "^18.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.0"
   },
   "keywords": [
     "graz",

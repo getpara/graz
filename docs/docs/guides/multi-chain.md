@@ -96,11 +96,8 @@ Query Hooks that have multi chain data support:
 - [useBalanceStaked](/docs/hooks/useBalanceStaked)
 - [useCosmWasmClient](/docs/hooks/useCosmWasmClient)
 - [useCosmWasmSigningClient](/docs/hooks/useCosmWasmSigningClient)
-- [useCosmWasmTmSigningClient](/docs/hooks/useCosmWasmTmSigningClient)
 - [useStargateClient](/docs/hooks/useStargateClient)
 - [useStargateSigningClient](/docs/hooks/useStargateSigningClient)
-- [useStargateTmSigningClient](/docs/hooks/useStargateTmSigningClient)
-- [useTendermintClient](/docs/hooks/useTendermintClient)
 
 Our hooks have a special pattern to handle multiple chains. In every hooks above have this param
 

@@ -1,6 +1,6 @@
 import type { UseQueryResult } from "@tanstack/react-query";
 import { useQuery } from "@tanstack/react-query";
-import { shallow } from "zustand/shallow";
+import { useShallow } from "zustand/shallow";
 
 import { checkWallet } from "../actions/wallet";
 import { useGrazInternalStore } from "../store";
@@ -17,7 +17,7 @@ import { WalletType } from "../types/wallet";
  */
 export const useActiveWalletType = () => {
   return useGrazInternalStore(
-    (x) => ({
+    useShallow((x) => ({
       walletType: x.walletType,
       isCosmostation: x.walletType === WalletType.COSMOSTATION,
       isCosmostationMobile: x.walletType === WalletType.WC_COSMOSTATION_MOBILE,
@@ -29,10 +29,8 @@ export const useActiveWalletType = () => {
       isWalletConnect: x.walletType === WalletType.WALLETCONNECT,
       isMetamaskSnapLeap: x.walletType === WalletType.METAMASK_SNAP_LEAP,
       isStation: x.walletType === WalletType.STATION,
-      isCapsule: x.walletType === WalletType.CAPSULE,
       isCosmiframe: x.walletType === WalletType.COSMIFRAME,
-    }),
-    shallow,
+    })),
   );
 };
 

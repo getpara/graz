@@ -49,7 +49,6 @@ enum WalletType {
   METAMASK_SNAP_COSMOS = "metamask_snap_cosmos",
   STATION = "station",
   XDEFI = "xdefi",
-  CAPSULE = "capsule",
   COSMIFRAME = "cosmiframe",
   COMPASS = "compass",
   OKX = "okx",

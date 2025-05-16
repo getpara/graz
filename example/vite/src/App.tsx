@@ -3,7 +3,6 @@ import "./App.css";
 import { useAccount, useActiveChainIds, useConnect, useDisconnect } from "graz";
 
 import reactLogo from "./assets/react.svg";
-import CapsuleModals from "./components/CapsuleModals";
 
 // eslint-disable-next-line prefer-arrow-functions/prefer-arrow-functions, react/function-component-definition
 export default function App() {
@@ -48,7 +47,6 @@ export default function App() {
           {isDisconnected ? "Connect Wallet" : null}
         </button>
       </div>
-      <CapsuleModals />
     </div>
   );
 }

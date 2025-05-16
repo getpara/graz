@@ -1,3 +1,5 @@
+# Graz
+
 ![graz](./banner.png)
 
 [![npm/v](https://badgen.net/npm/v/graz)](https://www.npmjs.com/package/graz)
@@ -33,6 +35,21 @@ yarn add graz
 
 # using pnpm
 pnpm add graz
+```
+
+### Install peer dependencies
+
+To avoid version missmatch we dcided to make these packages as peer dependencies
+
+```shell
+# using npm
+npm install @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
+
+# using yarn
+yarn add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
+
+# using pnpm
+pnpm add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 ```
 
 ## Quick start
@@ -97,8 +114,8 @@ You can read more about available hooks and exports on [Documentation Site](http
 
 ## Maintainers
 
-- Griko Nibras ([@grikomsn](https://github.com/grikomsn))
-- Nur Fikri ([@codingki](https://github.com/codingki))
+- Nur Fikri/Kiki ([@codingki](https://github.com/codingki))
+- Joshua Nataniel M ([@joshuanatanielnm](https://github.com/joshuanatanielnm))
 
 ## License
 

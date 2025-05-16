@@ -16,11 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <GrazProvider
         grazOptions={{
           chains: [cosmoshub],
-          capsuleConfig: {
-            apiKey: import.meta.env.VITE_CAPSULE_API_KEY as string,
-            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-            env: (import.meta.env.VITE_CAPSULE_ENV as "DEV" | "SANDBOX" | "BETA" | "PROD") || "DEV",
-          },
+
         }}
       >
         <App />
