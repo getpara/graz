@@ -1,5 +1,21 @@
 # graz
 
+## 0.3.0
+
+### Minor Changes
+
+- df4ed52: move cosmjs deps to peerDeps
+
+### Patch Changes
+
+- 0525070: remove @cosmjs/launchpad package deps
+- 406b721: add @cosmjs/encoding as peer dependencies
+- 25b5d66: bump zustand v5
+- ab7afd7: bump walletconnect deps
+- 2fb86fd: bump cosmjs package
+- 72fb04d: remove terndermint client
+- 50e5e55: remove capsule
+
 ## 0.2.6
 
 ### Patch Changes
