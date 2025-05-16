@@ -4,7 +4,6 @@ import type { Keplr } from "@keplr-wallet/types";
 import { SignClient } from "@walletconnect/sign-client";
 import type { ISignClient, SignClientTypes } from "@walletconnect/types";
 import { getSdkError } from "@walletconnect/utils";
-import Long from "long";
 
 import { useGrazInternalStore, useGrazSessionStore } from "../../../store";
 import { Key, type SignAminoParams, type SignDirectParams, type Wallet, WalletType } from "../../../types/wallet";

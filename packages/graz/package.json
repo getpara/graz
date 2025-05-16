@@ -43,12 +43,12 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.62.0",
-    "react": ">=17"
+    "react": ">=17",
+    "@cosmjs/amino": ">=0.32.4",
+    "@cosmjs/cosmwasm-stargate": ">=0.32.4",
+    "@cosmjs/proto-signing": ">=0.32.4"
   },
   "dependencies": {
-    "@cosmjs/amino": "0.32.4",
-    "@cosmjs/cosmwasm-stargate": "0.32.4",
-    "@cosmjs/proto-signing": "0.32.4",
     "@cosmjs/stargate": "0.32.4",
     "@keplr-wallet/types": "0.12.156",
     "@cosmsnap/snapper": "0.1.29",
