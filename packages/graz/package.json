@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@keplr-wallet/types": "0.12.156",
-    "@cosmsnap/snapper": "0.1.29",
+    "@cosmsnap/snapper": "0.2.7",
     "@dao-dao/cosmiframe": "0.1.0",
     "@keplr-wallet/cosmos": "0.12.156",
     "@metamask/providers": "12.0.0",

@@ -40,11 +40,11 @@ export const getCosmiframe = (): Wallet => {
   return {
     enable: keplr.enable.bind(keplr),
     getKey: keplr.getKey.bind(keplr),
-    getOfflineSigner: keplr.getOfflineSigner.bind(keplr),
-    getOfflineSignerAuto: keplr.getOfflineSignerAuto.bind(keplr),
+    getOfflineSigner: keplr.getOfflineSigner.bind(keplr) as unknown as Wallet["getOfflineSigner"],
+    getOfflineSignerAuto: keplr.getOfflineSignerAuto.bind(keplr) as unknown as Wallet["getOfflineSignerAuto"],
     getOfflineSignerOnlyAmino: keplr.getOfflineSignerOnlyAmino.bind(keplr),
     experimentalSuggestChain: keplr.experimentalSuggestChain.bind(keplr),
-    signDirect: keplr.signDirect.bind(keplr),
+    signDirect: keplr.signDirect.bind(keplr) as unknown as Wallet["signDirect"],
     signAmino: keplr.signAmino.bind(keplr),
   };
 };

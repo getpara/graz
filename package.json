@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build --filter=!@project/example-next --filter=!@project/starter --filter=!@project/example-vite",
+    "build-all": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev --filter=!@project/docs",
     "project:docs": "pnpm --dir docs",

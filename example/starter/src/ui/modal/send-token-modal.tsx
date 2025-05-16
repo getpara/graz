@@ -147,7 +147,7 @@ export const SendTokenModal = ({ chain }: { chain: ChainInfo }) => {
                       Gas Used:
                     </Text>
                     <Text fontFamily="mono" fontWeight="bold" wordBreak="break-all">
-                      {result.gasUsed}
+                      {result.gasUsed.toString()}
                     </Text>
                   </Stack>
                   <HStack>
