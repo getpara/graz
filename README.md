@@ -43,15 +43,14 @@ To avoid version missmatch we dcided to make these packages as peer dependencies
 
 ```shell
 # using npm
-npm install @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate
+npm install @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 
 # using yarn
-yarn add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate
+yarn add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 
 # using pnpm
-pnpm add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate
+pnpm add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 ```
-
 
 ## Quick start
 

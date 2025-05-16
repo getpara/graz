@@ -225,6 +225,9 @@ importers:
       '@cosmjs/cosmwasm-stargate':
         specifier: '>=0.32.4'
         version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@cosmjs/encoding':
+        specifier: '>=0.32.4'
+        version: 0.32.4
       '@cosmjs/proto-signing':
         specifier: '>=0.32.4'
         version: 0.32.4
