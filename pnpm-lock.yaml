@@ -234,9 +234,6 @@ importers:
       '@cosmjs/stargate':
         specifier: 0.32.4
         version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@cosmjs/tendermint-rpc':
-        specifier: 0.32.4
-        version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmsnap/snapper':
         specifier: 0.1.29
         version: 0.1.29

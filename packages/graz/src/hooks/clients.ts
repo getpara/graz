@@ -1,7 +1,6 @@
 import { CosmWasmClient } from "@cosmjs/cosmwasm-stargate";
 import type { HttpEndpoint } from "@cosmjs/stargate";
 import { StargateClient } from "@cosmjs/stargate";
-import { Tendermint34Client, Tendermint37Client } from "@cosmjs/tendermint-rpc";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 
@@ -86,52 +85,6 @@ export const useCosmWasmClient = <TMulti extends MultiChainHookArgs>(
       return res;
     },
     enabled: Boolean(chains) && chains.length > 0 && (args?.enabled !== undefined ? Boolean(args.enabled) : true),
-    refetchOnWindowFocus: false,
-  });
-};
-
-/**
- * graz query hook to retrieve a TendermintClient.
- *
- * @example
- * ```ts
- * import { useTendermintClient } from "graz";
- *
- * //single chain
- * const { data:client, isFetching, refetch, ... } = useTendermintClient({type: "tm37"});
- * await client.getAccount("address")
- *
- * // multi chain
- * const { data:clients, isFetching, refetch, ... } = useTendermintClient({type: "tm34", multiChain: true, chainId: ["cosmoshub-4", "sommelier-3"]});
- * await clients["cosmoshub-4"].getAccount("address")
- * ```
- */
-export const useTendermintClient = <T extends "tm34" | "tm37", TMulti extends MultiChainHookArgs>({
-  type,
-  chainId,
-  multiChain,
-  enabled,
-}: {
-  type: T;
-} & TMulti &
-  QueryConfig): UseMultiChainQueryResult<TMulti, T extends "tm34" ? Tendermint34Client : Tendermint37Client> => {
-  const chains = useChainsFromArgs({ chainId, multiChain });
-  const queryKey = useMemo(() => ["USE_TENDERMINT_CLIENT", type, chains] as const, [type, chains]);
-
-  return useQuery({
-    queryKey,
-    queryFn: async ({ queryKey: [, _type, _chains] }) => {
-      if (_chains.length < 1) throw new Error("No chains found");
-      const res = await createMultiChainAsyncFunction(Boolean(multiChain), _chains, async (_chain) => {
-        const chainConfig = useGrazInternalStore.getState().chainsConfig?.[_chain.chainId];
-        const endpoint: HttpEndpoint = { url: _chain.rpc, headers: { ...(chainConfig?.rpcHeaders || {}) } };
-        const TendermintClient = _type === "tm37" ? Tendermint37Client : Tendermint34Client;
-        const client = await TendermintClient.connect(endpoint);
-        return client;
-      });
-      return res;
-    },
-    enabled: Boolean(chains) && chains.length > 0 && (enabled !== undefined ? Boolean(enabled) : true),
     refetchOnWindowFocus: false,
   });
 };
