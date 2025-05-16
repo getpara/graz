@@ -229,7 +229,7 @@ importers:
         specifier: '>=0.32.4'
         version: 0.32.4
       '@cosmjs/stargate':
-        specifier: 0.32.4
+        specifier: '>=0.32.4'
         version: 0.32.4(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@cosmsnap/snapper':
         specifier: 0.1.29
