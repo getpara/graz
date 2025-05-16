@@ -63,7 +63,7 @@
     "@walletconnect/modal": "2.7.0",
     "cosmos-directory-client": "0.0.6",
     "long": "4",
-    "zustand": "4.5.2"
+    "zustand": "5.0.4"
   },
   "devDependencies": {
     "@initia/initia-registry-types": "0.0.20",
