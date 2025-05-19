@@ -1,5 +1,11 @@
 # graz
 
+## 0.3.2
+
+### Patch Changes
+
+- ec1a66c: fix install deps warning
+
 ## 0.3.1
 
 ### Patch Changes
