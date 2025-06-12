@@ -1,119 +1,93 @@
 import "./App.css";
-import { useAccount, useBalances, useConnect, useDisconnect, WALLET_TYPES, WalletType, checkWallet } from "graz";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { AccountInfo } from "./components/AccountInfo";
-import { WalletModal } from "./components/WalletModal";
 
+import { useAccount, useActiveChainIds, useConnect, useDisconnect } from "graz";
+
+import reactLogo from "./assets/react.svg";
+
+// eslint-disable-next-line prefer-arrow-functions/prefer-arrow-functions, react/function-component-definition
 export default function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const chainIds = useMemo(() => ['cosmoshub-4', 'osmosis-1'], []);
-  
-  const { data: accounts, isConnected, isConnecting, isDisconnected, isReconnecting } = useAccount({
-    chainId: chainIds,
-    multiChain: true,
-  });
-  
-  const { data: balances, isLoading: isLoadingBalances } = useBalances({
-    chainId: chainIds,
-    multiChain: true,
-  });
-  
-  const { connect } = useConnect({
-    onSuccess: () => setIsModalOpen(false),
-  });
-  
+  const { data: account, isConnected, isConnecting, isDisconnected, isReconnecting } = useAccount();
+  const { connect } = useConnect();
   const { disconnect } = useDisconnect();
-  
-  const { installedWallets, notInstalledWallets } = useMemo(() => {
-    const installed: WalletType[] = [];
-    const notInstalled: WalletType[] = [];
 
-    WALLET_TYPES.forEach((walletType) =>
-      checkWallet(walletType) ? installed.push(walletType) : notInstalled.push(walletType),
-    );
+  const activeChainIds = useActiveChainIds();
 
-    return { installedWallets: installed, notInstalledWallets: notInstalled };
-  }, []);
-  
-  const handleWalletSelect = useCallback(
-    (walletType: WalletType) => connect({ chainId: chainIds, walletType }),
-    [chainIds, connect]
-  );
-  
-  const handleConnectClick = useCallback(() => {
-    if (isConnected) {
-      disconnect({chainId: chainIds});
-    } else {
-      setIsModalOpen(true);
-    }
-  }, [isConnected, disconnect, chainIds]);
-  
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
-  
-  const truncateAddress = useCallback(
-    (addr: string) => `${addr.slice(0, 8)}...${addr.slice(-4)}`,
-    []
-  );
-  
-  useEffect(() => {
-    if (isModalOpen && isConnected) closeModal();
-  }, [isModalOpen, isConnected, closeModal]);
+  // eslint-disable-next-line prefer-arrow-functions/prefer-arrow-functions
+  function handleButton() {
+    isConnected
+      ? disconnect()
+      : connect({
+          chainId: "cosmoshub-4",
+        });
+  }
 
   return (
-    <div className="app">
-      <main className="app-main">
-        {isDisconnected && (
-          <div className="banner-card">
-            <h1>Graz Wallet Connector</h1>
-            <p>Connect your wallet to get started with the Cosmos ecosystem.</p>
-          </div>
-        )}
-
-        {isConnected && accounts && (
-          <AccountInfo 
-            accounts={accounts}
-            balances={balances}
-            isLoadingBalances={isLoadingBalances}
-            truncateAddress={truncateAddress}
-            chainIds={chainIds}
-          />
-        )}
-
-        <div className="connect-container">
-          <button
-            className="connect-button"
-            disabled={isConnecting || isReconnecting}
-            onClick={handleConnectClick}
-            type="button"
-          >
-            {isConnecting || isReconnecting ? (
-              <span className="loading-spinner"></span>
-            ) : isConnected ? (
-              "Disconnect Wallet"
-            ) : (
-              "Connect Wallet"
-            )}
-          </button>
-        </div>
-      </main>
-
-      <WalletModal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        installedWallets={installedWallets}
-        notInstalledWallets={notInstalledWallets}
-        onSelectWallet={handleWalletSelect}
-        isConnecting={isConnecting}
-      />
-
-      <footer className="app-footer">
-        <p>
-          Built with <span className="heart">♥</span> using Vite, React, and
-          Graz
-        </p>
-      </footer>
+    <div className="App">
+      <div>
+        <img alt="Vite logo" className="logo" src="vite.svg" />
+        <img alt="React logo" className="logo react" src={reactLogo} />
+      </div>
+      <h1>Vite + React + Graz</h1>
+      <div className="card">
+        {isDisconnected ? <p>Connect wallet using the button below.</p> : null}
+        {activeChainIds ? (
+          <p>
+            Current chain: <code>{activeChainIds.join("; ")}</code>
+          </p>
+        ) : null}
+        {account ? (
+          <p>
+            Wallet address: <code>{account.bech32Address}</code>
+          </p>
+        ) : null}
+        <br />
+        <button disabled={isConnecting || isReconnecting} onClick={handleButton} type="button">
+          {isConnecting || isReconnecting ? "Connecting..." : null}
+          {isConnected ? "Disconnect Wallet" : null}
+          {isDisconnected ? "Connect Wallet" : null}
+        </button>
+      </div>
     </div>
   );
 }
+
+export const Graz = () => {
+  const { data: account, isConnected, isConnecting, isDisconnected, isReconnecting } = useAccount();
+  const { connect } = useConnect();
+  const { disconnect } = useDisconnect();
+
+  const activeChainIds = useActiveChainIds();
+
+  const handleButton = () => {
+    (isConnected ? disconnect : connect)();
+  };
+
+  return (
+    <div className="App">
+      <div>
+        <img alt="Vite logo" className="logo" src="vite.svg" />
+        <img alt="React logo" className="logo react" src={reactLogo} />
+      </div>
+      <h1>Vite + React + Graz</h1>
+      <div className="card">
+        {isDisconnected ? <p>Connect wallet using the button below.</p> : null}
+        {activeChainIds ? (
+          <p>
+            Current chain: <code>{activeChainIds.join("; ")}</code>
+          </p>
+        ) : null}
+        {account ? (
+          <p>
+            Wallet address: <code>{account.bech32Address}</code>
+          </p>
+        ) : null}
+        <br />
+        <button disabled={isConnecting || isReconnecting} onClick={handleButton}>
+          {isConnecting || isReconnecting ? "Connecting..." : null}
+          {isConnected ? "Disconnect Wallet" : null}
+          {isDisconnected ? "Connect Wallet" : null}
+        </button>
+      </div>
+    </div>
+  );
+};

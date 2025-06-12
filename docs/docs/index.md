@@ -9,7 +9,7 @@ sidebar_position: 1
 ## Features
 
 - 🪝 20+ hooks for interfacing with wallets, clients, signers, etc. (connecting, view balances, send tokens, etc.)
-- 💳 Multiple wallet supports (Keplr, Leap, Cosmostation, Vectis, Station, XDefi, Metamask Snap, WalletConnect, Capsule)
+- 💳 Multiple wallet supports (Keplr, Leap, Cosmostation, Vectis, Station, XDefi, Metamask Snap, WalletConnect)
 - ⚙️ Generate mainnet & testnet `ChainInfo`
 - 📚 Built-in caching, request deduplication, and all the good stuff from [`@tanstack/react-query`](https://tanstack.com/query) and [`zustand`](https://github.com/pmndrs/zustand)
 - 🔄 Auto refresh on wallet and network change
@@ -41,13 +41,13 @@ To avoid version missmatch we dcided to make these packages as peer dependencies
 
 ```shell
 # using npm
-npm install @cosmjs/cosmwasm-stargate @cosmjs/launchpad @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc long
+npm install @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 
 # using yarn
-yarn add @cosmjs/cosmwasm-stargate @cosmjs/launchpad @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc long
+yarn add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 
 # using pnpm
-pnpm add @cosmjs/cosmwasm-stargate @cosmjs/launchpad @cosmjs/proto-signing @cosmjs/stargate @cosmjs/tendermint-rpc long
+pnpm add @cosmjs/cosmwasm-stargate @cosmjs/proto-signing @cosmjs/stargate @cosmjs/encoding
 ```
 
 ## Quick start
@@ -110,8 +110,8 @@ function Wallet() {
 
 ## Maintainers
 
-- Griko Nibras ([@grikomsn](https://github.com/grikomsn))
 - Nur Fikri ([@codingki](https://github.com/codingki))
+- Joshua Nataniel M ([@joshuanatanielnm](https://github.com/joshuanatanielnm))
 
 ## License
 

@@ -1,6 +1,6 @@
 {
   "name": "@project/example-vite",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -22,7 +22,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
     "node-stdlib-browser": "^1.2.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.4.0",
     "vite": "^4.4.9",
     "vite-plugin-node-stdlib-browser": "^0.2.1"
   },

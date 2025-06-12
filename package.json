@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build --filter=!@project/example-next --filter=!@project/starter --filter=!@project/example-vite",
+    "build-all": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev --filter=!@project/docs",
     "project:docs": "pnpm --dir docs",
@@ -27,7 +28,7 @@
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
     "turbo": "^1.10.13",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.0"
   },
   "prettier": "@graz-sh/style-guide/prettier",
   "private": true,

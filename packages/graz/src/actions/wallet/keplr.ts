@@ -34,12 +34,12 @@ export const getKeplr = (): Wallet => {
     const setDefaultOptions = (options: KeplrIntereactionOptions) => {
       keplr.defaultOptions = options;
     };
+
     const res = Object.assign(keplr, {
       subscription,
       setDefaultOptions,
     });
-
-    return res;
+    return res as unknown as Wallet;
   }
 
   useGrazInternalStore.getState()._notFoundFn();

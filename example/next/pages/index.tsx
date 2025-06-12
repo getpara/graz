@@ -1,10 +1,7 @@
-import "@leapwallet/cosmos-social-login-capsule-provider-ui/styles.css";
-
 import { Center, HStack, Spacer, Stack, Text } from "@chakra-ui/react";
 import { useAccount } from "graz";
 import type { NextPage } from "next";
 import { BalanceList } from "ui/balance-list";
-import CapsuleModals from "ui/capsule-modals";
 import { ChainSwitcher } from "ui/chain-switcher";
 import { ConnectButton } from "ui/connect-button";
 import { ConnectStatus } from "ui/connect-status";
@@ -40,7 +37,6 @@ const HomePage: NextPage = () => {
           <ConnectButton />
         </HStack>
       </Stack>
-      <CapsuleModals />
     </Center>
   );
 };

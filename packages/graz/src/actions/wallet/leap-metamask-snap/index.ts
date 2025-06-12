@@ -1,4 +1,4 @@
-import type { AccountData, Algo, AminoSignResponse, DirectSignResponse, Keplr, StdSignDoc } from "@keplr-wallet/types";
+import type { AccountData, Algo, AminoSignResponse, Keplr, StdSignDoc } from "@keplr-wallet/types";
 // eslint-disable-next-line import/no-named-as-default
 import Long from "long";
 
@@ -6,6 +6,7 @@ import { useGrazInternalStore } from "../../../store";
 import type { Key, KnownKeys, SignAminoParams, SignDirectParams, Wallet } from "../../../types/wallet";
 import type { ChainId } from "../../../utils/multi-chain";
 import type { GetSnapsResponse, Snap } from "./types";
+import { DirectSignResponse } from "@cosmjs/proto-signing";
 
 export interface GetMetamaskSnap {
   id: string;
@@ -196,7 +197,13 @@ export const getMetamaskSnap = (params?: GetMetamaskSnap): Wallet => {
     };
 
     const signDirect = async (...args: SignDirectParams): Promise<DirectSignResponse> => {
-      const [chainId, signer, signDoc] = args;
+      const [chainId, signer, _signDoc] = args;
+      const signDoc = {
+        ..._signDoc,
+        accountNumber: Long.fromString(_signDoc.accountNumber?.toString() || "0"),
+        authInfoBytes: _signDoc.authInfoBytes,
+        bodyBytes: _signDoc.bodyBytes,
+      };
       const res = await requestSignDirect(chainId, signer, signDoc);
       return res;
     };

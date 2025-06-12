@@ -1,10 +1,10 @@
 import type { AminoSignResponse } from "@cosmjs/amino";
 import { fromBech32 } from "@cosmjs/encoding";
-import type { DirectSignResponse } from "@cosmjs/proto-signing";
+import type { DirectSignResponse, OfflineSigner } from "@cosmjs/proto-signing";
 import Long from "long";
 
 import { useGrazInternalStore } from "../../store";
-import type { Key, SignAminoParams, SignDirectParams, Wallet } from "../../types/wallet";
+import type { Key, SignAminoParams, SignDirectParams, SignDoc, Wallet } from "../../types/wallet";
 import { clearSession } from ".";
 import { ChainInfo } from "@vectis/extension-client";
 
@@ -75,12 +75,21 @@ export const getVectis = (): Wallet => {
 
     const signDirect = async (...args: SignDirectParams): Promise<DirectSignResponse> => {
       const { 1: signer, 2: signDoc } = args;
-      return vectis.signDirect(signer, {
+      const res = await vectis.signDirect(signer, {
         bodyBytes: signDoc.bodyBytes || Uint8Array.from([]),
         authInfoBytes: signDoc.authInfoBytes || Uint8Array.from([]),
         accountNumber: Long.fromString(signDoc.accountNumber?.toString() || "", false),
         chainId: signDoc.chainId || "",
       });
+      return {
+        signature: res.signature,
+        signed: {
+          authInfoBytes: res.signed.authInfoBytes,
+          bodyBytes: res.signed.bodyBytes,
+          chainId: res.signed.chainId,
+          accountNumber: BigInt(res.signed.accountNumber.toString()),
+        },
+      };
     };
 
     const signAmino = async (...args: SignAminoParams): Promise<AminoSignResponse> => {
@@ -90,8 +99,59 @@ export const getVectis = (): Wallet => {
 
     return {
       enable: (chainId: string | string[]) => vectis.enable(chainId),
-      getOfflineSigner: (chainId: string) => vectis.getOfflineSigner(chainId),
-      getOfflineSignerAuto: (chainId: string) => vectis.getOfflineSignerAuto(chainId),
+      getOfflineSigner: (chainId: string) => {
+        const os = vectis.getOfflineSigner(chainId);
+        return {
+          getAccounts: os.getAccounts,
+          signAmino: os.signAmino,
+          signDirect: async (signer, signDoc) => {
+            const res = await os.signDirect(signer, {
+              accountNumber: Long.fromString(signDoc.accountNumber?.toString() || "", false),
+              authInfoBytes: signDoc.authInfoBytes,
+              bodyBytes: signDoc.bodyBytes,
+              chainId: signDoc.chainId || "",
+            });
+            return {
+              signature: res.signature,
+              signed: {
+                authInfoBytes: res.signed.authInfoBytes,
+                bodyBytes: res.signed.bodyBytes,
+                chainId: res.signed.chainId,
+                accountNumber: BigInt(res.signed.accountNumber.toString()),
+              },
+            };
+          },
+        };
+      },
+      getOfflineSignerAuto: async (chainId: string) => {
+        const os = await vectis.getOfflineSignerAuto(chainId);
+        if ("signAmino" in os) {
+          return os;
+        }
+        if ("signDirect" in os) {
+          return {
+            getAccounts: os.getAccounts,
+            signDirect: async (signer, signDoc) => {
+              const res = await os.signDirect(signer, {
+                accountNumber: Long.fromString(signDoc.accountNumber?.toString() || "", false),
+                authInfoBytes: signDoc.authInfoBytes,
+                bodyBytes: signDoc.bodyBytes,
+                chainId: signDoc.chainId || "",
+              });
+              return {
+                signature: res.signature,
+                signed: {
+                  authInfoBytes: res.signed.authInfoBytes,
+                  bodyBytes: res.signed.bodyBytes,
+                  chainId: res.signed.chainId,
+                  accountNumber: BigInt(res.signed.accountNumber.toString()),
+                },
+              };
+            },
+          };
+        }
+        return os;
+      },
       getKey,
       subscription,
       getOfflineSignerOnlyAmino,

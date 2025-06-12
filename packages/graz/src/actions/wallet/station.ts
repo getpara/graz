@@ -1,9 +1,62 @@
-import type { ChainInfo, DirectSignResponse, KeplrSignOptions, SignDoc, StdSignDoc } from "@keplr-wallet/types";
-import type { ChainInfoResponse } from "@terra-money/station-connector/keplrConnector";
+import type { ChainInfo, KeplrSignOptions, StdSignDoc } from "@keplr-wallet/types";
 
 import { useGrazInternalStore } from "../../store";
-import type { Key, Wallet } from "../../types/wallet";
+import type { Key, SignDoc, Wallet } from "../../types/wallet";
 import { clearSession } from ".";
+import { DirectSignResponse } from "@cosmjs/proto-signing";
+
+type ChainInfoResponse = {
+  chainId: string;
+  chainName: string;
+  chainSymbolImageUrl: string;
+  stakeCurrency: {
+    coinDecimals: number;
+    coinDenom: string;
+    coinImageUrl: string;
+    coinMinimalDenom: string;
+  };
+  bip44: {
+    coinType: number;
+  };
+  bech32Config: {
+    bech32PrefixAccAddr: string;
+    bech32PrefixAccPub: string;
+    bech32PrefixConsAddr: string;
+    bech32PrefixConsPub: string;
+    bech32PrefixValAddr: string;
+    bech32PrefixValPub: string;
+  };
+  currencies: {
+    coinDecimals: number;
+    coinDenom: string;
+    coinImageUrl: string;
+    coinMinimalDenom: string;
+  }[];
+  /**
+   * This indicates which coin or token can be used for fee to send transaction.
+   * You can get actual currency information from Currencies.
+   */
+  feeCurrencies: {
+    coinDecimals: number;
+    coinDenom: string;
+    coinImageUrl: string;
+    coinMinimalDenom: string;
+    gasPriceStep: {
+      average: number;
+      high: number;
+      low: number;
+    };
+  }[];
+};
+
+type GetKeyResponse = {
+  name: string;
+  algo: string;
+  pubKey: Uint8Array;
+  address: Uint8Array;
+  bech32Address: string;
+  isNanoLedger: boolean;
+};
 
 /**
  * Function to return Station object (which is {@link Wallet}) and throws and error if it does not exist on `window`.
@@ -18,7 +71,7 @@ import { clearSession } from ".";
  * ```
  */
 export const getStation = (): Wallet => {
-  if (typeof window.station !== "undefined") {
+  if (typeof window.station?.keplr !== "undefined") {
     const station = window.station.keplr;
 
     const subscription: (reconnect: () => void) => () => void = (reconnect) => {
@@ -33,7 +86,7 @@ export const getStation = (): Wallet => {
     };
 
     const getKey = async (chainId: string): Promise<Key> => {
-      const key = await station.getKey(chainId);
+      const key = (await station.getKey(chainId)) as GetKeyResponse;
       return {
         isKeystone: false,
         ...key,
@@ -105,9 +158,10 @@ export const getStation = (): Wallet => {
       experimentalSuggestChain,
       enable: (chainIds: string | string[]) => station.enable(chainIds),
       disable: (chainIds?: string | string[]) => station.disable(chainIds),
-      getOfflineSignerAuto: (chainId: string) => station.getOfflineSignerAuto(chainId),
+      getOfflineSignerAuto: ((chainId: string) =>
+        station.getOfflineSignerAuto(chainId)) as unknown as Wallet["getOfflineSignerAuto"],
       getOfflineSignerOnlyAmino: (chainId: string) => station.getOfflineSignerOnlyAmino(chainId),
-      signDirect: () => station.signDirect(),
+      signDirect: station.signDirect as unknown as Wallet["signDirect"],
       signAmino: (chainId: string, signer: string, signDoc: StdSignDoc, _signOptions?: KeplrSignOptions) =>
         station.signAmino(chainId, signer, signDoc),
     };

@@ -51,7 +51,8 @@ export const getMetamaskSnapCosmos = (): Wallet => {
     return {
       init,
       enable,
-      getOfflineSigner: (chainId: string) => cosmos.getOfflineSigner(chainId),
+      getOfflineSigner: ((chainId: string) =>
+        cosmos.getOfflineSigner(chainId)) as unknown as Wallet["getOfflineSigner"],
       experimentalSuggestChain: async (chainInfo) => {
         if (!chainInfo.bech32Config) throw new Error("Bech32Config is required");
         if (!chainInfo.stakeCurrency) throw new Error("StakeCurrency is required");

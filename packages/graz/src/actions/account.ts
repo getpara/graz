@@ -4,9 +4,10 @@ import type { ChainInfo, OfflineAminoSigner } from "@keplr-wallet/types";
 import { RECONNECT_SESSION_KEY } from "../constant";
 import { grazSessionDefaultValues, useGrazInternalStore, useGrazSessionStore } from "../store";
 import type { Maybe } from "../types/core";
-import type { Key, WalletType } from "../types/wallet";
+import type { Key } from "../types/wallet";
+import { WalletType } from "../types/wallet";
 import type { ChainId } from "../utils/multi-chain";
-import { checkWallet, getWallet, isLeapSnaps, isWalletConnect } from "./wallet";
+import { checkWallet, getWallet, isLeapDappBrowser, isLeapSnaps, isWalletConnect } from "./wallet";
 
 export type ConnectArgs = Maybe<{
   chainId: ChainId;
@@ -25,6 +26,16 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
     const { recentChainIds: recentChains, chains, walletType } = useGrazInternalStore.getState();
 
     const currentWalletType = args?.walletType || walletType;
+
+    if (isWalletConnect(currentWalletType)) {
+      const walletConnectInstance = getWallet(WalletType.WALLETCONNECT);
+      const { disable: walletConnectDisable } = walletConnectInstance;
+
+      if (walletConnectDisable) {
+        void walletConnectDisable();
+      }
+    }
+
     const isWalletAvailable = checkWallet(currentWalletType);
     if (!isWalletAvailable) {
       throw new Error(`${currentWalletType} is not available`);
@@ -62,12 +73,20 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
 
     if (!isWalletConnect(currentWalletType)) {
       let resultAccounts: Record<string, Key> = {};
-      if (chainIds.length > 1 && isLeapSnaps(currentWalletType)) {
+      if (isLeapSnaps(currentWalletType)) {
         const accounts: Record<string, Key> = {};
         for await (const chainId of chainIds) {
           accounts[chainId] = await wallet.getKey(chainId);
         }
         resultAccounts = accounts;
+      } else if (isLeapDappBrowser() && wallet.getKeys) {
+        const allAccounts = await wallet.getKeys(chainIds);
+        chainIds.forEach((chainId, index) => {
+          const account = allAccounts[index];
+          if (account) {
+            resultAccounts[chainId] = account;
+          }
+        });
       } else {
         resultAccounts = Object.fromEntries(
           await Promise.all(
@@ -119,6 +138,16 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
 export const disconnect = (args?: { chainId?: ChainId }) => {
   typeof window !== "undefined" && window.sessionStorage.removeItem(RECONNECT_SESSION_KEY);
   const chainId = typeof args?.chainId === "string" ? [args.chainId] : args?.chainId;
+
+  if (isWalletConnect(useGrazInternalStore.getState().walletType)) {
+    const walletConnectInstance = getWallet(WalletType.WALLETCONNECT);
+    const { disable: walletConnectDisable } = walletConnectInstance;
+
+    if (walletConnectDisable) {
+      void walletConnectDisable();
+    }
+  }
+
   if (chainId) {
     const _accounts = useGrazSessionStore.getState().accounts;
     chainId.forEach((x) => {
