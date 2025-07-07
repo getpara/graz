@@ -1,5 +1,12 @@
 # @project/example-vite
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [a0608c9]
+  - graz@0.3.3
+
 ## 0.0.9
 
 ### Patch Changes

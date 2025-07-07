@@ -1,5 +1,11 @@
 # graz
 
+## 0.3.3
+
+### Patch Changes
+
+- a0608c9: ping on window focus
+
 ## 0.3.2
 
 ### Patch Changes
