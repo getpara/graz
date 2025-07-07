@@ -36,7 +36,7 @@ export const useGrazEvents = () => {
    */
   useEffect(() => {
     const handleFocus = async () => {
-      if (isSessionActive && isReconnectConnectorReady && _reconnectConnector && activeChains && activeChains?.[0]) {
+      if (isSessionActive && isReconnectConnectorReady && _reconnectConnector && activeChains?.[0]) {
         const lastPing = useGrazSessionStore.getState().lastPing;
         if (lastPing && Date.now() - lastPing < pingInterval) {
           return;
