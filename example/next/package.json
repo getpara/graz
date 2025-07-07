@@ -1,6 +1,6 @@
 {
   "name": "@project/example-next",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
