@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { useEffect } from "react";
 
 import { connect, reconnect } from "../actions/account";
-import { checkWallet } from "../actions/wallet";
+import { checkWallet, getWallet } from "../actions/wallet";
 import { getCompass } from "../actions/wallet/compass";
 import { getCosmiframe } from "../actions/wallet/cosmiframe";
 import { getCosmostation } from "../actions/wallet/cosmostation";
@@ -26,9 +26,42 @@ import { WalletType } from "../types/wallet";
 export const useGrazEvents = () => {
   const isSessionActive =
     typeof window !== "undefined" && window.sessionStorage.getItem(RECONNECT_SESSION_KEY) === "Active";
-  const { _reconnect, _onReconnectFailed, _reconnectConnector, iframeOptions, chains } = useGrazInternalStore();
+  const { _reconnect, _onReconnectFailed, _reconnectConnector, iframeOptions, chains, pingInterval } =
+    useGrazInternalStore();
   const { activeChainIds: activeChains, wcSignClients } = useGrazSessionStore();
   const isReconnectConnectorReady = checkWallet(_reconnectConnector || undefined);
+
+  /**
+   * Reconnects to the wallet if the session is active and the reconnect connector is ready on window focus.
+   */
+  useEffect(() => {
+    const handleFocus = async () => {
+      if (isSessionActive && isReconnectConnectorReady && _reconnectConnector && activeChains && activeChains?.[0]) {
+        const lastPing = useGrazSessionStore.getState().lastPing;
+        if (lastPing && Date.now() - lastPing < pingInterval) {
+          return;
+        }
+        const wallet = getWallet(_reconnectConnector);
+        try {
+          const account = await wallet.getKey(activeChains[0]);
+          if (!account) {
+            throw new Error("No account found");
+          }
+          useGrazSessionStore.setState({
+            lastPing: Date.now(),
+          });
+          return;
+        } catch (error) {
+          void reconnect({ onError: _onReconnectFailed });
+        }
+      }
+    };
+
+    window.addEventListener("focus", handleFocus);
+    return () => {
+      window.removeEventListener("focus", handleFocus);
+    };
+  }, [isSessionActive, isReconnectConnectorReady, _reconnectConnector, chains, activeChains, pingInterval]);
 
   // Auto connect to iframe if possible.
   useEffect(() => {

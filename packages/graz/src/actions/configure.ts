@@ -25,6 +25,7 @@ export interface ConfigureGrazArgs {
    * Options to enable iframe wallet connection.
    */
   iframeOptions?: IframeOptions;
+  pingInteval?: number;
 }
 
 export const configureGraz = (args: ConfigureGrazArgs): ConfigureGrazArgs => {
@@ -36,6 +37,7 @@ export const configureGraz = (args: ConfigureGrazArgs): ConfigureGrazArgs => {
     chains: args.chains,
     chainsConfig: args.chainsConfig || prev.chainsConfig,
     multiChainFetchConcurrency: args.multiChainFetchConcurrency || prev.multiChainFetchConcurrency,
+    pingInterval: args.pingInteval || prev.pingInterval,
     _notFoundFn: args.onNotFound || prev._notFoundFn,
     _onReconnectFailed: args.onReconnectFailed || prev._onReconnectFailed,
     _reconnect: args.autoReconnect === undefined ? true : args.autoReconnect || prev._reconnect,
