@@ -42,7 +42,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@getpara/graz-connector": "file:../../../web-sdk/packages/graz-connector",
+    "@getpara/graz-connector": "2.0.0-alpha.42",
     "@tanstack/react-query": ">=5.62.0",
     "react": ">=17"
   },
@@ -69,7 +69,7 @@
     "zustand": "4.5.2"
   },
   "devDependencies": {
-    "@getpara/graz-connector": "file:../../../web-sdk/packages/graz-connector",
+    "@getpara/graz-connector": "2.0.0-alpha.42",
     "@initia/initia-registry-types": "0.0.20",
     "@types/node": "^18.17.15",
     "@types/react": "^18.2.21",

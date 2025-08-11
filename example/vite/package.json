@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "5.62.0",
-    "@getpara/graz-connector": "file:../../../web-sdk/packages/graz-connector",
+    "@getpara/graz-connector": "2.0.0-alpha.42",
     "graz": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
