@@ -55,6 +55,10 @@ export interface GrazInternalStore {
   walletType: WalletType;
   walletConnect: WalletConnectStore | null;
   walletDefaultOptions: Keplr["defaultOptions"] | null;
+  /**
+   * Interval in milliseconds to ping the wallet.
+   */
+  pingInterval: number;
   _notFoundFn: () => void;
   _reconnect: boolean;
   _reconnectConnector: WalletType | null;
@@ -65,11 +69,13 @@ export interface GrazSessionStore {
   accounts: Record<string, Key> | null;
   activeChainIds: string[] | null;
   status: "connected" | "connecting" | "reconnecting" | "disconnected";
+  lastPing: number | null;
+
   wcSignClients: Map<WalletType, ISignClient>;
   paraConnector: ParaGrazConnector | null;
 }
 
-export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds">;
+export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds" | "lastPing">;
 
 export type GrazInternalPersistedStore = Pick<
   GrazInternalStore,
@@ -89,6 +95,7 @@ export const grazInternalDefaultValues: GrazInternalStore = {
     walletConnectModal: null,
   },
   walletDefaultOptions: null,
+  pingInterval: 3600000 /* 1 hour */,
   _notFoundFn: () => null,
   _onReconnectFailed: () => null,
   _reconnect: false,
@@ -99,6 +106,7 @@ export const grazSessionDefaultValues: GrazSessionStore = {
   accounts: null,
   activeChainIds: null,
   status: "disconnected",
+  lastPing: null,
   wcSignClients: new Map(),
   paraConnector: null,
 };
@@ -109,6 +117,7 @@ const sessionOptions: PersistOptions<GrazSessionStore, GrazSessionPersistedStore
   partialize: (x) => ({
     accounts: x.accounts,
     activeChainIds: x.activeChainIds,
+    lastPing: x.lastPing,
   }),
   storage: createJSONStorage(() => sessionStorage),
 };
