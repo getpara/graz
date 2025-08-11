@@ -48,7 +48,8 @@
     "@cosmjs/cosmwasm-stargate": ">=0.32.4",
     "@cosmjs/proto-signing": ">=0.32.4",
     "@cosmjs/stargate": ">=0.32.4",
-    "@cosmjs/encoding": ">=0.32.4"
+    "@cosmjs/encoding": ">=0.32.4",
+    "@getpara/graz-connector": ">=2.0.0-alpha.42 <2.0.0"
   },
   "dependencies": {
     "@keplr-wallet/types": "0.12.156",
@@ -73,6 +74,14 @@
     "arg": "^5.0.2",
     "react": "^18.2.0",
     "typescript": "^5.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@getpara/graz": {
+      "optional": true
+    }
+  },
+  "resolutions": {
+    "@getpara/graz-connector": "file:../../../web-sdk/packages/graz-connector"
   },
   "keywords": [
     "graz",
