@@ -24,13 +24,30 @@ export const getPara = (): Wallet => {
     if (connector) return connector;
 
     try {
-      const { ParaGrazConnector } = await import("@getpara/graz-connector");
-      if (typeof ParaGrazConnector !== "function" && typeof ParaGrazConnector !== "object") {
-        throw new Error("`ParaGrazConnector` not found in @getpara/graz-connector");
+      let ConnectorClass;
+      if (paraConfig.connectorClass) {
+        ConnectorClass = paraConfig.connectorClass;
+      } else {
+        const importPath = paraConfig.connectorImportPath || "@getpara/graz-integration";
+        let module;
+        try {
+          module = await import(importPath);
+        } catch (importErr: unknown) {
+          throw new Error(
+            `Failed to import Para connector from "${importPath}". Ensure it's installed. For modal support, install @getpara/graz-integration. Error: ${(importErr as Error).message}`,
+          );
+        }
+        ConnectorClass = module.ParaGrazConnector;
+        if (typeof ConnectorClass !== "function") {
+          throw new Error(`ParaGrazConnector not found or not a constructor in ${importPath}`);
+        }
       }
 
       const chains = useGrazInternalStore.getState().chains;
-      connector = new ParaGrazConnector(paraConfig, chains);
+      connector = new ConnectorClass(paraConfig, chains);
+      if (!connector) {
+        throw new Error("Failed to create Para connector instance.");
+      }
       return connector;
     } catch (err) {
       throw wrap("init", err);

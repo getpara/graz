@@ -8,7 +8,10 @@ import { persist, subscribeWithSelector } from "zustand/middleware";
 
 import type { Dictionary } from "../types/core";
 import { Key, WalletType } from "../types/wallet";
-import { ParaGrazConfig, ParaGrazConnector } from "@getpara/graz-connector";
+import {
+  ParaGrazConfig as BaseParaGrazConfig,
+  ParaGrazConnector as BaseParaGrazConnector,
+} from "@getpara/graz-connector";
 
 export interface ChainConfig {
   path?: string;
@@ -18,6 +21,12 @@ export interface ChainConfig {
     denom: string;
   };
 }
+
+export interface ParaGrazConfig extends BaseParaGrazConfig {
+  connectorClass?: new (config: ParaGrazConfig, chains?: ChainInfo[] | null) => BaseParaGrazConnector;
+  connectorImportPath?: string;
+}
+
 export interface WalletConnectStore {
   options: SignClientTypes.Options | null;
   walletConnectModal?: Pick<
@@ -72,7 +81,7 @@ export interface GrazSessionStore {
   lastPing: number | null;
 
   wcSignClients: Map<WalletType, ISignClient>;
-  paraConnector: ParaGrazConnector | null;
+  paraConnector: BaseParaGrazConnector | null; // Compatible with base or extended classes
 }
 
 export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds" | "lastPing">;
