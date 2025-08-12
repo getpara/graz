@@ -30,6 +30,11 @@
     "turbo": "^1.10.13",
     "typescript": "^5.4.0"
   },
+  "pnpm": {
+    "overrides": {
+      "@getpara/graz-connector": "file:../web-sdk/packages/graz-connector"
+    }
+  },
   "prettier": "@graz-sh/style-guide/prettier",
   "private": true,
   "license": "MIT"

@@ -15,7 +15,7 @@ export const getPara = (): Wallet => {
   };
 
   const paraConfig = useGrazInternalStore.getState().paraConfig;
-  if (!paraConfig || !paraConfig.apiKey || !paraConfig.env) {
+  if (!paraConfig || !paraConfig.paraWeb) {
     throw new Error("Para configuration missing. Supply `paraConfig` in GrazProvider.");
   }
 
