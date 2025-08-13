@@ -49,9 +49,11 @@
     "@cosmjs/proto-signing": ">=0.32.4",
     "@cosmjs/stargate": ">=0.32.4",
     "@cosmjs/encoding": ">=0.32.4",
-    "@getpara/graz-connector": "*"
+    "@getpara/graz-connector": "^2.0.0-dev.10",
+    "@getpara/graz-integration": "^2.0.0-dev.10"
   },
   "dependencies": {
+    "@initia/initia-registry-types": "0.0.20",
     "@keplr-wallet/types": "0.12.156",
     "@cosmsnap/snapper": "0.2.7",
     "@dao-dao/cosmiframe": "1.0.0",
@@ -67,16 +69,19 @@
     "zustand": "5.0.4"
   },
   "devDependencies": {
-    "@initia/initia-registry-types": "0.0.20",
     "@types/node": "^18.17.15",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "arg": "^5.0.2",
     "react": "^18.2.0",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "@getpara/graz-integration": "^2.0.0-dev.10"
   },
   "peerDependenciesMeta": {
-    "@getpara/graz": {
+    "@getpara/graz-integration": {
+      "optional": true
+    },
+    "@getpara/graz-connector": {
       "optional": true
     }
   },
