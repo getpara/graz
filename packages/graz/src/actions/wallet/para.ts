@@ -2,105 +2,76 @@ import { useGrazInternalStore, useGrazSessionStore } from "../../store";
 import { type Key, type Wallet, WalletType } from "../../types/wallet";
 
 const RECONNECT_SESSION_KEY = "para.reconnect";
+let initPromise: Promise<void> | null = null;
 
 export const getPara = (): Wallet => {
-  const wrap = (ctx: string, err: unknown, extraInfo?: string): never => {
-    const baseMsg = `Para wallet error in ${ctx}: ${(err as Error).message}`;
-    const fullMsg = extraInfo ? `${baseMsg}. Additional details: ${extraInfo}` : baseMsg;
-    throw new Error(fullMsg);
-  };
-
   const getClientOrThrow = () => {
     const connector = useGrazSessionStore.getState().paraConnector;
     if (!connector) {
-      throw new Error(
-        "Para wallet connector not initialized. Ensure 'enable()' is called successfully before accessing connector methods. Check if 'paraConfig' is properly set in GrazProvider.",
-      );
+      throw new Error("Para connector not initialized. Call connect() first or check paraConfig in GrazProvider.");
     }
     return connector;
   };
 
   const paraConfig = useGrazInternalStore.getState().paraConfig;
+
   if (!paraConfig || !paraConfig.paraWeb) {
-    throw new Error(
-      "Para configuration is missing or incomplete. Ensure 'paraConfig' with 'paraWeb' is provided in GrazProvider. Example: { paraWeb: '...', ... }.",
-    );
+    throw new Error("Missing Para config. Provide paraConfig with 'paraWeb' to GrazProvider.");
   }
 
   const init = async () => {
-    console.log("[DEBUG] Initializing Para connector. Current paraConfig:", paraConfig);
     let connector = useGrazSessionStore.getState().paraConnector;
-    console.log("[DEBUG] Existing Para connector from session store:", connector);
     if (connector) return connector;
+
     try {
       let ConnectorClass;
       if (paraConfig.connectorClass) {
-        console.log("[DEBUG] Using embedded connectorClass from paraConfig.");
         ConnectorClass = paraConfig.connectorClass;
       } else if (!paraConfig.connectorImportPath) {
-        console.log("[DEBUG] Using static import from @getpara/graz-integration.");
         const module = await import("@getpara/graz-integration");
         ConnectorClass = module.ParaGrazConnector;
         if (typeof ConnectorClass !== "function") {
-          throw new Error(
-            `ParaGrazConnector not found or not a function in @getpara/graz-integration module. Verify package installation and exports.`,
-          );
+          throw new Error("Invalid ParaGrazConnector in @getpara/graz-integration. Check package installation.");
         }
       } else {
-        console.warn(
-          `[DEBUG] Using dynamic import for custom path "${paraConfig.connectorImportPath}". This may cause bundling issues in frameworks like Next.js. Prefer static imports or connectorClass for compatibility.`,
-        );
         const module = await import(paraConfig.connectorImportPath);
         ConnectorClass = module.ParaGrazConnector;
         if (typeof ConnectorClass !== "function") {
-          throw new Error(
-            `ParaGrazConnector not found or not a function in module at ${paraConfig.connectorImportPath}. Check the module's exports and path validity.`,
-          );
+          throw new Error("Invalid ParaGrazConnector at import path. Check module export.");
         }
       }
       const chains = useGrazInternalStore.getState().chains;
-      console.log("[DEBUG] Instantiating Para connector with chains:", chains);
       connector = new ConnectorClass(paraConfig, chains);
-      console.log("[DEBUG] Para connector instantiated successfully:", connector);
+
+      if (!connector) {
+        throw new Error("Para connector initialization failed. Check config and dependencies.");
+      }
+
       return connector;
     } catch (err) {
-      throw wrap("init", err, `paraConfig: ${JSON.stringify(paraConfig)}`);
+      throw new Error("Para connector init failed. Check @getpara/graz-integration and ParaConfig.");
     }
   };
 
   const enable = async (_chainIds: string | string[]) => {
-    console.log("[DEBUG] Para enable method called with input chainIds:", _chainIds);
     const chainIds = Array.isArray(_chainIds) ? _chainIds : [_chainIds];
-    console.log("[DEBUG] Normalized chainIds for enable:", chainIds);
 
     try {
-      console.log("[DEBUG] Starting Para connector initialization in enable.");
       const connector = await init();
-      console.log("[DEBUG] Para connector initialized in enable:", connector);
-      if (!connector) {
-        throw new Error(
-          `Failed to initialize Para wallet connector. Verify paraConfig: ${JSON.stringify(paraConfig)} and chainIds: ${JSON.stringify(chainIds)}. Ensure required dependencies are installed.`,
-        );
-      }
-      console.log("[DEBUG] Updating Graz session store to 'connecting' status with connector:", connector);
+
       useGrazSessionStore.setState({ paraConnector: connector, status: "connecting" });
-      console.log("[DEBUG] Calling enable on Para connector for chainIds:", chainIds);
       await connector.enable(chainIds);
 
-      console.log("[DEBUG] Fetching accounts for chainIds:", chainIds);
       const accounts = Object.fromEntries(
         await Promise.all(chainIds.map(async (c): Promise<[string, Key]> => [c, await connector.getKey(c)])),
       );
-      console.log("[DEBUG] Retrieved accounts:", accounts);
 
-      console.log("[DEBUG] Updating Graz session store with accounts, activeChainIds, and 'connected' status.");
       useGrazSessionStore.setState((prev) => ({
         accounts: { ...(prev.accounts || {}), ...accounts },
         activeChainIds: Array.from(new Set([...(prev.activeChainIds || []), ...chainIds])),
         status: "connected",
       }));
 
-      console.log("[DEBUG] Updating Graz internal store with recentChainIds, walletType, and reconnect flags.");
       useGrazInternalStore.setState((prev) => ({
         recentChainIds: Array.from(new Set([...(prev.recentChainIds || []), ...chainIds])),
         walletType: WalletType.PARA,
@@ -109,92 +80,94 @@ export const getPara = (): Wallet => {
       }));
 
       if (typeof window !== "undefined") {
-        console.log("[DEBUG] Setting reconnect flag in sessionStorage.");
         window.sessionStorage.setItem(RECONNECT_SESSION_KEY, "1");
       }
     } catch (err) {
-      console.log("[DEBUG] Error in enable; resetting session store to disconnected.");
       useGrazSessionStore.setState({ paraConnector: null, status: "disconnected" });
-      throw wrap("enable", err, `chainIds: ${JSON.stringify(chainIds)}, paraConfig: ${JSON.stringify(paraConfig)}`);
+      throw new Error(`Para enable failed${err instanceof Error ? `: ${err.message}` : ""}`);
     }
   };
+
+  // Early check: Use paraWeb directly to detect connection state ASAP
+  (async () => {
+    try {
+      const isLoggedIn = await paraConfig.paraWeb.isFullyLoggedIn();
+      const hasWallets = paraConfig.paraWeb.getWalletsByType("COSMOS").length > 0;
+      if (isLoggedIn && hasWallets) {
+        await init();
+        useGrazSessionStore.setState((prev) => ({ ...prev, status: "connected" }));
+        console.log("Early detection: Para is already connected with wallets. Connector initialized.");
+      }
+    } catch (err) {
+      console.warn("Early Para check failed:", err);
+    }
+  })();
 
   return {
     enable,
     disable: async () => {
-      console.log("[DEBUG] Para disable method called.");
       const connector = getClientOrThrow();
-      console.log("[DEBUG] Retrieved connector for disable:", connector);
       try {
-        console.log("[DEBUG] Calling disconnect on Para connector.");
         await connector.disconnect();
-        console.log("[DEBUG] Disconnect successful.");
+      } catch (err) {
+        throw new Error("Para disconnect failed. Wallet may already be disconnected.");
       } finally {
-        console.log("[DEBUG] Updating Graz session store to 'disconnected' status and clearing connector.");
         useGrazSessionStore.setState({ paraConnector: null, status: "disconnected" });
       }
     },
-    getKey: (chainId) => {
-      console.log("[DEBUG] Para getKey method called for chainId:", chainId);
-      return getClientOrThrow()
-        .getKey(chainId)
-        .catch((e: Error) => wrap("getKey", e, `chainId: ${chainId}`));
+    getKey: async (chainId) => {
+      try {
+        return await getClientOrThrow().getKey(chainId);
+      } catch (err) {
+        throw new Error(
+          "Failed to get key. Check chain connection and Cosmos API key settings at developer.getpara.com.",
+        );
+      }
     },
     getOfflineSigner: (chainId) => {
-      console.log("[DEBUG] Para getOfflineSigner method called for chainId:", chainId);
-      return getClientOrThrow().getOfflineSigner(chainId);
+      try {
+        return getClientOrThrow().getOfflineSigner(chainId);
+      } catch (err) {
+        throw new Error("Failed to get offline signer. Check Para auth and Cosmos support in developer portal.");
+      }
     },
     getOfflineSignerOnlyAmino: (chainId) => {
-      console.log("[DEBUG] Para getOfflineSignerOnlyAmino method called for chainId:", chainId);
-      return getClientOrThrow().getOfflineSignerOnlyAmino(chainId);
+      try {
+        return getClientOrThrow().getOfflineSignerOnlyAmino(chainId);
+      } catch (err) {
+        throw new Error("Failed to get Amino signer. Check Para auth and Cosmos support in developer portal.");
+      }
     },
     getOfflineSignerAuto: (chainId) => {
-      console.log("[DEBUG] Para getOfflineSignerAuto method called for chainId:", chainId);
-      return getClientOrThrow().getOfflineSignerAuto(chainId);
+      try {
+        return getClientOrThrow().getOfflineSignerAuto(chainId);
+      } catch (err) {
+        throw new Error("Failed to get auto signer. Check Para auth and Cosmos support in developer portal.");
+      }
     },
-    signAmino: (c, s, d, o) => {
-      console.log(
-        "[DEBUG] Para signAmino method called with params: chainId=",
-        c,
-        ", signer=",
-        s,
-        ", data=",
-        d,
-        ", options=",
-        o,
-      );
-      return getClientOrThrow()
-        .signAmino(c, s, d, o)
-        .catch((e: Error) => wrap("signAmino", e, `chainId: ${c}, signer: ${s}`));
+    signAmino: async (c, s, d, o) => {
+      try {
+        return await getClientOrThrow().signAmino(c, s, d, o);
+      } catch (err) {
+        throw new Error("Amino signing failed. User rejected or invalid transaction/signer.");
+      }
     },
-    signDirect: (c, s, d, o) => {
-      console.log(
-        "[DEBUG] Para signDirect method called with params: chainId=",
-        c,
-        ", signer=",
-        s,
-        ", data=",
-        d,
-        ", options=",
-        o,
-      );
-      return getClientOrThrow()
-        .signDirect(c, s, d, o)
-        .catch((e: Error) => wrap("signDirect", e, `chainId: ${c}, signer: ${s}`));
+    signDirect: async (c, s, d, o) => {
+      try {
+        return await getClientOrThrow().signDirect(c, s, d, o);
+      } catch (err) {
+        throw new Error("Direct signing failed. User rejected or invalid transaction/signer.");
+      }
     },
-    signArbitrary: (c, s, data) => {
-      console.log("[DEBUG] Para signArbitrary method called with params: chainId=", c, ", signer=", s, ", data=", data);
-      return getClientOrThrow()
-        .signArbitrary(c, s, data)
-        .catch((e: Error) => wrap("signArbitrary", e, `chainId: ${c}, signer: ${s}`));
+    signArbitrary: async (c, s, data) => {
+      try {
+        return await getClientOrThrow().signArbitrary(c, s, data);
+      } catch (err) {
+        throw new Error("Arbitrary signing failed. User rejected or feature not supported.");
+      }
     },
     experimentalSuggestChain: async () => {
-      console.log("[DEBUG] Para experimentalSuggestChain method called (not supported).");
-      return Promise.reject(
-        new Error(
-          "Suggest chain is not supported by Para wallet. Consider alternative wallets or check Para documentation for updates.",
-        ),
-      );
+      throw new Error("Chain suggestion not supported. Configure chains in Para wallet settings.");
     },
   };
 };
