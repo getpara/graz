@@ -1,8 +1,9 @@
+import { ParaGrazConnector } from "@getpara/graz-connector";
 import { useGrazInternalStore, useGrazSessionStore } from "../../store";
 import { type Key, type Wallet, WalletType } from "../../types/wallet";
 
 const RECONNECT_SESSION_KEY = "para.reconnect";
-let initPromise: Promise<void> | null = null;
+let initPromise: Promise<ParaGrazConnector> | null = null;
 
 export const getPara = (): Wallet => {
   const getClientOrThrow = () => {
@@ -20,37 +21,44 @@ export const getPara = (): Wallet => {
   }
 
   const init = async () => {
-    let connector = useGrazSessionStore.getState().paraConnector;
-    if (connector) return connector;
+    if (initPromise) return initPromise;
 
-    try {
-      let ConnectorClass;
-      if (paraConfig.connectorClass) {
-        ConnectorClass = paraConfig.connectorClass;
-      } else if (!paraConfig.connectorImportPath) {
-        const module = await import("@getpara/graz-integration");
-        ConnectorClass = module.ParaGrazConnector;
-        if (typeof ConnectorClass !== "function") {
-          throw new Error("Invalid ParaGrazConnector in @getpara/graz-integration. Check package installation.");
+    initPromise = (async () => {
+      let connector = useGrazSessionStore.getState().paraConnector;
+      if (connector) return connector;
+      try {
+        let ConnectorClass;
+        if (paraConfig.connectorClass) {
+          ConnectorClass = paraConfig.connectorClass;
+        } else if (!paraConfig.connectorImportPath) {
+          const module = await import("@getpara/graz-integration");
+          ConnectorClass = module.ParaGrazConnector;
+          if (typeof ConnectorClass !== "function") {
+            throw new Error("Invalid ParaGrazConnector in @getpara/graz-integration. Check package installation.");
+          }
+        } else {
+          const module = await import(paraConfig.connectorImportPath);
+          ConnectorClass = module.ParaGrazConnector;
+          if (typeof ConnectorClass !== "function") {
+            throw new Error("Invalid ParaGrazConnector at import path. Check module export.");
+          }
         }
-      } else {
-        const module = await import(paraConfig.connectorImportPath);
-        ConnectorClass = module.ParaGrazConnector;
-        if (typeof ConnectorClass !== "function") {
-          throw new Error("Invalid ParaGrazConnector at import path. Check module export.");
+        const chains = useGrazInternalStore.getState().chains;
+        connector = new ConnectorClass(paraConfig, chains);
+
+        useGrazSessionStore.setState((prev) => ({ ...prev, paraConnector: connector }));
+
+        if (!connector) {
+          throw new Error("Para connector initialization failed. Check config and dependencies.");
         }
+        return connector;
+      } catch (err) {
+        throw new Error("Para connector init failed. Check @getpara/graz-integration and ParaConfig.");
+      } finally {
+        initPromise = null;
       }
-      const chains = useGrazInternalStore.getState().chains;
-      connector = new ConnectorClass(paraConfig, chains);
-
-      if (!connector) {
-        throw new Error("Para connector initialization failed. Check config and dependencies.");
-      }
-
-      return connector;
-    } catch (err) {
-      throw new Error("Para connector init failed. Check @getpara/graz-integration and ParaConfig.");
-    }
+    })();
+    return initPromise;
   };
 
   const enable = async (_chainIds: string | string[]) => {
