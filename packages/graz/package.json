@@ -49,8 +49,8 @@
     "@cosmjs/proto-signing": ">=0.32.4",
     "@cosmjs/stargate": ">=0.32.4",
     "@cosmjs/encoding": ">=0.32.4",
-    "@getpara/graz-connector": "~2.0.0-alpha.43",
-    "@getpara/graz-integration": "~2.0.0-alpha.43"
+    "@getpara/graz-connector": "~2.0.0-alpha.44",
+    "@getpara/graz-integration": "~2.0.0-alpha.44"
   },
   "dependencies": {
     "@initia/initia-registry-types": "0.0.20",
@@ -76,7 +76,7 @@
     "arg": "^5.0.2",
     "react": "^18.2.0",
     "typescript": "^5.4.0",
-    "@getpara/graz-integration": "~2.0.0-alpha.43"
+    "@getpara/graz-integration": "~2.0.0-alpha.44"
   },
   "peerDependenciesMeta": {
     "@getpara/graz-integration": {
