@@ -1,6 +1,7 @@
-import { ParaGrazConnector } from "@getpara/graz-connector";
 import { useGrazInternalStore, useGrazSessionStore } from "../../store";
-import { type Key, type Wallet, WalletType } from "../../types/wallet";
+import type { ParaGrazConnector } from "@getpara/graz-connector";
+import type { Key, Wallet } from "../../types/wallet";
+import { WalletType } from "../../types/wallet";
 
 const RECONNECT_SESSION_KEY = "para.reconnect";
 let initPromise: Promise<ParaGrazConnector> | null = null;

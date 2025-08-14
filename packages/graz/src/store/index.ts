@@ -8,7 +8,7 @@ import { persist, subscribeWithSelector } from "zustand/middleware";
 
 import type { Dictionary } from "../types/core";
 import { Key, WalletType } from "../types/wallet";
-import {
+import type {
   ParaGrazConfig as BaseParaGrazConfig,
   ParaGrazConnector as BaseParaGrazConnector,
 } from "@getpara/graz-connector";
