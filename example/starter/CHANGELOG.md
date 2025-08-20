@@ -1,5 +1,12 @@
 # @project/starter
 
+## 0.1.11
+
+### Patch Changes
+
+- Updated dependencies [4808068]
+  - graz@0.3.4
+
 ## 0.1.10
 
 ### Patch Changes
