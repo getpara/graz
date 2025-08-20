@@ -58,10 +58,17 @@ export function useStargateSigningClient(
   const chains = useChainsFromArgs({ chainId: args?.chainId, multiChain: args?.multiChain });
   const wallet = useGrazInternalStore((x) => x.walletType);
   const activeChainIds = useGrazSessionStore((x) => x.activeChainIds);
+
+  const isConnected =
+    useGrazSessionStore.getState().status === "connected" &&
+    useGrazSessionStore.getState().accounts &&
+    useGrazInternalStore.getState()._reconnectConnector === wallet;
+
   const queryKey = useMemo(
     () => ["USE_STARGATE_SIGNING_CLIENT", chains, wallet, args, activeChainIds] as const,
     [activeChainIds, args, chains, wallet],
   );
+
   return useQuery({
     queryKey,
     queryFn: async ({ queryKey: [, _chains, _wallet] }) => {
@@ -103,7 +110,8 @@ export function useStargateSigningClient(
       Boolean(chains) &&
       chains.length > 0 &&
       Boolean(wallet) &&
-      (args?.enabled !== undefined ? Boolean(args.enabled) : true),
+      (args?.enabled !== undefined ? Boolean(args.enabled) : true) &&
+      Boolean(isConnected),
     refetchOnWindowFocus: false,
   });
 }
@@ -136,6 +144,12 @@ export function useCosmWasmSigningClient(
   const chains = useChainsFromArgs({ chainId: args?.chainId, multiChain: args?.multiChain });
   const wallet = useGrazInternalStore((x) => x.walletType);
   const activeChainIds = useGrazSessionStore((x) => x.activeChainIds);
+
+  const isConnected =
+    useGrazSessionStore.getState().status === "connected" &&
+    useGrazSessionStore.getState().accounts &&
+    useGrazInternalStore.getState()._reconnectConnector === wallet;
+
   const queryKey = useMemo(
     () => ["USE_COSMWASM_SIGNING_CLIENT", chains, wallet, args, activeChainIds] as const,
     [activeChainIds, args, chains, wallet],
@@ -181,7 +195,8 @@ export function useCosmWasmSigningClient(
       Boolean(chains) &&
       chains.length > 0 &&
       Boolean(wallet) &&
-      (args?.enabled !== undefined ? Boolean(args.enabled) : true),
+      (args?.enabled !== undefined ? Boolean(args.enabled) : true) &&
+      Boolean(isConnected),
     refetchOnWindowFocus: false,
   });
 }
