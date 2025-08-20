@@ -359,6 +359,12 @@ export const useOfflineSigners = <TMulti extends MultiChainHookArgs>(
 ): UseMultiChainQueryResult<TMulti, OfflineSigners> => {
   const chains = useChainsFromArgs({ chainId: args?.chainId, multiChain: args?.multiChain });
   const wallet = useGrazInternalStore((x) => x.walletType);
+
+  const isConnected =
+    useGrazSessionStore.getState().status === "connected" &&
+    useGrazSessionStore.getState().accounts &&
+    useGrazInternalStore.getState()._reconnectConnector === wallet;
+
   const queryKey = useMemo(() => ["USE_OFFLINE_SIGNERS", chains, wallet] as const, [chains, wallet]);
 
   return useQuery({
@@ -378,7 +384,7 @@ export const useOfflineSigners = <TMulti extends MultiChainHookArgs>(
       });
       return res;
     },
-    enabled: Boolean(chains) && chains.length > 0 && Boolean(wallet),
+    enabled: Boolean(chains) && chains.length > 0 && Boolean(wallet) && Boolean(isConnected),
     refetchOnWindowFocus: false,
   });
 };
