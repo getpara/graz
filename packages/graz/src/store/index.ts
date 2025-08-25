@@ -84,7 +84,7 @@ export interface GrazSessionStore {
   paraConnector: BaseParaGrazConnector | null; // Compatible with base or extended classes
 }
 
-export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds" | "lastPing">;
+export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds" | "lastPing" | "status">;
 
 export type GrazInternalPersistedStore = Pick<
   GrazInternalStore,
@@ -127,6 +127,7 @@ const sessionOptions: PersistOptions<GrazSessionStore, GrazSessionPersistedStore
     accounts: x.accounts,
     activeChainIds: x.activeChainIds,
     lastPing: x.lastPing,
+    status: x.status,
   }),
   storage: createJSONStorage(() => sessionStorage),
 };

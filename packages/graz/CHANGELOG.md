@@ -1,5 +1,11 @@
 # graz
 
+## 0.3.4
+
+### Patch Changes
+
+- 4808068: fix useOfflineSigners always propmts user to connect wallet
+
 ## 0.3.3
 
 ### Patch Changes
