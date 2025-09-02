@@ -78,6 +78,12 @@ importers:
       '@emotion/styled':
         specifier: 11.11.0
         version: 11.11.0(@emotion/react@11.11.1(@types/react@18.3.23)(react@18.2.0))(@types/react@18.3.23)(react@18.2.0)
+      '@getpara/graz-integration':
+        specifier: 2.0.0-alpha.50
+        version: 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@packages+graz)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@getpara/react-sdk-lite':
+        specifier: 2.0.0-alpha.50
+        version: 2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tanstack/react-query':
         specifier: 5.62.0
         version: 5.62.0(react@18.2.0)
@@ -176,6 +182,12 @@ importers:
 
   example/vite:
     dependencies:
+      '@getpara/graz-integration':
+        specifier: 2.0.0-alpha.50
+        version: 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@packages+graz)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@getpara/react-sdk-lite':
+        specifier: 2.0.0-alpha.50
+        version: 2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tanstack/react-query':
         specifier: 5.62.0
         version: 5.62.0(react@18.2.0)
@@ -242,7 +254,7 @@ importers:
         version: 1.0.0(@cosmjs/amino@0.34.0)(@cosmjs/proto-signing@0.34.0)
       '@getpara/graz-connector':
         specifier: '>=2.0.0-alpha.50 <2.0.0-beta'
-        version: 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))
+        version: 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))
       '@initia/initia-registry-types':
         specifier: 0.0.20
         version: 0.0.20
@@ -288,7 +300,7 @@ importers:
     devDependencies:
       '@getpara/graz-integration':
         specifier: '>=2.0.0-alpha.50 <2.0.0-beta'
-        version: 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.42(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.51(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/node':
         specifier: ^18.17.15
         version: 18.19.122
@@ -2300,14 +2312,17 @@ packages:
   '@ethersproject/web@5.8.0':
     resolution: {integrity: sha512-j7+Ksi/9KfGviws6Qtf9Q7KCqRhpwrYKQPs+JBA/rKVFF/yaWLHJEH3zfVP2plVu+eys0d2DlFmhoQJayFewcw==}
 
-  '@getpara/core-components@2.0.0-alpha.42':
-    resolution: {integrity: sha512-/9+N7cCYkD8rZBQqeLqJ0THG4EF0Jb+cf5B+A+JcdJQyoq3+mNxxavOsMHWymMxcdbd3Vg1LabUj2GLXVxsifg==}
+  '@getpara/core-components@2.0.0-alpha.50':
+    resolution: {integrity: sha512-QvkVve+eily33PCzdTrOrkPOnEv3E6D/eaUrpGyFyNCEZZC6Go1NGGsBs6l2xuewlJKZOFnBZf0hoE2dDyG//g==}
 
-  '@getpara/core-sdk@2.0.0-alpha.42':
-    resolution: {integrity: sha512-sBxNngLC5nuOFpNBay7TMAinvdENIzPHo8juwgHoXOiTbDq7m54Spoixosyb7Pl6WckaPIDl1v5yT2FluZ9d1Q==}
+  '@getpara/core-components@2.0.0-alpha.51':
+    resolution: {integrity: sha512-YBTTUKxH6wnAjFRiK06PctWRvEGDioh0n8XDk1I/E6s9tKHcxKQKubBYPR6Yt3YMQLhzi3ShM6tBJ06S39aPqA==}
 
   '@getpara/core-sdk@2.0.0-alpha.50':
     resolution: {integrity: sha512-Qu6Ep6h1qnrbsCqSy1O8cwIuELe/A8QXB8qGVgaxcrCq5W1cdI45YPSSvPfe3dEC2Fl61VHNUxB4gTq1m6JcOA==}
+
+  '@getpara/core-sdk@2.0.0-alpha.51':
+    resolution: {integrity: sha512-AtcTSa4GZaVmYQ94Vi05YRKkE9yhi4DvetaknjmV0q4Sp2XlN/FpE7ufmPWYQoKmwQxD0sT3yrpBw9dwOEaLVQ==}
 
   '@getpara/cosmjs-v0-integration@2.0.0-alpha.50':
     resolution: {integrity: sha512-Uz8EQLrthqJTAub4O1CrCgYih3oUqE4gYipS3s/9nZbZMh2BBvdrJMyssQ8MBgiBkrU47C2xf6TEH4CaI9GkmA==}
@@ -2338,39 +2353,56 @@ packages:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
 
-  '@getpara/react-common@2.0.0-alpha.42':
-    resolution: {integrity: sha512-eOJAcBjfLjc81unDcwiomuJHB34slJQrdjUi9OH2fLwaYg07aKrjCSwu5jq+dM9iXGIFEbv3bhDMKkp2vf6c5g==}
+  '@getpara/react-common@2.0.0-alpha.50':
+    resolution: {integrity: sha512-mgUGd5K9Q/r2ZSLXCPcn4i0U3yRv2XB5gfNUwiSyXvl+EZafmUE+ILaOmBFqPjw8Sr4z7OdFOAVW9k3qk//nbQ==}
     peerDependencies:
       react: '*'
       react-dom: '*'
 
-  '@getpara/react-components@2.0.0-alpha.42':
-    resolution: {integrity: sha512-w4QXx5lCu6yKUZRd3RYn1hDk/eigwUwLwJJLUfYhf9AVQf7+U7/iRJQ2OWq5JkVJya6HDKiSCPg0VjzwGFOt1g==}
+  '@getpara/react-common@2.0.0-alpha.51':
+    resolution: {integrity: sha512-w7nwP7Yjqj6lHiXCg9E5jGtgxW4psa4add8/4Y9yk2XjJ1IePLQTdTy09eysYBD0iujSid/DbiFUmqQptxBv6A==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
 
-  '@getpara/react-sdk-lite@2.0.0-alpha.42':
-    resolution: {integrity: sha512-mLRk7CKNXis1w0EZwvVLA6UAC8EG254hk9Jf446DIM/ceXJaYXuRo8WB+sdPMfH5IU0xqSGjqpFG58OXpQWCAw==}
+  '@getpara/react-components@2.0.0-alpha.50':
+    resolution: {integrity: sha512-r8F+Me33IPBLau6VO2kdAKG62Qb5GjLCYnOrpWgM4C8A/O+OUiocXNq1xKBICFRpqw42CPChe9L339gl2IKr4g==}
+
+  '@getpara/react-components@2.0.0-alpha.51':
+    resolution: {integrity: sha512-Qz7VGMIODD6h3jEsWdKl+ImG+g3vm2v1C8tAs6ae9GHkTHfeUd4IciP5S7xNbeZ6nPY80YXLM/YT2xE/tY6IWw==}
+
+  '@getpara/react-sdk-lite@2.0.0-alpha.50':
+    resolution: {integrity: sha512-T20/NxUUWDTePMLAOH6aE1oSs1dtCqfWu5Af4UuJv+LTdlYyYQde79/nlfNTAu1qr/mXmRwI9vrN5Iq3fGncAg==}
     hasBin: true
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
       react: '*'
       react-dom: '*'
 
-  '@getpara/user-management-client@2.0.0-alpha.42':
-    resolution: {integrity: sha512-AppEK1I5vrhQQlcicaHMfdt9HgB/XU8iBldnDsCoQ8a7yYtlwn6SC3+umpWEsipyFKZaZ6fYNdAnOHRn6tfCuQ==}
+  '@getpara/react-sdk-lite@2.0.0-alpha.51':
+    resolution: {integrity: sha512-x0nV5cy+29b+CjyzwKIE4DiyfulS3VQbjqBqaqagQAT/ojrvO955hBiV+ha/J/pSn3nb3rFk9DIc/NFURNrVig==}
+    hasBin: true
+    peerDependencies:
+      '@tanstack/react-query': '>=5.0.0'
+      react: '*'
+      react-dom: '*'
 
   '@getpara/user-management-client@2.0.0-alpha.50':
     resolution: {integrity: sha512-BYD2aJUttDOkPEfL1WnoFvROgkhM6u6Ofe6gwKEZjqVvM1eY2o0vFw0uEs3jMOu2Hoeh18eA+kztOB7teQBUUQ==}
 
-  '@getpara/web-sdk@2.0.0-alpha.42':
-    resolution: {integrity: sha512-q4Ni36I4JNhZRONXNfmWkz385G/WXsRF5IKxqhNp+Ej1kCNb/lgafhPxqV4qbc/ZUyjow5VF5b17+Hl76lx/+w==}
+  '@getpara/user-management-client@2.0.0-alpha.51':
+    resolution: {integrity: sha512-ZTungkDZFp5oCBdvbGCxBzy7d63EFvWaxv3QXGFZ0+UwNL4fN2UOFJ1ULnlmsKTzmfswvbSE7byFzVbTSY9TdA==}
+
+  '@getpara/web-sdk@2.0.0-alpha.50':
+    resolution: {integrity: sha512-K40Y6dqZ+wCnKTzCgUrORfwBnnhO5YYQCVPgFCP/zuuPnNib3TUZCGjP2W6gOpsZkzMKM+y0FGy4rFthzP94pA==}
     peerDependencies:
       '@farcaster/miniapp-sdk': ^0.1.2
     peerDependenciesMeta:
       '@farcaster/miniapp-sdk':
         optional: true
 
-  '@getpara/web-sdk@2.0.0-alpha.50':
-    resolution: {integrity: sha512-K40Y6dqZ+wCnKTzCgUrORfwBnnhO5YYQCVPgFCP/zuuPnNib3TUZCGjP2W6gOpsZkzMKM+y0FGy4rFthzP94pA==}
+  '@getpara/web-sdk@2.0.0-alpha.51':
+    resolution: {integrity: sha512-7ewxWEtAkvugV6V6EseYOs4KfmjSrQqu5HRFkEX60pzTcHLXB0Sd1hIhK3jaOnPDYWogfojTMjaSIjtkep8ZLg==}
     peerDependencies:
       '@farcaster/miniapp-sdk': ^0.1.2
     peerDependenciesMeta:
@@ -5548,8 +5580,8 @@ packages:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
 
-  graz@0.3.3:
-    resolution: {integrity: sha512-XKRFY1IA4BBd23oCcd+QljWgmPJ6sGxCoqLiwZwZacK+uP0PusTgaGF6ndF0J0oVfGNG87Tg32odCqzz7IcpFg==}
+  graz@0.3.4:
+    resolution: {integrity: sha512-1QYINLgtvbOcY70mD2100Tim0mbAipN8VWYdOSwGiDSLRvk2ZOiBXNc8HA1X8Ua6FN6AnwlS3FT5jhbvNqMQVQ==}
     hasBin: true
     peerDependencies:
       '@cosmjs/amino': '>=0.32.4'
@@ -12295,7 +12327,7 @@ snapshots:
       '@ethersproject/properties': 5.8.0
       '@ethersproject/strings': 5.8.0
 
-  '@getpara/core-components@2.0.0-alpha.42':
+  '@getpara/core-components@2.0.0-alpha.50':
     dependencies:
       '@stencil/core': 4.36.2
       color-blend: 4.0.0
@@ -12304,12 +12336,21 @@ snapshots:
       inputmask: 5.0.9
       qrcode-with-logos: 1.1.1
 
-  '@getpara/core-sdk@2.0.0-alpha.42':
+  '@getpara/core-components@2.0.0-alpha.51':
+    dependencies:
+      '@stencil/core': 4.36.2
+      color-blend: 4.0.0
+      color2k: 2.0.3
+      gsap: 3.13.0
+      inputmask: 5.0.9
+      qrcode-with-logos: 1.1.1
+
+  '@getpara/core-sdk@2.0.0-alpha.50':
     dependencies:
       '@celo/utils': 8.0.3
       '@cosmjs/encoding': 0.32.4
       '@ethereumjs/util': 9.1.0
-      '@getpara/user-management-client': 2.0.0-alpha.42
+      '@getpara/user-management-client': 2.0.0-alpha.50
       '@noble/hashes': 1.8.0
       base64url: 3.0.1
       libphonenumber-js: 1.12.10
@@ -12318,12 +12359,12 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@getpara/core-sdk@2.0.0-alpha.50':
+  '@getpara/core-sdk@2.0.0-alpha.51':
     dependencies:
       '@celo/utils': 8.0.3
       '@cosmjs/encoding': 0.32.4
       '@ethereumjs/util': 9.1.0
-      '@getpara/user-management-client': 2.0.0-alpha.50
+      '@getpara/user-management-client': 2.0.0-alpha.51
       '@noble/hashes': 1.8.0
       base64url: 3.0.1
       libphonenumber-js: 1.12.10
@@ -12342,7 +12383,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@getpara/graz-connector@2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))':
+  '@getpara/graz-connector@2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))':
     dependencies:
       '@cosmjs/amino': 0.34.0
       '@cosmjs/encoding': 0.34.0
@@ -12353,18 +12394,35 @@ snapshots:
       '@getpara/web-sdk': 2.0.0-alpha.50
       '@keplr-wallet/types': 0.12.156(starknet@6.24.1)
       cosmjs-types: 0.9.0
-      graz: 0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76)
+      graz: 0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76)
     transitivePeerDependencies:
       - '@farcaster/miniapp-sdk'
       - debug
       - encoding
 
-  '@getpara/graz-integration@2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.42(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@getpara/graz-connector@2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@packages+graz)':
     dependencies:
-      '@getpara/graz-connector': 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))
-      '@getpara/react-sdk-lite': 2.0.0-alpha.42(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@cosmjs/amino': 0.34.0
+      '@cosmjs/encoding': 0.34.0
+      '@cosmjs/proto-signing': 0.34.0
+      '@cosmjs/stargate': 0.34.0
+      '@cosmjs/tendermint-rpc': 0.34.0
+      '@getpara/cosmjs-v0-integration': 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)
+      '@getpara/web-sdk': 2.0.0-alpha.50
+      '@keplr-wallet/types': 0.12.156(starknet@6.24.1)
+      cosmjs-types: 0.9.0
+      graz: link:packages/graz
+    transitivePeerDependencies:
+      - '@farcaster/miniapp-sdk'
+      - debug
+      - encoding
+
+  '@getpara/graz-integration@2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@packages+graz)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@getpara/graz-connector': 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@packages+graz)
+      '@getpara/react-sdk-lite': 2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tanstack/react-query': 5.62.0(react@18.2.0)
-      graz: 0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76)
+      graz: link:packages/graz
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
@@ -12379,10 +12437,30 @@ snapshots:
       - debug
       - encoding
 
-  '@getpara/react-common@2.0.0-alpha.42(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@getpara/graz-integration@2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@getpara/react-sdk-lite@2.0.0-alpha.51(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@keplr-wallet/types@0.12.156(starknet@6.24.1))(@tanstack/react-query@5.62.0(react@18.2.0))(cosmjs-types@0.9.0)(graz@0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@getpara/react-components': 2.0.0-alpha.42
-      '@getpara/web-sdk': 2.0.0-alpha.42
+      '@getpara/graz-connector': 2.0.0-alpha.50(@cosmjs/amino@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@cosmjs/tendermint-rpc@0.34.0)(@keplr-wallet/types@0.12.156(starknet@6.24.1))(cosmjs-types@0.9.0)(graz@0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76))
+      '@getpara/react-sdk-lite': 2.0.0-alpha.51(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@tanstack/react-query': 5.62.0(react@18.2.0)
+      graz: 0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@cosmjs/amino'
+      - '@cosmjs/encoding'
+      - '@cosmjs/proto-signing'
+      - '@cosmjs/stargate'
+      - '@cosmjs/tendermint-rpc'
+      - '@farcaster/miniapp-sdk'
+      - '@keplr-wallet/types'
+      - cosmjs-types
+      - debug
+      - encoding
+
+  '@getpara/react-common@2.0.0-alpha.50(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@getpara/react-components': 2.0.0-alpha.50
+      '@getpara/web-sdk': 2.0.0-alpha.50
       '@moonpay/moonpay-react': 1.10.5(react@18.2.0)
       '@ramp-network/ramp-instant-sdk': 4.0.8
       libphonenumber-js: 1.12.10
@@ -12395,15 +12473,35 @@ snapshots:
       - debug
       - encoding
 
-  '@getpara/react-components@2.0.0-alpha.42':
+  '@getpara/react-common@2.0.0-alpha.51(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@getpara/core-components': 2.0.0-alpha.42
+      '@getpara/react-components': 2.0.0-alpha.51
+      '@getpara/web-sdk': 2.0.0-alpha.51
+      '@moonpay/moonpay-react': 1.10.5(react@18.2.0)
+      '@ramp-network/ramp-instant-sdk': 4.0.8
+      libphonenumber-js: 1.12.10
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      styled-components: 6.1.19(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      ua-parser-js: 2.0.4
+    transitivePeerDependencies:
+      - '@farcaster/miniapp-sdk'
+      - debug
+      - encoding
 
-  '@getpara/react-sdk-lite@2.0.0-alpha.42(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@getpara/react-components@2.0.0-alpha.50':
     dependencies:
-      '@getpara/react-common': 2.0.0-alpha.42(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@getpara/react-components': 2.0.0-alpha.42
-      '@getpara/web-sdk': 2.0.0-alpha.42
+      '@getpara/core-components': 2.0.0-alpha.50
+
+  '@getpara/react-components@2.0.0-alpha.51':
+    dependencies:
+      '@getpara/core-components': 2.0.0-alpha.51
+
+  '@getpara/react-sdk-lite@2.0.0-alpha.50(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@getpara/react-common': 2.0.0-alpha.50(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@getpara/react-components': 2.0.0-alpha.50
+      '@getpara/web-sdk': 2.0.0-alpha.50
       '@tanstack/react-query': 5.62.0(react@18.2.0)
       date-fns: 3.6.0
       framer-motion: 11.18.2(@emotion/is-prop-valid@1.3.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -12421,12 +12519,27 @@ snapshots:
       - encoding
       - immer
 
-  '@getpara/user-management-client@2.0.0-alpha.42':
+  '@getpara/react-sdk-lite@2.0.0-alpha.51(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      axios: 1.11.0
+      '@getpara/react-common': 2.0.0-alpha.51(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@getpara/react-components': 2.0.0-alpha.51
+      '@getpara/web-sdk': 2.0.0-alpha.51
+      '@tanstack/react-query': 5.62.0(react@18.2.0)
+      date-fns: 3.6.0
+      framer-motion: 11.18.2(@emotion/is-prop-valid@1.3.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       libphonenumber-js: 1.12.10
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      styled-components: 6.1.19(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      zustand: 4.5.7(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)
+      zustand-sync-tabs: 0.2.3(zustand@4.5.7(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0))
     transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@farcaster/miniapp-sdk'
+      - '@types/react'
       - debug
+      - encoding
+      - immer
 
   '@getpara/user-management-client@2.0.0-alpha.50':
     dependencies:
@@ -12435,10 +12548,17 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@getpara/web-sdk@2.0.0-alpha.42':
+  '@getpara/user-management-client@2.0.0-alpha.51':
     dependencies:
-      '@getpara/core-sdk': 2.0.0-alpha.42
-      '@getpara/user-management-client': 2.0.0-alpha.42
+      axios: 1.11.0
+      libphonenumber-js: 1.12.10
+    transitivePeerDependencies:
+      - debug
+
+  '@getpara/web-sdk@2.0.0-alpha.50':
+    dependencies:
+      '@getpara/core-sdk': 2.0.0-alpha.50
+      '@getpara/user-management-client': 2.0.0-alpha.50
       base64url: 3.0.1
       buffer: 6.0.3
       cbor-web: 9.0.2
@@ -12448,10 +12568,10 @@ snapshots:
       - debug
       - encoding
 
-  '@getpara/web-sdk@2.0.0-alpha.50':
+  '@getpara/web-sdk@2.0.0-alpha.51':
     dependencies:
-      '@getpara/core-sdk': 2.0.0-alpha.50
-      '@getpara/user-management-client': 2.0.0-alpha.50
+      '@getpara/core-sdk': 2.0.0-alpha.51
+      '@getpara/user-management-client': 2.0.0-alpha.51
       base64url: 3.0.1
       buffer: 6.0.3
       cbor-web: 9.0.2
@@ -16445,7 +16565,7 @@ snapshots:
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
 
-  graz@0.3.3(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76):
+  graz@0.3.4(@cosmjs/amino@0.34.0)(@cosmjs/cosmwasm-stargate@0.34.0)(@cosmjs/encoding@0.34.0)(@cosmjs/proto-signing@0.34.0)(@cosmjs/stargate@0.34.0)(@tanstack/react-query@5.62.0(react@18.2.0))(@types/react@18.3.23)(immer@9.0.21)(react@18.2.0)(starknet@6.24.1)(typescript@5.9.2)(use-sync-external-store@1.5.0(react@18.2.0))(zod@3.25.76):
     dependencies:
       '@cosmjs/amino': 0.34.0
       '@cosmjs/cosmwasm-stargate': 0.34.0
