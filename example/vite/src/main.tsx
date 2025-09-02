@@ -1,4 +1,5 @@
 import "./index.css";
+import "@getpara/react-sdk-lite/styles.css"
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { GrazProvider } from "graz";
@@ -14,7 +15,7 @@ const queryClient = new QueryClient();
 
 // Get an API key at https://developer.getpara.com
 // Modal will open with fake key but will not authenticate
-export const para = new ParaWeb("beta_3e185167932bc6cc7ed11c0abed4dfb8");
+export const para = new ParaWeb("beta_your_api_key_goes_here_for_testing");
 
 const paraConfig: ParaGrazConfig = {
   paraWeb: para!,
