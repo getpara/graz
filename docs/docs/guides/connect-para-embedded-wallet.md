@@ -18,6 +18,16 @@ Install the required packages:
 npm install @getpara/graz-integration @getpara/react-sdk-lite @tanstack/react-query
 ```
 
+Add a postinstall script to your `package.json` to stub out unused packages from react-sdk-lite:
+
+```json
+{
+  "scripts": {
+    "postinstall": "npx setup-para"
+  }
+}
+```
+
 Ensure Graz and its peer dependencies (e.g., `@cosmjs/*`) are already installed.
 
 ## Step 2: Create a ParaWeb Client
