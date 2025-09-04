@@ -18,7 +18,7 @@ const queryClient = new QueryClient();
 export const para = new ParaWeb("beta_your_api_key_goes_here_for_testing");
 
 const paraConfig: ParaGrazConfig = {
-  paraWeb: para!,
+  paraWeb: para,
   modalProps: { appName: "MyApp" },
   queryClient: queryClient,
 };
