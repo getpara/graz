@@ -7,7 +7,7 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { chains } from "utils/graz";
 import { ParaGrazConfig } from "@getpara/graz-integration";
-import ParaWeb from "@getpara/react-sdk-lite";
+import ParaWeb, { Environment } from "@getpara/react-sdk-lite";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +15,7 @@ const theme = extendTheme();
 
 // Get an API key at https://developer.getpara.com
 // Modal will open with fake key but will not authenticate
-export const para = new ParaWeb("beta_your_api_key_goes_here_for_testing");
+export const para = new ParaWeb(Environment.BETA, process.env.NEXT_PUBLIC_PARA_API_KEY || "");
 
 const paraConfig: ParaGrazConfig = {
   paraWeb: para,
@@ -30,7 +30,7 @@ const CustomApp: NextPage<AppProps> = ({ Component, pageProps }) => {
         <GrazProvider
           grazOptions={{
             chains,
-            paraConfig: paraConfig,
+            paraConfig,
             onReconnectFailed: () => {
               console.log("reconnect failed");
             },
