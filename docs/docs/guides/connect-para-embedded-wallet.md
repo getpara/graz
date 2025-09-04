@@ -8,6 +8,7 @@ Para is a wallet connector that enables seamless integration with Cosmos-based c
 
 - A Graz project set up with React and `@tanstack/react-query`.
 - Access to a Para API key (sign up at [developer.getpara.com](https://developer.getpara.com)).
+- Enabled Cosmos network in you Para project settings
 - Familiarity with Graz hooks like `useAccount` and `useConnect`.
 
 ## Step 1: Install Dependencies
