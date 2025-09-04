@@ -56,16 +56,15 @@ export const getPara = (): Wallet => {
         const connector = new ConnectorClass(paraConfig, chains) as ParaGrazConnector;
 
         useGrazSessionStore.setState((prev) => ({ ...prev, paraConnector: connector }));
+        if (!connector) {
+          throw new Error("Para connector initialization failed. Check config and dependencies.");
+        }
         return connector;
       } catch (err) {
-        useGrazSessionStore.setState({ paraConnector: null, status: "disconnected" });
-        throw new Error(`Para connector initialization failed${err instanceof Error ? `: ${err.message}` : ""}`);
+        initPromise = null;
+        throw new Error("Para connector init failed. Check @getpara/graz-integration and ParaConfig.");
       }
     })();
-
-    initPromise.finally(() => {
-      initPromise = null;
-    });
 
     return initPromise;
   };
@@ -105,27 +104,13 @@ export const getPara = (): Wallet => {
     }
   };
 
-  // Early check: Use paraWeb directly to detect connection state ASAP
-  (async () => {
-    try {
-      const isLoggedIn = await paraConfig.paraWeb.isFullyLoggedIn();
-      const hasWallets = paraConfig.paraWeb.getWalletsByType("COSMOS").length > 0;
-      if (isLoggedIn && hasWallets) {
-        await init();
-        useGrazSessionStore.setState((prev) => ({ ...prev, status: "connected" }));
-        console.log("Early detection: Para is already connected with wallets. Connector initialized.");
-      }
-    } catch (err) {
-      console.warn("Early Para check failed:", err);
-    }
-  })();
-
   return {
     enable,
     disable: async () => {
       const connector = getClientOrThrow();
       try {
         await connector.disconnect();
+        await connector.getParaWebClient().logout();
       } catch (err) {
         throw new Error("Para disconnect failed. Wallet may already be disconnected.");
       } finally {

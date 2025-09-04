@@ -148,3 +148,7 @@ export const isWalletConnect = (type: WalletType): boolean => {
     type === WalletType.WC_COSMOSTATION_MOBILE
   );
 };
+
+export const isPara = (type: WalletType) => {
+  return type === WalletType.PARA;
+};

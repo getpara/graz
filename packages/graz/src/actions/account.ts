@@ -7,7 +7,7 @@ import type { Maybe } from "../types/core";
 import type { Key } from "../types/wallet";
 import { WalletType } from "../types/wallet";
 import type { ChainId } from "../utils/multi-chain";
-import { checkWallet, getWallet, isLeapDappBrowser, isLeapSnaps, isWalletConnect } from "./wallet";
+import { checkWallet, getWallet, isLeapDappBrowser, isLeapSnaps, isPara, isWalletConnect } from "./wallet";
 
 export type ConnectArgs = Maybe<{
   chainId: ChainId;
@@ -138,16 +138,25 @@ export const connect = async (args?: ConnectArgs): Promise<ConnectResult> => {
 export const disconnect = (args?: { chainId?: ChainId }) => {
   typeof window !== "undefined" && window.sessionStorage.removeItem(RECONNECT_SESSION_KEY);
   const chainId = typeof args?.chainId === "string" ? [args.chainId] : args?.chainId;
+  const disable = () => {
+    if (isWalletConnect(useGrazInternalStore.getState().walletType)) {
+      const walletConnectInstance = getWallet(WalletType.WALLETCONNECT);
+      const { disable: walletConnectDisable } = walletConnectInstance;
 
-  if (isWalletConnect(useGrazInternalStore.getState().walletType)) {
-    const walletConnectInstance = getWallet(WalletType.WALLETCONNECT);
-    const { disable: walletConnectDisable } = walletConnectInstance;
-
-    if (walletConnectDisable) {
-      void walletConnectDisable();
+      if (walletConnectDisable) {
+        void walletConnectDisable();
+      }
     }
-  }
 
+    if (isPara(useGrazInternalStore.getState().walletType)) {
+      const paraInstance = getWallet(WalletType.PARA);
+      const { disable: paraDisable } = paraInstance;
+
+      if (paraDisable) {
+        void paraDisable();
+      }
+    }
+  };
   if (chainId) {
     const _accounts = useGrazSessionStore.getState().accounts;
     chainId.forEach((x) => {
@@ -155,6 +164,7 @@ export const disconnect = (args?: { chainId?: ChainId }) => {
     });
     const isEmpty = Object.values(_accounts ? _accounts : {}).length === 0;
     if (isEmpty) {
+      disable();
       useGrazSessionStore.setState(grazSessionDefaultValues);
       useGrazInternalStore.setState({
         _reconnect: false,
@@ -171,6 +181,7 @@ export const disconnect = (args?: { chainId?: ChainId }) => {
       }));
     }
   } else {
+    disable();
     useGrazSessionStore.setState(grazSessionDefaultValues);
     useGrazInternalStore.setState({
       _reconnect: false,
