@@ -8,6 +8,10 @@ import { persist, subscribeWithSelector } from "zustand/middleware";
 
 import type { Dictionary } from "../types/core";
 import { Key, WalletType } from "../types/wallet";
+import type {
+  ParaGrazConfig as BaseParaGrazConfig,
+  ParaGrazConnector as BaseParaGrazConnector,
+} from "@getpara/graz-connector";
 
 export interface ChainConfig {
   path?: string;
@@ -17,6 +21,12 @@ export interface ChainConfig {
     denom: string;
   };
 }
+
+export interface ParaGrazConfig extends BaseParaGrazConfig {
+  connectorClass?: new (config: ParaGrazConfig, chains?: ChainInfo[] | null) => BaseParaGrazConnector;
+  connectorImportPath?: string;
+}
+
 export interface WalletConnectStore {
   options: SignClientTypes.Options | null;
   walletConnectModal?: Pick<
@@ -42,6 +52,7 @@ export interface IframeOptions {
 
 export interface GrazInternalStore {
   recentChainIds: string[] | null;
+  paraConfig: ParaGrazConfig | null | undefined;
   chains: ChainInfo[] | null;
   chainsConfig: Record<string, ChainConfig> | null;
   iframeOptions: IframeOptions | null;
@@ -70,6 +81,7 @@ export interface GrazSessionStore {
   lastPing: number | null;
 
   wcSignClients: Map<WalletType, ISignClient>;
+  paraConnector: BaseParaGrazConnector | null; // Compatible with base or extended classes
 }
 
 export type GrazSessionPersistedStore = Pick<GrazSessionStore, "accounts" | "activeChainIds" | "lastPing" | "status">;
@@ -84,6 +96,7 @@ export const grazInternalDefaultValues: GrazInternalStore = {
   recentChainIds: null,
   chains: null,
   chainsConfig: null,
+  paraConfig: null,
   multiChainFetchConcurrency: 3,
   walletType: WalletType.KEPLR,
   walletConnect: {
@@ -104,6 +117,7 @@ export const grazSessionDefaultValues: GrazSessionStore = {
   status: "disconnected",
   lastPing: null,
   wcSignClients: new Map(),
+  paraConnector: null,
 };
 
 const sessionOptions: PersistOptions<GrazSessionStore, GrazSessionPersistedStore> = {

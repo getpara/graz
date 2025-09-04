@@ -6,10 +6,13 @@
     "build": "tsc && vite build",
     "dev": "vite",
     "export:docs": "vite build --emptyOutDir --outDir ../../docs/build/examples/vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "npx setup-para"
   },
   "dependencies": {
     "@tanstack/react-query": "5.62.0",
+    "@getpara/graz-integration": ">=2.0.0-alpha.51 <2.0.0-beta",
+    "@getpara/react-sdk-lite": ">=2.0.0-alpha.51 <2.0.0-beta",
     "graz": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
