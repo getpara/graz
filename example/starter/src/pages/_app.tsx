@@ -26,7 +26,6 @@ const theme = extendTheme({
   },
 });
 
-
 // Get an API key at https://developer.getpara.com
 // Modal will open with fake key but will not authenticate
 export const para = new ParaWeb(Environment.BETA, process.env.NEXT_PUBLIC_PARA_API_KEY || "");
@@ -36,7 +35,6 @@ const paraConfig: ParaGrazConfig = {
   modalProps: { appName: "MyApp" },
   queryClient: queryClient,
 };
-
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

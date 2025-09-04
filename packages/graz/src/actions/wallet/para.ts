@@ -44,6 +44,9 @@ export const getPara = (): Wallet => {
           }
           ConnectorClass = maybe;
         } else {
+          if (typeof window === "undefined") {
+            throw new Error("Connector import path requires client-side execution (SSR is unsupported).");
+          }
           const mod = await import("@getpara/graz-integration");
           const maybe = (mod as any)?.ParaGrazConnector;
           if (typeof maybe !== "function") {
