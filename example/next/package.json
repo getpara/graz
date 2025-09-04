@@ -6,12 +6,15 @@
     "dev": "next dev",
     "export:docs": "next build && next export --outdir ../../docs/build/examples/next",
     "lint": "eslint --fix \"**/*.{ts,tsx}\"",
-    "start": "next start"
+    "start": "next start",
+    "postinstall": "npx setup-para"
   },
   "dependencies": {
     "@chakra-ui/react": "2.8.1",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
+    "@getpara/graz-integration": ">=2.0.0-alpha.51 <2.0.0-beta",
+    "@getpara/react-sdk-lite": ">=2.0.0-alpha.51 <2.0.0-beta",
     "@tanstack/react-query": "5.62.0",
     "framer-motion": "^10.16.4",
     "graz": "workspace:*",

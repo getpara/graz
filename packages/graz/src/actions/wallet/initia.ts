@@ -7,7 +7,7 @@ import {
   rawSecp256k1PubkeyToRawAddress,
   type StdSignature,
 } from "@cosmjs/amino";
-import type { OfflineDirectSigner } from "@cosmjs/proto-signing";
+import type { OfflineDirectSigner, OfflineSigner } from "@cosmjs/proto-signing";
 import type { DeliverTxResponse } from "@cosmjs/stargate";
 import type { Chain } from "@initia/initia-registry-types";
 import type { ChainInfo } from "@keplr-wallet/types";
@@ -151,7 +151,7 @@ export const getInitia = (): Wallet => {
     };
 
     const signArbitrary = async (chainId: string, signer: string, data: string | Uint8Array): Promise<StdSignature> => {
-      const offlineSigner = initia.getOfflineSigner(chainId);
+      const offlineSigner = initia.getOfflineSigner(chainId) as OfflineSigner;
       const accounts = await offlineSigner.getAccounts();
       const account = accounts.find((acc) => acc.address === signer);
       if (!account) {

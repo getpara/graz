@@ -1,20 +1,18 @@
 import {
   Button,
   Heading,
-  HStack,
   Modal,
   ModalBody,
   ModalContent,
   ModalOverlay,
   Stack,
-  Text,
   useDisclosure,
   useToast,
 } from "@chakra-ui/react";
 import type { ChainInfo } from "@graz-sh/types";
-import { checkWallet, useAccount } from "graz";
-import { useConnect, type WalletType } from "graz";
-import { listedWallets, mainnetChains } from "src/utils/graz";
+import { getAvailableWallets, useAccount } from "graz";
+import { useConnect, WalletType } from "graz";
+import { mainnetChains } from "src/utils/graz";
 
 const WalletModal = ({
   modal,
@@ -23,6 +21,19 @@ const WalletModal = ({
   modal: ReturnType<typeof useDisclosure>;
   onClick: (walletType: WalletType) => void;
 }) => {
+  const availableWallets = getAvailableWallets();
+  const wallets = Object.entries(availableWallets)
+    .filter(([_, isAvailable]) => isAvailable)
+    .map(([walletType]) => ({
+      walletType: walletType as WalletType,
+      name: walletType
+        .split("_")
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" "),
+    }));
+
+  const paraWallet = wallets.find((wallet) => wallet.walletType === WalletType.PARA);
+  const otherWallets = wallets.filter((wallet) => wallet.walletType !== WalletType.PARA);
   return (
     <Modal isCentered isOpen={modal.isOpen} onClose={modal.onClose} size="xs">
       <ModalOverlay bgColor="blackAlpha.800" />
@@ -33,29 +44,32 @@ const WalletModal = ({
               Choose wallet
             </Heading>
             <Stack>
-              {Object.entries(listedWallets)
-                .filter(([key, wallet]) => checkWallet(key as WalletType))
-                .map(([key, wallet]) => (
-                  <HStack
-                    key={wallet.name}
-                    _hover={{
-                      bgColor: "whiteAlpha.400",
-                    }}
-                    as="button"
-                    bgColor="whiteAlpha.200"
-                    borderRadius={12}
-                    flex={1}
-                    onClick={() => {
-                      modal.onClose();
-                      onClick(key as WalletType);
-                    }}
-                    p={4}
-                    spacing={4}
-                  >
-                    {/* <Image alt={wallet.name} boxSize="40px" src={wallet.imgSrc} /> */}
-                    <Text fontWeight="bold">{wallet.name}</Text>
-                  </HStack>
-                ))}
+              <Stack spacing={3}>
+                {paraWallet && (
+                  <>
+                    <Stack spacing={2}>
+                      <strong>Social Login</strong>
+                      <Button onClick={() => onClick(paraWallet.walletType)} colorScheme="blue" width="100%">
+                        Connect with {paraWallet.name}
+                      </Button>
+                    </Stack>
+                  </>
+                )}
+
+                {otherWallets.length > 0 && (
+                  <>
+                    {paraWallet && <hr style={{ margin: "16px 0" }} />}
+                    <Stack spacing={2}>
+                      <strong>Other Wallets</strong>
+                      {otherWallets.map((wallet) => (
+                        <Button key={wallet.walletType} onClick={() => onClick(wallet.walletType)} width="100%">
+                          {wallet.name}
+                        </Button>
+                      ))}
+                    </Stack>
+                  </>
+                )}
+              </Stack>
             </Stack>
           </Stack>
         </ModalBody>

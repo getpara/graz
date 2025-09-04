@@ -18,7 +18,8 @@
     "graz": "pnpm --dir packages/graz",
     "lint": "turbo run lint",
     "release": "pnpm graz build && changeset publish",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "postinstall": "npx setup-para"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.2",

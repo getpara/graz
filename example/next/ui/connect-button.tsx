@@ -43,7 +43,20 @@ export const ConnectButton: FC = () => {
     connect({ walletType: wallet, chainId: "cosmoshub-4" });
     onClose();
   };
-  const wallets = getAvailableWallets();
+  
+  const availableWallets = getAvailableWallets();
+  const wallets = Object.entries(availableWallets)
+    .filter(([_, isAvailable]) => isAvailable)
+    .map(([walletType]) => ({
+      walletType: walletType as WalletType,
+      name: walletType
+        .split("_")
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" "),
+    }));
+
+  const paraWallet = wallets.find((wallet) => wallet.walletType === WalletType.PARA);
+  const otherWallets = wallets.filter((wallet) => wallet.walletType !== WalletType.PARA);
   return (
     <>
       <ButtonGroup alignSelf="end" isAttached variant="outline">
@@ -58,37 +71,38 @@ export const ConnectButton: FC = () => {
         <ModalContent>
           <ModalHeader>Select a wallet</ModalHeader>
           <Stack p={4} spacing={3}>
-            {wallets.keplr ? <Button onClick={() => handleConnect(WalletType.KEPLR)}>Keplr</Button> : null}
-            {wallets.leap ? <Button onClick={() => handleConnect(WalletType.LEAP)}>Leap</Button> : null}
-            {wallets.cosmostation ? (
-              <Button onClick={() => handleConnect(WalletType.COSMOSTATION)}>Cosmostation</Button>
-            ) : null}
-            {wallets.vectis ? <Button onClick={() => handleConnect(WalletType.VECTIS)}>Vectis</Button> : null}
-            {wallets.xdefi ? <Button onClick={() => handleConnect(WalletType.XDEFI)}>XDefi</Button> : null}
-            {wallets.walletconnect ? (
-              <Button onClick={() => handleConnect(WalletType.WALLETCONNECT)}>WalletConnect</Button>
-            ) : null}
-            {wallets.wc_keplr_mobile ? (
-              <Button onClick={() => handleConnect(WalletType.WC_KEPLR_MOBILE)}>Keplr Mobile</Button>
-            ) : null}
-            {wallets.wc_leap_mobile ? (
-              <Button onClick={() => handleConnect(WalletType.WC_LEAP_MOBILE)}>LEAP Mobile</Button>
-            ) : null}
-            {wallets.wc_cosmostation_mobile ? (
-              <Button onClick={() => handleConnect(WalletType.WC_COSMOSTATION_MOBILE)}>Cosmostation Mobile</Button>
-            ) : null}
-            {wallets.wc_clot_mobile ? (
-              <Button onClick={() => handleConnect(WalletType.WC_CLOT_MOBILE)}>Clot Mobile</Button>
-            ) : null}
-            {wallets.station ? <Button onClick={() => handleConnect(WalletType.STATION)}>Station</Button> : null}
-            {wallets.metamask_snap_leap ? (
-              <Button onClick={() => handleConnect(WalletType.METAMASK_SNAP_LEAP)}>Metamask Snap Leap</Button>
-            ) : null}
-            {wallets.metamask_snap_cosmos ? (
-              <Button onClick={() => handleConnect(WalletType.METAMASK_SNAP_COSMOS)}>Metamask Snap Cosmos</Button>
-            ) : null}
-            {wallets.cosmiframe ? <Button onClick={() => handleConnect(WalletType.COSMIFRAME)}>DAO DAO</Button> : null}
-            {wallets.compass ? <Button onClick={() => handleConnect(WalletType.COMPASS)}>Compass</Button> : null}
+            {paraWallet && (
+              <>
+                <Stack spacing={2}>
+                  <strong>Social Login</strong>
+                  <Button 
+                    onClick={() => handleConnect(paraWallet.walletType)}
+                    colorScheme="blue"
+                    width="100%"
+                  >
+                    Connect with {paraWallet.name}
+                  </Button>
+                </Stack>
+              </>
+            )}
+            
+            {otherWallets.length > 0 && (
+              <>
+                {paraWallet && <hr style={{ margin: "16px 0" }} />}
+                <Stack spacing={2}>
+                  <strong>Other Wallets</strong>
+                  {otherWallets.map((wallet) => (
+                    <Button
+                      key={wallet.walletType}
+                      onClick={() => handleConnect(wallet.walletType)}
+                      width="100%"
+                    >
+                      Connect with {wallet.name}
+                    </Button>
+                  ))}
+                </Stack>
+              </>
+            )}
           </Stack>
         </ModalContent>
       </Modal>
