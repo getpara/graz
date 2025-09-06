@@ -1,5 +1,11 @@
 # graz
 
+## 0.3.5
+
+### Patch Changes
+
+- 25ad685: Add Para embedded wallet integration
+
 ## 0.3.4
 
 ### Patch Changes
