@@ -8,6 +8,8 @@ export * from "./actions/wallet/keplr";
 export * from "./actions/wallet/leap";
 export * from "./actions/wallet/leap-metamask-snap/leap";
 export * from "./actions/wallet/vectis";
+export * from "./actions/wallet/okx";
+export * from "./actions/wallet/para";
 export * from "./actions/wallet/wallet-connect";
 export * from "./actions/wallet/wallet-connect/cosmostation";
 export * from "./actions/wallet/wallet-connect/keplr";
