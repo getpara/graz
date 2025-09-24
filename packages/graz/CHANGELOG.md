@@ -1,5 +1,11 @@
 # graz
 
+## 0.3.6
+
+### Patch Changes
+
+- 4aa2a8c: release latest
+
 ## 0.3.5
 
 ### Patch Changes
