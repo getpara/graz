@@ -1,0 +1,5 @@
+---
+"graz": patch
+---
+
+release latest
