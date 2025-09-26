@@ -24,7 +24,6 @@ export interface ChainConfig {
 
 export interface ParaGrazConfig extends BaseParaGrazConfig {
   connectorClass?: new (config: ParaGrazConfig, chains?: ChainInfo[] | null) => BaseParaGrazConnector;
-  connectorImportPath?: string;
 }
 
 export interface WalletConnectStore {

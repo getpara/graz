@@ -138,8 +138,84 @@ export default function Header() {
 }
 ```
 
+## Bundler Configuration (Optional)
+
+If you're **not** using Para wallet in your application, you may need to configure your bundler to ignore the Para package imports. This prevents build errors when the packages aren't installed.
+
+### Webpack
+
+Add to your webpack configuration:
+
+```javascript
+module.exports = {
+  resolve: {
+    fallback: {
+      "@getpara/graz-integration": false,
+      "@getpara/graz-connector": false
+    }
+  }
+};
+```
+
+Or use `externals`:
+
+```javascript
+module.exports = {
+  externals: {
+    "@getpara/graz-integration": "commonjs @getpara/graz-integration",
+    "@getpara/graz-connector": "commonjs @getpara/graz-connector"
+  }
+};
+```
+
+### Vite
+
+Add to your `vite.config.js`:
+
+```javascript
+export default {
+  optimizeDeps: {
+    exclude: ["@getpara/graz-integration", "@getpara/graz-connector"]
+  },
+  ssr: {
+    external: ["@getpara/graz-integration", "@getpara/graz-connector"]
+  }
+};
+```
+
+### Next.js
+
+For Next.js apps, if you encounter issues, add to `next.config.js`:
+
+```javascript
+module.exports = {
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      "@getpara/graz-integration": false,
+      "@getpara/graz-connector": false
+    };
+    return config;
+  }
+};
+```
+
+### Rollup
+
+Add to your `rollup.config.js`:
+
+```javascript
+export default {
+  external: ["@getpara/graz-integration", "@getpara/graz-connector"]
+};
+```
+
+**Note:** These configurations are only needed if you're not using Para wallet and want to prevent bundler warnings. If you're using Para, install the packages as described in Step 1.
+
 ## Troubleshooting
 
+- **Module Not Found Errors:** If you see "Cannot find module '@getpara/graz-integration'" and you want to use Para, install it with `npm install @getpara/graz-integration @getpara/react-sdk-lite`.
+- **Bundler Warnings Without Para:** Apply the bundler configurations above to silence warnings when not using Para.
 - **Modal Styling Not Appearing:** Ensure `@getpara/react-sdk-lite/styles.css` is imported globally.
 - **Chain Mismatch:** Verify chains in `GrazProvider` match your app's requirements.
 - **Errors:** Check console for Para-specific messages (e.g., auth issues). Visit [developer.getpara.com](https://developer.getpara.com) for API config.

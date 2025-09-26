@@ -48,9 +48,7 @@
     "@cosmjs/cosmwasm-stargate": ">=0.32.4",
     "@cosmjs/proto-signing": ">=0.32.4",
     "@cosmjs/stargate": ">=0.32.4",
-    "@cosmjs/encoding": ">=0.32.4",
-    "@getpara/graz-connector": ">=2.0.0-alpha.51 <2.0.0-beta",
-    "@getpara/graz-integration": ">=2.0.0-alpha.51 <2.0.0-beta"
+    "@cosmjs/encoding": ">=0.32.4"
   },
   "dependencies": {
     "@initia/initia-registry-types": "0.0.20",
@@ -78,14 +76,6 @@
     "typescript": "^5.4.0",
     "@getpara/graz-connector": ">=2.0.0-alpha.51 <2.0.0-beta",
     "@getpara/graz-integration": ">=2.0.0-alpha.51 <2.0.0-beta"
-  },
-  "peerDependenciesMeta": {
-    "@getpara/graz-integration": {
-      "optional": true
-    },
-    "@getpara/graz-connector": {
-      "optional": true
-    }
   },
   "keywords": [
     "graz",
