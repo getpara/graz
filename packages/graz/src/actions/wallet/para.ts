@@ -3,7 +3,6 @@ import type { ParaGrazConnector } from "@getpara/graz-connector";
 import type { Key, Wallet } from "../../types/wallet";
 import { WalletType } from "../../types/wallet";
 
-const RECONNECT_SESSION_KEY = "para.reconnect";
 let initPromise: Promise<ParaGrazConnector> | null = null;
 
 export const getPara = (): Wallet => {
@@ -55,16 +54,19 @@ export const getPara = (): Wallet => {
         return connector;
       } catch (err: any) {
         initPromise = null;
-        const isModuleNotFound = err?.code === 'MODULE_NOT_FOUND' ||
-                                 err?.message?.includes('Cannot find module') ||
-                                 err?.message?.includes('Failed to resolve');
+        const isModuleNotFound =
+          err?.code === "MODULE_NOT_FOUND" ||
+          err?.message?.includes("Cannot find module") ||
+          err?.message?.includes("Failed to resolve");
 
         if (isModuleNotFound) {
           throw new Error(
-            "Para integration package not found. Install @getpara/graz-integration to use Para wallet: npm install @getpara/graz-integration"
+            "Para integration package not found. Install @getpara/graz-integration to use Para wallet: npm install @getpara/graz-integration",
           );
         }
-        throw new Error(`Para connector init failed: ${err?.message || 'Unknown error'}. Check @getpara/graz-integration and ParaConfig.`);
+        throw new Error(
+          `Para connector init failed: ${err?.message || "Unknown error"}. Check @getpara/graz-integration and ParaConfig.`,
+        );
       }
     })();
 
@@ -96,17 +98,13 @@ export const getPara = (): Wallet => {
         _reconnect: false,
         _reconnectConnector: WalletType.PARA,
       }));
-
-      if (typeof window !== "undefined") {
-        window.sessionStorage.setItem(RECONNECT_SESSION_KEY, "1");
-      }
     } catch (err: any) {
       useGrazSessionStore.setState({ paraConnector: null, status: "disconnected" });
-      const isModuleNotFound = err?.message?.includes('not found') || err?.message?.includes('Cannot find');
+      const isModuleNotFound = err?.message?.includes("not found") || err?.message?.includes("Cannot find");
 
       if (isModuleNotFound) {
         throw new Error(
-          "Para wallet connection failed: Required packages not installed. Install @getpara/graz-integration to enable Para wallet."
+          "Para wallet connection failed: Required packages not installed. Install @getpara/graz-integration to enable Para wallet.",
         );
       }
       throw new Error(`Para enable failed${err instanceof Error ? `: ${err.message}` : ""}`);
@@ -116,12 +114,22 @@ export const getPara = (): Wallet => {
   return {
     enable,
     disable: async () => {
-      const connector = getClientOrThrow();
+      const connector = useGrazSessionStore.getState().paraConnector;
+
+      // If no connector exists, we're already disconnected - just clean up state
+      if (!connector) {
+        useGrazSessionStore.setState({ paraConnector: null, status: "disconnected" });
+        return;
+      }
+
+      // Connector exists, proceed with disconnect
       try {
         await connector.disconnect();
         await connector.getParaWebClient().logout();
       } catch (err: any) {
-        throw new Error(`Para disconnect failed${err?.message ? `: ${err.message}` : ". Wallet may already be disconnected."}`);
+        throw new Error(
+          `Para disconnect failed${err?.message ? `: ${err.message}` : ". Wallet may already be disconnected."}`,
+        );
       } finally {
         useGrazSessionStore.setState({ paraConnector: null, status: "disconnected" });
       }
@@ -131,7 +139,7 @@ export const getPara = (): Wallet => {
         return await getClientOrThrow().getKey(chainId);
       } catch (err: any) {
         throw new Error(
-          `Failed to get key${err?.message ? `: ${err.message}` : ""}. Check chain connection and Cosmos API key settings at developer.getpara.com.`
+          `Failed to get key${err?.message ? `: ${err.message}` : ""}. Check chain connection and Cosmos API key settings at developer.getpara.com.`,
         );
       }
     },
@@ -139,42 +147,54 @@ export const getPara = (): Wallet => {
       try {
         return getClientOrThrow().getOfflineSigner(chainId);
       } catch (err: any) {
-        throw new Error(`Failed to get offline signer${err?.message ? `: ${err.message}` : ""}. Check Para auth and Cosmos support in developer portal.`);
+        throw new Error(
+          `Failed to get offline signer${err?.message ? `: ${err.message}` : ""}. Check Para auth and Cosmos support in developer portal.`,
+        );
       }
     },
     getOfflineSignerOnlyAmino: (chainId) => {
       try {
         return getClientOrThrow().getOfflineSignerOnlyAmino(chainId);
       } catch (err: any) {
-        throw new Error(`Failed to get Amino signer${err?.message ? `: ${err.message}` : ""}. Check Para auth and Cosmos support in developer portal.`);
+        throw new Error(
+          `Failed to get Amino signer${err?.message ? `: ${err.message}` : ""}. Check Para auth and Cosmos support in developer portal.`,
+        );
       }
     },
     getOfflineSignerAuto: (chainId) => {
       try {
         return getClientOrThrow().getOfflineSignerAuto(chainId);
       } catch (err: any) {
-        throw new Error(`Failed to get auto signer${err?.message ? `: ${err.message}` : ""}. Check Para auth and Cosmos support in developer portal.`);
+        throw new Error(
+          `Failed to get auto signer${err?.message ? `: ${err.message}` : ""}. Check Para auth and Cosmos support in developer portal.`,
+        );
       }
     },
     signAmino: async (c, s, d, o) => {
       try {
         return await getClientOrThrow().signAmino(c, s, d, o);
       } catch (err: any) {
-        throw new Error(`Amino signing failed${err?.message ? `: ${err.message}` : ""}. User rejected or invalid transaction/signer.`);
+        throw new Error(
+          `Amino signing failed${err?.message ? `: ${err.message}` : ""}. User rejected or invalid transaction/signer.`,
+        );
       }
     },
     signDirect: async (c, s, d, o) => {
       try {
         return await getClientOrThrow().signDirect(c, s, d, o);
       } catch (err: any) {
-        throw new Error(`Direct signing failed${err?.message ? `: ${err.message}` : ""}. User rejected or invalid transaction/signer.`);
+        throw new Error(
+          `Direct signing failed${err?.message ? `: ${err.message}` : ""}. User rejected or invalid transaction/signer.`,
+        );
       }
     },
     signArbitrary: async (c, s, data) => {
       try {
         return await getClientOrThrow().signArbitrary(c, s, data);
       } catch (err: any) {
-        throw new Error(`Arbitrary signing failed${err?.message ? `: ${err.message}` : ""}. User rejected or feature not supported.`);
+        throw new Error(
+          `Arbitrary signing failed${err?.message ? `: ${err.message}` : ""}. User rejected or feature not supported.`,
+        );
       }
     },
     experimentalSuggestChain: async () => {
